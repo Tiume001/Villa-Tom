@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Villa Timea | Villa con Piscina, Tennis e Vista Egadi a Marsala (Sicilia)</title>
+  <meta name="description" content="Esclusiva villa con piscina privata panoramica, campo da tennis, pineta mediterranea e cantina storica scavata nel tufo a Marsala, con vista mozzafiato sulle Isole Egadi.">
+  <meta name="keywords" content="Villa Timea, Marsala, Villa con piscina Sicilia, Isole Egadi, Campo da tennis villa vacanze, Affitto villa Marsala, Cantina vino Marsala, Airbnb Marsala, Booking Marsala">
+  <meta name="theme-color" content="#0e3b56">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Villa Timea | Esclusiva Villa Panoramica a Marsala, Sicilia">
+  <meta property="og:description" content="Piscina privata con trampolino, campo da tennis, cantina storica nel tufo e vista sulle Isole Egadi. Scopri la villa e prenota il tuo soggiorno.">
+  <meta property="og:image" content="assets/images/pool-panorama.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="assets/css/leaflet.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span data-i18n="topWelcome">Benvenuti a Villa Timea • Marsala, Sicilia</span>
+        <span style="opacity: 0.5;">|</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Contrada+Fontanelle+231,+Marsala" target="_blank" rel="noopener">
+          📍 Contrada Fontanelle 231, Marsala (TP)
+        </a>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+393349241047">📞 +39 334 924 1047</a>
+        <a href="https://wa.me/393349241047" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="mailto:villatimea@gmail.com">✉️ villatimea@gmail.com</a>
+        <div class="lang-switch">
+          <button type="button" class="lang-btn active" data-lang="it">IT</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a href="#" class="logo" aria-label="Villa Timea Home">
+          <span class="logo-title">Villa Timea</span>
+          <span class="logo-sub">Marsala • Sicilia</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigazione Principale">
+          <a href="#villa" class="nav-link" data-i18n="navAbout">La Villa</a>
+          <a href="#comfort" class="nav-link" data-i18n="navComfort">Comfort & Spazi</a>
+          <a href="#galleria" class="nav-link" data-i18n="navGallery">Galleria</a>
+          <a href="#qr-section" class="nav-link" data-i18n="navQr">QR Ospiti</a>
+          <a href="#dintorni" class="nav-link" data-i18n="navTerritory">Dintorni</a>
+          <a href="#posizione" class="nav-link" data-i18n="mapTag">Posizione</a>
+          <a href="#contatti" class="nav-link" data-i18n="navContact">Contatti</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="lang-switch">
+            <button type="button" class="lang-btn active" data-lang="it">IT</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <a href="#contatti" class="btn btn-primary btn-sm" data-i18n="btnBookNow">Richiedi Disponibilità</a>
+          <button type="button" class="menu-toggle" id="menu-open-btn" aria-label="Apri menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Dialog -->
+  <dialog id="mobile-nav-dialog" closedby="any" aria-labelledby="mob-nav-title">
+    <div class="mob-nav-header">
+      <div>
+        <div class="logo-title" id="mob-nav-title">Villa Timea</div>
+        <div class="logo-sub">Marsala • Sicilia</div>
+      </div>
+      <button type="button" class="lightbox-close-btn" id="menu-close-btn" aria-label="Chiudi menu">&times;</button>
+    </div>
+    <div class="mob-nav-list">
+      <a href="#villa" data-i18n="navAbout">La Villa</a>
+      <a href="#comfort" data-i18n="navComfort">Comfort & Spazi</a>
+      <a href="#galleria" data-i18n="navGallery">Galleria</a>
+      <a href="#qr-section" data-i18n="navQr">QR Ospiti</a>
+      <a href="#dintorni" data-i18n="navTerritory">Dintorni</a>
+      <a href="#posizione" data-i18n="mapTag">Posizione</a>
+      <a href="#contatti" data-i18n="navContact">Contatti</a>
+    </div>
+    <div class="mob-nav-footer">
+      <div class="lang-switch" style="align-self: flex-start;">
+        <button type="button" class="lang-btn active" data-lang="it">Italiano</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+      </div>
+      <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%;">
+        💬 Chat WhatsApp Diretta
+      </a>
+      <a href="#contatti" class="btn btn-primary" style="width: 100%;" data-i18n="btnBookNow">
+        Richiedi Disponibilità
+      </a>
+    </div>
+  </dialog>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="assets/images/pool-panorama.jpg" alt="Piscina panoramica Villa Timea Marsala">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-badge" data-i18n="heroBadge">
+        ✨ Marsala • Vista Isole Egadi
+      </div>
+      <h1 class="hero-title" data-i18n="heroTitle">
+        Il Tuo Rifugio Esclusivo nel Cuore della Sicilia
+      </h1>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">
+        Piscina privata panoramica con trampolino, campo da tennis regolamentare, pineta mediterranea e un'autentica cantina storica scavata nel tufo.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#galleria" class="btn btn-primary" data-i18n="heroExplore">Esplora la Villa</a>
+        <a href="#contatti" class="btn btn-outline-white" data-i18n="heroInquire">Prenota o Richiedi Info</a>
+        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp">
+          💬 WhatsApp Diretto
+        </a>
+      </div>
+
+      <!-- Hero Features Highlights -->
+      <div class="hero-features">
+        <div class="hero-feat-item">
+          <div class="hero-feat-icon">🏊‍♂️</div>
+          <div>
+            <div class="hero-feat-title" data-i18n="heroFeatPool">Piscina Panoramica</div>
+            <div class="hero-feat-desc" data-i18n="heroFeatPoolDesc">Con trampolino e vista mare</div>
+          </div>
+        </div>
+        <div class="hero-feat-item">
+          <div class="hero-feat-icon">🎾</div>
+          <div>
+            <div class="hero-feat-title" data-i18n="heroFeatTennis">Campo da Tennis</div>
+            <div class="hero-feat-desc" data-i18n="heroFeatTennisDesc">Privato e regolamentare</div>
+          </div>
+        </div>
+        <div class="hero-feat-item">
+          <div class="hero-feat-icon">🌅</div>
+          <div>
+            <div class="hero-feat-title" data-i18n="heroFeatSunset">Vista Isole Egadi</div>
+            <div class="hero-feat-desc" data-i18n="heroFeatSunsetDesc">Tramonti spettacolari</div>
+          </div>
+        </div>
+        <div class="hero-feat-item">
+          <div class="hero-feat-icon">🍷</div>
+          <div>
+            <div class="hero-feat-title" data-i18n="heroFeatCellar">Cantina nel Tufo</div>
+            <div class="hero-feat-desc" data-i18n="heroFeatCellarDesc">Storica cantina del Marsala</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking Channels Bar -->
+  <section class="booking-channels-bar">
+    <div class="container">
+      <div class="channels-intro">
+        <div class="channels-intro-icon">🛎️</div>
+        <div class="channels-intro-text">
+          <h3 data-i18n="channelsTitle">Prenota attraverso il canale che preferisci</h3>
+          <p data-i18n="channelsSubtitle">Disponibile su Airbnb, Booking.com oppure a tariffa diretta garantita</p>
+        </div>
+      </div>
+      <div class="channels-buttons">
+        <a href="#contatti" class="btn btn-outline btn-sm" data-i18n="btnDirectContact">
+          🌟 Contatto Diretto (Miglior Tariffa)
+        </a>
+        <a href="https://www.airbnb.com" target="_blank" rel="noopener" class="btn btn-airbnb btn-sm">
+          <span>Airbnb</span>
+        </a>
+        <a href="https://www.booking.com" target="_blank" rel="noopener" class="btn btn-booking btn-sm">
+          <span>Booking.com</span>
+        </a>
+        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story / About Section -->
+  <section class="section section-sand" id="villa">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content">
+          <span class="section-tag" data-i18n="storyTag">L'Esperienza</span>
+          <h2 data-i18n="storyTitle">Un'oasi di pace tra il mare di Marsala e le Isole Egadi</h2>
+          <p class="story-lead" data-i18n="storyLead">
+            Immersa nella quiete della campagna marsalese, Villa Timea è una proprietà unica, dove gli ampi spazi, la bellezza del paesaggio e il piacere della vita all'aria aperta si fondono in un'esperienza di soggiorno straordinaria.
+          </p>
+          <div class="story-text">
+            <p data-i18n="storyP1">
+              Il suo punto di forza è senza dubbio la posizione panoramica: dalle terrazze lo sguardo abbraccia il mare e le isole Egadi, regalando uno scenario spettacolare soprattutto nelle ore del tramonto, quando il sole scende lentamente all'orizzonte tingendo il paesaggio di colori caldi e suggestivi.
+            </p>
+            <p data-i18n="storyP2">
+              All'esterno, la grande piscina privata è il cuore della villa. Circondata da palme e aree dedicate al relax, offre uno spazio ideale per trascorrere intere giornate al sole, rinfrescarsi nelle acque cristalline e godersi momenti di assoluta tranquillità. La presenza dei trampolini aggiunge un elemento di divertimento che rende la piscina ancora più speciale, soprattutto per famiglie e gruppi di amici.
+            </p>
+            <p data-i18n="storyP3">
+              Per chi ama lo sport e desidera mantenersi attivo anche in vacanza, Villa Timea offre un campo da tennis privato e ulteriori spazi dedicati all'attività fisica e al divertimento. Un privilegio raro, che permette di alternare il relax a partite e momenti di svago senza mai lasciare la proprietà.
+            </p>
+          </div>
+
+          <div class="story-highlights">
+            <div class="story-stat">
+              <div class="story-stat-number">100%</div>
+              <div class="story-stat-label">Privacy & Relax Esclusivo</div>
+            </div>
+            <div class="story-stat">
+              <div class="story-stat-number">10+</div>
+              <div class="story-stat-label">Ospiti & Grandi Spazi</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="#contatti" class="btn btn-primary" data-i18n="btnBookNow">Richiedi Disponibilità</a>
+            <a href="#galleria" class="btn btn-outline" style="margin-left: 0.75rem;" data-i18n="navGallery">Guarda le Foto</a>
+          </div>
+        </div>
+
+        <div class="story-media">
+          <div class="story-img-main">
+            <img src="assets/images/terrace-view.jpg" alt="Terrazza panoramica Villa Timea con vista sulle isole Egadi">
+          </div>
+          <div class="story-badge-floating">
+            <div class="story-badge-icon">🌅</div>
+            <div class="story-badge-text" data-i18n="storyBadge">
+              Vista Isole Egadi & Tramonti indimenticabili
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities & Features Grid -->
+  <section class="section" id="comfort">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="amenitiesTag">Spazi & Caratteristiche</span>
+        <h2 class="section-title" data-i18n="amenitiesTitle">Tutto ciò di cui hai bisogno per un soggiorno perfetto</h2>
+        <p class="section-desc" data-i18n="amenitiesDesc">
+          Dalla piscina all'aria aperta agli interni signorili con parquet e camino, ogni ambiente è pensato per offrire il massimo comfort.
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        <!-- Amenity 1: Piscina -->
+        <article class="amenity-card">
+          <div class="amenity-media">
+            <img src="assets/images/pool-terrace.jpg" alt="Grande piscina privata con trampolino">
+            <span class="amenity-tag">Outdoor</span>
+          </div>
+          <div class="amenity-content">
+            <div class="amenity-icon-title">
+              <div class="amenity-icon">🏊‍♂️</div>
+              <h3 class="amenity-title">Piscina Privata & Solarium</h3>
+            </div>
+            <p class="amenity-desc">
+              Ampia vasca immersa tra palme e vegetazione mediterranea, completa di trampolino per i tuffi, sdraio prendisole e solarium vista mare.
+            </p>
+            <div class="amenity-list">
+              <span class="amenity-chip">Trampolino tuffi</span>
+              <span class="amenity-chip">Solarium con lettini</span>
+              <span class="amenity-chip">Vista aperta sulle Egadi</span>
+              <span class="amenity-chip">Zona d'ombra rilassante</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Amenity 2: Tennis -->
+        <article class="amenity-card">
+          <div class="amenity-media">
+            <img src="assets/images/tennis-court.jpg" alt="Campo da tennis privato">
+            <span class="amenity-tag">Sport & Fitness</span>
+          </div>
+          <div class="amenity-content">
+            <div class="amenity-icon-title">
+              <div class="amenity-icon">🎾</div>
+              <h3 class="amenity-title">Campo da Tennis Regolamentare</h3>
+            </div>
+            <p class="amenity-desc">
+              Un campo da tennis privato all'interno della proprietà per tornei amichevoli o allenamenti quotidiani con la fresca brezza collinare.
+            </p>
+            <div class="amenity-list">
+              <span class="amenity-chip">Regolamentare</span>
+              <span class="amenity-chip">Veranda spettatori</span>
+              <span class="amenity-chip">Uso esclusivo</span>
+              <span class="amenity-chip">Spazio polivalente</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Amenity 3: Cantina Storica -->
+        <article class="amenity-card">
+          <div class="amenity-media">
+            <img src="assets/images/wine-cellar.jpg" alt="Antica cantina sotterranea nel tufo">
+            <span class="amenity-tag">Tradizione Siciliana</span>
+          </div>
+          <div class="amenity-content">
+            <div class="amenity-icon-title">
+              <div class="amenity-icon">🍷</div>
+              <h3 class="amenity-title">Cantina Storica nel Tufo</h3>
+            </div>
+            <p class="amenity-desc">
+              Un suggestivo ipogeo scavato nella roccia di tufo marsalese con cancello in ferro battuto, custode delle migliori annate di vino siciliano.
+            </p>
+            <div class="amenity-list">
+              <span class="amenity-chip">Scavata nella roccia</span>
+              <span class="amenity-chip">Bottiglie storiche Marsala</span>
+              <span class="amenity-chip">Atmosfera autentica</span>
+              <span class="amenity-chip">Clima fresco naturale</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Amenity 4: Forno a Legna & BBQ -->
+        <article class="amenity-card">
+          <div class="amenity-media">
+            <img src="assets/images/outdoor-pizza-oven.jpg" alt="Forno a legna e barbecue in pietra">
+            <span class="amenity-tag">Gastronomia</span>
+          </div>
+          <div class="amenity-content">
+            <div class="amenity-icon-title">
+              <div class="amenity-icon">🍕</div>
+              <h3 class="amenity-title">Forno a Legna & Area BBQ</h3>
+            </div>
+            <p class="amenity-desc">
+              Forno in pietra e mattoni refrattari per preparare autentiche pizze siciliane all'aperto, circondati dal profumo dei pini e delle piante grasse.
+            </p>
+            <div class="amenity-list">
+              <span class="amenity-chip">Forno tradizionale</span>
+              <span class="amenity-chip">Zona barbecue</span>
+              <span class="amenity-chip">Piazzale in cotto</span>
+              <span class="amenity-chip">Tavoli all'aperto</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Amenity 5: Salone & Dining -->
+        <article class="amenity-card">
+          <div class="amenity-media">
+            <img src="assets/images/living-room-main.jpg" alt="Ampio salone con camino e parquet">
+            <span class="amenity-tag">Spazi Interni</span>
+          </div>
+          <div class="amenity-content">
+            <div class="amenity-icon-title">
+              <div class="amenity-icon">🛋️</div>
+              <h3 class="amenity-title">Salone Nobile con Camino</h3>
+            </div>
+            <p class="amenity-desc">
+              Grande salone con pavimenti in parquet a spina di pesce, divani confortevoli, camino in mattoni a vista e tavolo da pranzo per oltre 10 persone.
+            </p>
+            <div class="amenity-list">
+              <span class="amenity-chip">Parquet pregiato</span>
+              <span class="amenity-chip">Camino a legna</span>
+              <span class="amenity-chip">Tavolo 10+ coperti</span>
+              <span class="amenity-chip">Luminosità naturale</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Amenity 6: Camere & Bagni -->
+        <article class="amenity-card">
+          <div class="amenity-media">
+            <img src="assets/images/bedroom-window-view.jpg" alt="Camera matrimoniale con vista mare">
+            <span class="amenity-tag">Notte & Benessere</span>
+          </div>
+          <div class="amenity-content">
+            <div class="amenity-icon-title">
+              <div class="amenity-icon">🛏️</div>
+              <h3 class="amenity-title">Camere Panoramiche & Bagni di Charme</h3>
+            </div>
+            <p class="amenity-desc">
+              Camere con finestre affacciate sul mare e sulle isole, arredi d'epoca, aria condizionata e bagni eleganti (vasca in ghisa vintage e doccia moderna).
+            </p>
+            <div class="amenity-list">
+              <span class="amenity-chip">Vista Isole Egadi</span>
+              <span class="amenity-chip">Aria Condizionata</span>
+              <span class="amenity-chip">Vasca freestanding</span>
+              <span class="amenity-chip">Doccia moderna in cristallo</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Photo Gallery -->
+  <section class="section section-sand" id="galleria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="galleryTag">Tour Fotografico</span>
+        <h2 class="section-title" data-i18n="galleryTitle">Scorci di Villa Timea</h2>
+        <p class="section-desc" data-i18n="galleryDesc">
+          Sfoglia le immagini della proprietà: piscina, campo da tennis, salone, camere panoramiche e cantina storica.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="gallery-filters" role="tablist" aria-label="Filtri Galleria">
+        <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Tutte le foto (15)</button>
+        <button type="button" class="filter-btn" data-filter="pool" data-i18n="filterPool">Piscina & Panorama</button>
+        <button type="button" class="filter-btn" data-filter="interior" data-i18n="filterInteriors">Salone & Interni</button>
+        <button type="button" class="filter-btn" data-filter="rooms" data-i18n="filterRooms">Camere & Bagni</button>
+        <button type="button" class="filter-btn" data-filter="sports" data-i18n="filterSports">Tennis & Giardino</button>
+        <button type="button" class="filter-btn" data-filter="cellar" data-i18n="filterCellar">Cantina Storica</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Accessible Lightbox Dialog -->
+  <dialog id="gallery-lightbox" closedby="any" aria-labelledby="lightbox-title">
+    <div class="lightbox-wrap">
+      <div class="lightbox-header">
+        <span class="lightbox-counter" id="lightbox-counter">1 / 15</span>
+        <h3 class="lightbox-title" id="lightbox-title">Titolo Foto</h3>
+        <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Chiudi Lightbox">&times;</button>
+      </div>
+
+      <div class="lightbox-body">
+        <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightbox-prev" aria-label="Foto precedente">&#10094;</button>
+        <div class="lightbox-img-wrap">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+        </div>
+        <button type="button" class="lightbox-nav-btn lightbox-next" id="lightbox-next" aria-label="Foto successiva">&#10095;</button>
+      </div>
+
+      <div class="lightbox-footer">
+        <span id="lightbox-desc">Descrizione foto</span>
+        <span style="font-size: 0.8rem; opacity: 0.7;">Villa Timea • Marsala</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- QR Code & Guest Hub Section (Feature requested by user) -->
+  <section class="section section-aqua" id="qr-section">
+    <div class="container">
+      <div class="qr-section-card">
+        <div class="qr-info-content">
+          <span class="section-tag" data-i18n="qrTag">QR Code & Guida Ospiti</span>
+          <h2 class="section-title" data-i18n="qrTitle">Condividi la Villa & Accogli i tuoi Ospiti</h2>
+          <p class="section-desc" data-i18n="qrDesc" style="margin-bottom: 1.5rem;">
+            Questo sito è pensato per essere facilmente fruibile tramite QR Code: esponilo all'interno della villa, sui biglietti da visita o sul materiale promozionale per permettere agli ospiti di consultare mappa, contatti e servizi con una semplice scansione con lo smartphone.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 1.3rem;">📱</span>
+              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;">
+                Perfetto per QR posizionati in casa (Wi-Fi, regole, piscina, contatti rapidi)
+              </span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 1.3rem;">🗺️</span>
+              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;">
+                Navigazione GPS one-touch verso Contrada Fontanelle 231
+              </span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 1.3rem;">🌐</span>
+              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;">
+                Bilingue Italiano / Inglese con cambio istantaneo per ospiti internazionali
+              </span>
+            </div>
+          </div>
+
+          <div class="qr-actions">
+            <button type="button" class="btn btn-primary" id="qr-download-btn" data-i18n="qrBtnDownload">
+              📥 Scarica QR Code (PNG)
+            </button>
+            <button type="button" class="btn btn-outline" id="qr-print-btn" data-i18n="qrBtnPrint">
+              🖨️ Stampa Scheda Villa
+            </button>
+          </div>
+        </div>
+
+        <div class="qr-box-wrap">
+          <div id="qr-canvas-holder">
+            <!-- Dynamic QR Code rendered via local qrcode.min.js -->
+          </div>
+          <div style="font-weight: 700; color: var(--c-navy); font-size: 1.05rem; margin-bottom: 0.25rem;">
+            Scansiona con la Fotocamera
+          </div>
+          <div style="font-size: 0.8rem; color: var(--c-text-muted);">
+            Apri direttamente questo sito sul tuo smartphone
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marsala & Surroundings / Territory -->
+  <section class="section" id="dintorni">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="territoryTag">Esplora Marsala & Trapani</span>
+        <h2 class="section-title" data-i18n="territoryTitle">I Tesori della Sicilia Occidentale</h2>
+        <p class="section-desc" data-i18n="territoryDesc">
+          Villa Timea è la base ideale per esplorare mare, storia, saline e cantine vinicole famose nel mondo.
+        </p>
+      </div>
+
+      <div class="territory-grid">
+        <article class="territory-card">
+          <span class="territory-icon">🏝️</span>
+          <h3 class="territory-title">Isole Egadi (Favignana & Levanzo)</h3>
+          <p class="territory-desc">
+            Visibili direttamente dalle terrazze della villa! L'imbarco degli aliscafi dal porto di Marsala è a soli 10 minuti di auto, per raggiungere cale turchesi come Cala Rossa e Cala Azzurra in 20 minuti di navigazione.
+          </p>
+          <div class="territory-dist">⏱️ 10 min al porto di Marsala</div>
+        </article>
+
+        <article class="territory-card">
+          <span class="territory-icon">🦩</span>
+          <h3 class="territory-title">Riserva dello Stagnone & Saline</h3>
+          <p class="territory-desc">
+            Mulini a vento storici, cumuli di sale e fenicotteri rosa. Famosa a livello mondiale per il kitesurf e per uno dei tramonti più fotografati d'Europa, con l'antica isola fenicia di Mozia.
+          </p>
+          <div class="territory-dist">⏱️ 12 min di auto</div>
+        </article>
+
+        <article class="territory-card">
+          <span class="territory-icon">🍷</span>
+          <h3 class="territory-title">Cantine Storiche del Vino Marsala</h3>
+          <p class="territory-desc">
+            Patria del celebre vino liquoroso DOC. Visita le storiche botti monumentali delle Cantine Florio, Donnafugata e Pellegrino con tour di degustazione e cucina tipica siciliana.
+          </p>
+          <div class="territory-dist">⏱️ 8-12 min dalle principali cantine</div>
+        </article>
+
+        <article class="territory-card">
+          <span class="territory-icon">🏖️</span>
+          <h3 class="territory-title">Spiagge Dorate del Litorale Sud</h3>
+          <p class="territory-desc">
+            Chilometri di lidi attrezzati e spiagge libere di sabbia dorata con fondali bassi e acqua cristallina (Lido Signorino, Torrazza, Tiburon Beach).
+          </p>
+          <div class="territory-dist">⏱️ 15 min dal litorale</div>
+        </article>
+
+        <article class="territory-card">
+          <span class="territory-icon">🏛️</span>
+          <h3 class="territory-title">Centro Storico di Marsala</h3>
+          <p class="territory-desc">
+            Passeggia per l'elegante isola pedonale, scopri Porta Garibaldi, la Cattedrale barocca, il Museo Archeologico con la Nave Punica e i vivaci wine-bar serali.
+          </p>
+          <div class="territory-dist">⏱️ 8 min dal centro</div>
+        </article>
+
+        <article class="territory-card">
+          <span class="territory-icon">✈️</span>
+          <h3 class="territory-title">Aeroporti Vicini</h3>
+          <p class="territory-desc">
+            Facilmente raggiungibile: Aeroporto di Trapani-Birgi (Vincenzo Florio) con voli Ryanair e nazionali a 20 minuti; Aeroporto Internazionale Falcone-Borsellino di Palermo a circa 1 ora.
+          </p>
+          <div class="territory-dist">⏱️ 20 min (Trapani) • 60 min (Palermo)</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking & Direct Inquiry Section -->
+  <section class="section section-sand" id="contatti">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="bookingTag">Prenotazione & Info</span>
+        <h2 class="section-title" data-i18n="bookingTitle">Richiedi Informazioni o Prenota Direttamente</h2>
+        <p class="section-desc" data-i18n="bookingDesc">
+          Compila il modulo per inviarci una richiesta via WhatsApp o Email. Ti risponderemo in pochissimo tempo!
+        </p>
+      </div>
+
+      <div class="booking-grid">
+        <!-- Inquiry Form -->
+        <div class="booking-form-wrap">
+          <form id="inquiry-form" onsubmit="return false;">
+            <div class="form-group">
+              <label for="inq-name" class="form-label" data-i18n="formName">Nome e Cognome *</label>
+              <input type="text" id="inq-name" class="form-input" placeholder="Es. Marco Rossi" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inq-phone" class="form-label" data-i18n="formPhone">Telefono / WhatsApp *</label>
+                <input type="tel" id="inq-phone" class="form-input" placeholder="+39 333 1234567" required>
+              </div>
+              <div class="form-group">
+                <label for="inq-email" class="form-label" data-i18n="formEmail">Email</label>
+                <input type="email" id="inq-email" class="form-input" placeholder="nome@email.com">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inq-checkin" class="form-label">Check-in</label>
+                <input type="date" id="inq-checkin" class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="inq-checkout" class="form-label">Check-out</label>
+                <input type="date" id="inq-checkout" class="form-input">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inq-guests" class="form-label" data-i18n="formGuests">Numero Ospiti</label>
+              <select id="inq-guests" class="form-select">
+                <option value="1-2">1-2 Ospiti</option>
+                <option value="3-4">3-4 Ospiti</option>
+                <option value="5-6">5-6 Ospiti</option>
+                <option value="7-8">7-8 Ospiti</option>
+                <option value="9-10+">9-10+ Ospiti (Gruppo / Famiglie)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="inq-notes" class="form-label" data-i18n="formMsg">Messaggio o Richieste Speciali</label>
+              <textarea id="inq-notes" class="form-textarea" placeholder="Desidero conoscere la disponibilità e le tariffe per il periodo..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-whatsapp" id="send-whatsapp-btn" style="flex: 1;" data-i18n="btnSendWhatsApp">
+                💬 Invia su WhatsApp
+              </button>
+              <button type="button" class="btn btn-secondary" id="send-email-btn" style="flex: 1;" data-i18n="btnSendEmail">
+                ✉️ Invia via Email
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Information & Channels Column -->
+        <div class="booking-info-box">
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon">📞</div>
+              <div>
+                <h3 class="info-card-title">Contatti Diretti</h3>
+                <span style="font-size: 0.8rem; color: var(--c-text-muted);">Siamo a tua disposizione</span>
+              </div>
+            </div>
+            <div class="info-list-item">
+              <span class="info-list-icon">📱</span>
+              <div>
+                <strong>Telefono / WhatsApp:</strong><br>
+                <a href="tel:+393349241047" style="color: var(--c-ocean); font-weight: 600;">+39 334 924 1047</a>
+              </div>
+            </div>
+            <div class="info-list-item">
+              <span class="info-list-icon">✉️</span>
+              <div>
+                <strong>Email Direzione:</strong><br>
+                <a href="mailto:villatimea@gmail.com" style="color: var(--c-ocean);">villatimea@gmail.com</a><br>
+                <a href="mailto:Info@larosadeiventibb.com" style="color: var(--c-ocean); font-size: 0.85rem;">Info@larosadeiventibb.com</a>
+              </div>
+            </div>
+            <div class="info-list-item">
+              <span class="info-list-icon">📍</span>
+              <div>
+                <strong>Indirizzo:</strong><br>
+                Contrada Fontanelle 231, 91025 Marsala (TP), Sicilia
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card" style="border-left: 4px solid var(--c-terracotta);">
+            <div class="info-card-header">
+              <div class="info-card-icon" style="background: #fef2f2; color: #dc2626;">⭐</div>
+              <div>
+                <h3 class="info-card-title">Portali di Prenotazione</h3>
+                <span style="font-size: 0.8rem; color: var(--c-text-muted);">Trova la villa anche sulle OTA</span>
+              </div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--c-text-muted); margin-bottom: 1.25rem;">
+              La proprietà è già presente e recensita sui principali portali internazionali:
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://www.airbnb.com" target="_blank" rel="noopener" class="btn btn-airbnb" style="justify-content: space-between;">
+                <span>Vedi su Airbnb</span>
+                <span>➔</span>
+              </a>
+              <a href="https://www.booking.com" target="_blank" rel="noopener" class="btn btn-booking" style="justify-content: space-between;">
+                <span>Vedi su Booking.com</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map & How to Reach -->
+  <section class="section" id="posizione">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="mapTag">Dove Siamo</span>
+        <h2 class="section-title" data-i18n="mapTitle">Posizione Panoramica a Marsala</h2>
+        <p class="section-desc" data-i18n="mapDesc">
+          Situata in Contrada Fontanelle 231, in collina con vista mare ma a pochi minuti dal centro storico, dalle spiagge e dall'imbarco per le Egadi.
+        </p>
+      </div>
+
+      <div class="map-wrap">
+        <div id="map"></div>
+        <div class="map-floating-card">
+          <h4 class="map-card-title">Villa Timea</h4>
+          <div class="map-card-address">Contrada Fontanelle 231<br>91025 Marsala (TP), Sicilia</div>
+          <div class="map-card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=Contrada+Fontanelle+231,+Marsala" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              Google Maps ➔
+            </a>
+            <a href="https://waze.com/ul?q=Contrada+Fontanelle+231+Marsala" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+              Waze
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-title">Villa Timea</span>
+            <span class="logo-sub">Marsala • Sicilia</span>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">
+            Esclusiva villa con piscina panoramica, campo da tennis e cantina storica a Marsala (Trapani), Sicilia.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigazione</h4>
+          <ul class="footer-links">
+            <li><a href="#villa" data-i18n="navAbout">La Villa</a></li>
+            <li><a href="#comfort" data-i18n="navComfort">Comfort & Spazi</a></li>
+            <li><a href="#galleria" data-i18n="navGallery">Galleria Fotografica</a></li>
+            <li><a href="#qr-section" data-i18n="navQr">QR Code Ospiti</a></li>
+            <li><a href="#dintorni" data-i18n="navTerritory">Dintorni & Mare</a></li>
+            <li><a href="#posizione" data-i18n="mapTag">Posizione</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Canali</h4>
+          <ul class="footer-links">
+            <li><a href="#contatti">Prenotazione Diretta</a></li>
+            <li><a href="https://wa.me/393349241047" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+            <li><a href="https://www.airbnb.com" target="_blank" rel="noopener">Scheda Airbnb</a></li>
+            <li><a href="https://www.booking.com" target="_blank" rel="noopener">Scheda Booking.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contatti & Info</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Contrada Fontanelle 231, Marsala (TP)</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <a href="tel:+393349241047">+39 334 924 1047</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <a href="mailto:villatimea@gmail.com">villatimea@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <a href="mailto:Info@larosadeiventibb.com">Info@larosadeiventibb.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="year">2026</span> Villa Timea. <span data-i18n="footerRights">Tutti i diritti riservati.</span>
+        </div>
+        <div style="font-size: 0.78rem; opacity: 0.7;">
+          Contrada Fontanelle 231, 91025 Marsala (TP) • CIR / CIN: Richiedibile all'host
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Quick Action Bar (Speed Dial) -->
+  <aside class="mobile-action-bar" aria-label="Azioni Rapide Mobile">
+    <div class="mobile-action-bar-inner">
+      <a href="tel:+393349241047" class="mob-action-btn">
+        <span class="icon">📞</span>
+        <span>Chiama</span>
+      </a>
+      <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="mob-action-btn">
+        <span class="icon">💬</span>
+        <span>WhatsApp</span>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Contrada+Fontanelle+231,+Marsala" target="_blank" rel="noopener" class="mob-action-btn">
+        <span class="icon">📍</span>
+        <span>Mappa</span>
+      </a>
+      <a href="#contatti" class="mob-action-btn highlight">
+        <span class="icon">📅</span>
+        <span>Prenota</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Local Leaflet Map JS -->
+  <script src="assets/js/leaflet.js"></script>
+
+  <!-- Local QRCode Generator JS -->
+  <script src="assets/js/qrcode.min.js"></script>
+
+  <!-- Main Website Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
