@@ -2,6 +2,7 @@
 
 Sito web moderno, elegante e completamente responsive per la presentazione di **Villa Timea** (Marsala, Sicilia), progettato per:
 - Presentazione ad alto impatto visivo della villa (piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, cantina storica nel tufo, spazi interni signorili e vista sulle Isole Egadi: Favignana, Levanzo e Marettimo).
+- Galleria fotografica con zoom interattivo (fino a 3.5x con controlli dedicati, rotella mouse, doppio click, drag-to-pan e pinch-to-zoom multi-touch su smartphone).
 - Canali di prenotazione diretti (WhatsApp, Telefono ed Email con modulo preventivo interattivo a tariffa diretta garantita senza commissioni).
 - Diffusione rapida e accoglienza ospiti tramite **QR Code** (generatore integrato e scaricabile).
 - Supporto bilingue istantaneo (**Italiano** e **Inglese**).

@@ -1099,6 +1099,61 @@ dialog {
   text-align: center;
 }
 
+.lightbox-header {
+  padding: 1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 1rem;
+}
+
+.lightbox-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.25rem 0.45rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-tool-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--c-white);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 32px;
+  height: 32px;
+}
+
+.lightbox-tool-btn:hover:not(:disabled) {
+  background: var(--c-terracotta);
+  border-color: var(--c-terracotta);
+  color: var(--c-white);
+  transform: translateY(-1px);
+}
+
+.lightbox-tool-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.zoom-level-btn {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  padding: 0 0.55rem;
+  letter-spacing: 0.3px;
+}
+
 .lightbox-close-btn {
   width: 40px;
   height: 40px;
@@ -1125,23 +1180,48 @@ dialog {
   justify-content: center;
   padding: 1.5rem;
   overflow: hidden;
+  user-select: none;
 }
 
 .lightbox-img-wrap {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+  touch-action: none;
+}
+
+.lightbox-img-wrap.is-zoomed {
+  cursor: grab;
+}
+
+.lightbox-img-wrap.is-dragging {
+  cursor: grabbing;
 }
 
 .lightbox-img {
   max-width: 100%;
-  max-height: 60vh;
+  max-height: 65vh;
   object-fit: contain;
   border-radius: var(--radius-sm);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.lightbox-img-wrap.is-dragging .lightbox-img {
+  transition: opacity 0.25s ease; /* No transition on drag for instantaneous 60fps tracking */
+}
+
+.lightbox-hint {
+  font-size: 0.78rem;
+  color: var(--c-sand-300);
+  opacity: 0.85;
 }
 
 .lightbox-nav-btn {
@@ -1176,7 +1256,7 @@ dialog {
 }
 
 .lightbox-footer {
-  padding: 1rem 1.75rem;
+  padding: 0.85rem 1.75rem;
   background: rgba(7, 35, 56, 0.6);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
@@ -1184,6 +1264,36 @@ dialog {
   justify-content: space-between;
   color: var(--c-sand-200);
   font-size: 0.9rem;
+}
+
+.amenity-media {
+  cursor: pointer;
+}
+
+.amenity-media:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .lightbox-header {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .lightbox-title {
+    order: 3;
+    width: 100%;
+    font-size: 0.95rem;
+  }
+  .lightbox-tools {
+    order: 2;
+  }
+  .lightbox-close-btn {
+    order: 2;
+  }
+  .lightbox-hint {
+    display: none;
+  }
 }
 
 /* General Modal Content Styling (QR Code & Inquiry Dialogs) */
