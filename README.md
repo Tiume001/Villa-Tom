@@ -1,11 +1,11 @@
 # Villa Timea — Sito Web Ufficiale di Presentazione
 
 Sito web moderno, elegante e completamente responsive per la presentazione di **Villa Timea** (Marsala, Sicilia), progettato per:
-- Presentazione ad alto impatto visivo della villa (piscina panoramica con trampolino, campo da tennis privato, cantina storica nel tufo, spazi interni signorili e vista sulle Isole Egadi).
-- Canali di prenotazione diretti (WhatsApp ed Email con form interattivo) e collegamenti ai portali OTA (Airbnb e Booking.com).
+- Presentazione ad alto impatto visivo della villa (piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, cantina storica nel tufo, spazi interni signorili e vista sulle Isole Egadi: Favignana, Levanzo e Marettimo).
+- Canali di prenotazione diretti (WhatsApp, Telefono ed Email con modulo preventivo interattivo a tariffa diretta garantita senza commissioni).
 - Diffusione rapida e accoglienza ospiti tramite **QR Code** (generatore integrato e scaricabile).
 - Supporto bilingue istantaneo (**Italiano** e **Inglese**).
-- Mappa interattiva e navigazione GPS one-touch (Google Maps, Waze).
+- Mappa interattiva e navigazione GPS one-touch (Google Maps: https://maps.app.goo.gl/ddpPGVBYh4fJH2ks8, Waze).
 
 ---
 
@@ -38,7 +38,7 @@ Quando sei pronto a pubblicarlo online su GitHub per farlo vedere al tuo amico o
    ```bash
    git init
    git add .
-   git commit -m "Initial commit: Villa Timea website"
+   git commit -m "Aggiornamento Villa Timea: uso esclusivo piscina e tennis, Egadi complete, link Maps e focus prenotazione diretta"
    ```
 
 2. **Crea una nuova repository su GitHub** (es. `villa-timea`) e collega il remote:
@@ -79,11 +79,23 @@ Quando il proprietario acquisterà il dominio (es. `villatimea.it` o `villatimea
 
 ---
 
-## 🛠️ Personalizzazione Link Diretti (Airbnb & Booking.com)
+## 📍 Posizione & Navigazione GPS
 
-Nel file `index.html` puoi inserire i link esatti dell'annuncio di Airbnb e Booking.com:
-- Cerca `https://www.airbnb.com` e sostituiscilo con l'URL completo dell'annuncio (es. `https://www.airbnb.it/rooms/12345678`).
-- Cerca `https://www.booking.com` e sostituiscilo con l'URL della struttura su Booking.
+Il collegamento corretto a Google Maps per raggiungere Villa Timea in Contrada Fontanelle 231 (Marsala) è:
+`https://maps.app.goo.gl/ddpPGVBYh4fJH2ks8`
+
+---
+
+## 🎨 Selettore Palette Stili (Provvisorio)
+
+In basso a destra è attivo un tasto fluttuante discreto (**🎨 Palette Stili**) che consente al cliente e ai proprietari di testare in tempo reale 5 varianti cromatiche mediterranee studiate per la villa:
+1. **Oceano & Terracotta (Predefinito)**: Blu navy profondo, azzurro mare e cotto siciliano.
+2. **Ulivo & Tufo Nobile**: Verde oliva scuro, salvia e ambra calda (charme naturale ed eco-resort).
+3. **Tramonto sulle Egadi**: Vinaccia, vino Marsala rubino e arancio tramonto.
+4. **Blu Egeo & Riserva Marina**: Azzurro cristallino stile Cala Rossa, blu profondo e corallo.
+5. **Oro Barocco & Sabbia Dorata**: Ebano nobile, ocra dorata e lino chiaro.
+
+La scelta viene memorizzata automaticamente nel browser (`localStorage`). Una volta individuata la combinazione preferita, basterà un attimo per impostarla come definitiva e rimuovere il pulsante provvisorio.
 
 ---
 

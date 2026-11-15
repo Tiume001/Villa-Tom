@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMap();
   initHeader();
   initMobileNav();
+  initThemePicker();
 });
 
 /* ==========================================================================
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const i18nData = {
   it: {
-    metaTitle: "Villa Timea | Villa con Piscina, Tennis e Vista Egadi a Marsala",
+    metaTitle: "Villa Timea | Villa con Piscina e Tennis ad Uso Esclusivo, Vista Egadi a Marsala",
     topWelcome: "Benvenuti a Villa Timea • Marsala, Sicilia",
     topCall: "Chiamaci / WhatsApp",
     navAbout: "La Villa",
@@ -35,29 +36,29 @@ const i18nData = {
 
     heroBadge: "Marsala • Vista Isole Egadi",
     heroTitle: "Il Tuo Rifugio Esclusivo nel Cuore della Sicilia",
-    heroSubtitle: "Piscina privata panoramica con trampolino, campo da tennis regolamentare, pineta mediterranea e un'autentica cantina storica scavata nel tufo.",
+    heroSubtitle: "Piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, pineta mediterranea e un'autentica cantina storica scavata nel tufo.",
     heroExplore: "Esplora la Villa",
     heroInquire: "Prenota o Richiedi Info",
 
     heroFeatPool: "Piscina Panoramica",
-    heroFeatPoolDesc: "Con trampolino e vista mare",
+    heroFeatPoolDesc: "Uso esclusivo, trampolino e vista mare",
     heroFeatTennis: "Campo da Tennis",
-    heroFeatTennisDesc: "Privato e regolamentare",
+    heroFeatTennisDesc: "Uso esclusivo ospiti, regolamentare",
     heroFeatSunset: "Vista Isole Egadi",
-    heroFeatSunsetDesc: "Tramonti spettacolari",
+    heroFeatSunsetDesc: "Favignana, Levanzo e Marettimo",
     heroFeatCellar: "Cantina nel Tufo",
     heroFeatCellarDesc: "Storica cantina del Marsala",
 
-    channelsTitle: "Prenota attraverso il canale che preferisci",
-    channelsSubtitle: "Disponibile su Airbnb, Booking.com oppure a tariffa diretta garantita",
+    channelsTitle: "Prenotazione Diretta al Miglior Prezzo Garantito",
+    channelsSubtitle: "Nessuna commissione di intermediazione: contatto diretto con la proprietà e assistenza dedicata",
     btnDirectContact: "Contatto Diretto (Miglior Tariffa)",
 
     storyTag: "L'Esperienza",
     storyTitle: "Un'oasi di pace tra il mare di Marsala e le Isole Egadi",
     storyLead: "Immersa nella quiete della campagna marsalese, Villa Timea è una proprietà unica dove gli ampi spazi, la bellezza del paesaggio e il piacere della vita all'aria aperta si fondono in un'esperienza straordinaria.",
-    storyP1: "Il suo punto di forza è senza dubbio la posizione panoramica: dalle terrazze lo sguardo abbraccia il mare e le isole Egadi, regalando uno scenario spettacolare soprattutto nelle ore del tramonto, quando il sole scende lentamente all'orizzonte tingendo il paesaggio di colori caldi e suggestivi.",
-    storyP2: "All'esterno, la grande piscina privata è il cuore pulsante della tenuta. Circondata da palme e aree relax, offre lo spazio ideale per trascorrere intere giornate al sole, rinfrescarsi nelle acque cristalline e godersi momenti di autentica tranquillità. La presenza del trampolino aggiunge un tocco di divertimento irresistibile per famiglie e amici.",
-    storyP3: "Per gli amanti dello sport, il campo da tennis privato e le aree fitness consentono di alternare il riposo all'attività fisica senza mai dover lasciare la villa, immersi in una pineta verde con vialetti illuminati di sera.",
+    storyP1: "Il suo punto di forza è senza dubbio la posizione panoramica: dalle terrazze lo sguardo abbraccia il mare e le Isole Egadi (Favignana, Levanzo e Marettimo), regalando uno scenario spettacolare soprattutto nelle ore del tramonto, quando il sole scende lentamente all'orizzonte tingendo il paesaggio di colori caldi e suggestivi.",
+    storyP2: "All'esterno, la grande piscina privata ad uso esclusivo per gli ospiti è il cuore pulsante della tenuta. Circondata da palme e aree relax, offre lo spazio ideale per trascorrere intere giornate al sole, rinfrescarsi nelle acque cristalline e godersi momenti di autentica tranquillità in totale privacy. La presenza del trampolino aggiunge un tocco di divertimento irresistibile per famiglie e amici.",
+    storyP3: "Per gli amanti dello sport, il campo da tennis privato e regolamentare ad uso esclusivo per gli ospiti e le aree fitness consentono di alternare il riposo all'attività fisica in assoluta riservatezza senza mai dover condividere gli spazi con altri, immersi in una pineta verde con vialetti illuminati di sera.",
     storyBadge: "Vista Isole Egadi & Tramonti indimenticabili",
 
     amenitiesTag: "Spazi & Caratteristiche",
@@ -66,7 +67,7 @@ const i18nData = {
 
     galleryTag: "Tour Fotografico",
     galleryTitle: "Scorci di Villa Timea",
-    galleryDesc: "Sfoglia le immagini della proprietà: piscina, campo da tennis, salone, camere panoramiche e cantina storica.",
+    galleryDesc: "Sfoglia le immagini della proprietà: piscina e tennis ad uso esclusivo, salone, camere panoramiche e cantina storica.",
     filterAll: "Tutte le foto",
     filterPool: "Piscina & Panorama",
     filterInteriors: "Salone & Interni",
@@ -100,11 +101,11 @@ const i18nData = {
     mapTitle: "Posizione Panoramica a Marsala",
     mapDesc: "Situata in Contrada Fontanelle 231, in collina con vista mare ma a pochi minuti dal centro storico, dalle spiagge e dall'imbarco per le Egadi.",
 
-    footerDesc: "Villa Timea: esclusiva villa con piscina panoramica, campo da tennis e cantina storica a Marsala (Trapani), Sicilia.",
+    footerDesc: "Villa Timea: esclusiva villa con piscina panoramica e campo da tennis entrambi ad uso esclusivo per gli ospiti, cantina storica nel tufo e vista mozzafiato sulle Isole Egadi a Marsala (Trapani), Sicilia.",
     footerRights: "Tutti i diritti riservati. Villa Timea Marsala."
   },
   en: {
-    metaTitle: "Villa Timea | Villa with Pool, Tennis & Egadi Island Views in Marsala",
+    metaTitle: "Villa Timea | Villa with Exclusive Pool & Tennis, Egadi Views in Marsala",
     topWelcome: "Welcome to Villa Timea • Marsala, Sicily",
     topCall: "Call us / WhatsApp",
     navAbout: "The Villa",
@@ -117,29 +118,29 @@ const i18nData = {
 
     heroBadge: "Marsala • Egadi Islands View",
     heroTitle: "Your Exclusive Retreat in the Heart of Western Sicily",
-    heroSubtitle: "Private panoramic pool with diving board, regulation tennis court, Mediterranean pine grove, and an authentic historic wine cellar carved in stone.",
+    heroSubtitle: "Panoramic swimming pool with diving board and regulation tennis court reserved exclusively for guests, Mediterranean pine grove, and authentic historic wine cellar carved in tuff.",
     heroExplore: "Explore the Villa",
     heroInquire: "Book or Inquire",
 
     heroFeatPool: "Panoramic Pool",
-    heroFeatPoolDesc: "With diving board & sea view",
+    heroFeatPoolDesc: "Exclusive guest use, diving board & sea view",
     heroFeatTennis: "Tennis Court",
-    heroFeatTennisDesc: "Private & full regulation",
+    heroFeatTennisDesc: "Exclusive guest use, private regulation court",
     heroFeatSunset: "Egadi Islands View",
-    heroFeatSunsetDesc: "Breathtaking sunsets",
+    heroFeatSunsetDesc: "Favignana, Levanzo & Marettimo",
     heroFeatCellar: "Tuff Wine Cellar",
     heroFeatCellarDesc: "Historic Marsala wine cellar",
 
-    channelsTitle: "Book through your preferred channel",
-    channelsSubtitle: "Available on Airbnb, Booking.com or via direct guaranteed rate",
+    channelsTitle: "Direct Booking with Guaranteed Best Rate",
+    channelsSubtitle: "No intermediary commissions: direct contact with property owners and dedicated assistance",
     btnDirectContact: "Direct Contact (Best Rate)",
 
     storyTag: "The Experience",
     storyTitle: "An oasis of peace between Marsala's sea and the Egadi Islands",
     storyLead: "Nestled in the quiet Marsala countryside, Villa Timea is a unique property where generous spaces, scenic beauty, and open-air living blend into an unforgettable vacation experience.",
-    storyP1: "Its greatest highlight is undoubtedly the panoramic vantage point: from the terraces, your gaze sweeps over the sparkling sea and the Egadi Islands (Favignana, Levanzo), treating you to glorious sunset vistas each evening.",
-    storyP2: "Outside, the large private pool is the vibrant heart of the estate. Framed by palm trees and sun terraces, it is the ideal place to soak up the Sicilian sun, dive into crystal clear water, and unwind in complete serenity. The diving board adds fun for friends and family alike.",
-    storyP3: "For sports lovers, the private regulation tennis court allows you to alternate deep relaxation with spirited matches without ever leaving the grounds, surrounded by a peaceful pine forest with illuminated evening paths.",
+    storyP1: "Its greatest highlight is undoubtedly the panoramic vantage point: from the terraces, your gaze sweeps over the sparkling sea and the Egadi Islands (Favignana, Levanzo, and Marettimo), treating you to glorious sunset vistas each evening.",
+    storyP2: "Outside, the large private pool reserved exclusively for guests is the vibrant heart of the estate. Framed by palm trees and sun terraces, it is the ideal place to soak up the Sicilian sun, dive into crystal clear water, and unwind in complete serenity and absolute privacy. The diving board adds fun for friends and family alike.",
+    storyP3: "For sports lovers, the private regulation tennis court reserved exclusively for guests allows you to alternate deep relaxation with spirited matches without ever having to share spaces, surrounded by a peaceful pine forest with illuminated evening paths.",
     storyBadge: "Egadi Islands View & Memorable Sunsets",
 
     amenitiesTag: "Spaces & Highlights",
@@ -182,7 +183,7 @@ const i18nData = {
     mapTitle: "Panoramic Setting in Marsala",
     mapDesc: "Located in Contrada Fontanelle 231, on a gentle hill with sea breezes, just minutes from the historic center, sandy beaches, and Egadi ferry port.",
 
-    footerDesc: "Villa Timea: luxury Sicilian villa with panoramic pool, tennis court and historic wine cellar in Marsala (Trapani), Sicily.",
+    footerDesc: "Villa Timea: exclusive villa with panoramic swimming pool and regulation tennis court reserved exclusively for guests, historic wine cellar, and Egadi views in Marsala (Trapani), Sicily.",
     footerRights: "All rights reserved. Villa Timea Marsala."
   }
 };
@@ -246,10 +247,10 @@ const galleryItems = [
     id: 1,
     src: "assets/images/pool-panorama.jpg",
     category: "pool",
-    titleIt: "Piscina Privata & Trampolino",
-    titleEn: "Private Pool & Diving Board",
-    descIt: "Ampia piscina immersa nel verde con solarium e vista aperta sul mare.",
-    descEn: "Generous pool surrounded by lush greenery with sea view sun deck."
+    titleIt: "Piscina Panoramica ad Uso Esclusivo & Trampolino",
+    titleEn: "Exclusive Private Pool & Diving Board",
+    descIt: "Ampia piscina ad uso esclusivo per gli ospiti immersa nel verde con solarium e vista aperta sul mare.",
+    descEn: "Generous swimming pool for exclusive guest use surrounded by lush greenery with sea view sun deck."
   },
   {
     id: 2,
@@ -282,9 +283,9 @@ const galleryItems = [
     id: 5,
     src: "assets/images/tennis-court.jpg",
     category: "sports",
-    titleIt: "Campo da Tennis Regolamentare",
-    titleEn: "Private Regulation Tennis Court",
-    descIt: "Campo da tennis privato ad uso esclusivo degli ospiti della villa.",
+    titleIt: "Campo da Tennis ad Uso Esclusivo",
+    titleEn: "Exclusive Regulation Tennis Court",
+    descIt: "Campo da tennis regolamentare riservato ad uso esclusivo degli ospiti della villa.",
     descEn: "Full-size private tennis court exclusively reserved for villa guests."
   },
   {
@@ -734,7 +735,7 @@ function initMap() {
     <div style="font-family: sans-serif; padding: 4px; min-width: 190px;">
       <strong style="color: #0e3b56; font-size: 1.1rem; display: block; margin-bottom: 4px;">Villa Timea</strong>
       <p style="font-size: 0.85rem; color: #53697a; margin-bottom: 8px;">Contrada Fontanelle 231, Marsala (TP)</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Contrada+Fontanelle+231,+Marsala" target="_blank" rel="noopener" style="display: inline-block; background: #0e3b56; color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; text-decoration: none;">Apri in Google Maps ➔</a>
+      <a href="https://maps.app.goo.gl/ddpPGVBYh4fJH2ks8" target="_blank" rel="noopener" style="display: inline-block; background: #0e3b56; color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; text-decoration: none;">Apri in Google Maps ➔</a>
     </div>
   `).openPopup();
 }
@@ -779,6 +780,71 @@ function initMobileNav() {
   if (dialog) {
     dialog.querySelectorAll('.mob-nav-list a').forEach(link => {
       link.addEventListener('click', () => dialog.close());
+    });
+  }
+}
+
+/* ==========================================================================
+   9. TEMPORARY THEME & STYLE PALETTE PICKER
+   Provvisorio: permette al cliente di testare 5 varianti colore in tempo reale.
+   ========================================================================== */
+
+function initThemePicker() {
+  const pill = document.getElementById('themePickerPill');
+  const panel = document.getElementById('themePickerPanel');
+  const closeBtn = document.getElementById('themePickerClose');
+  const cards = document.querySelectorAll('.theme-card');
+
+  if (!pill || !panel) return;
+
+  // 1. Carica palette salvata o predefinita
+  const savedTheme = localStorage.getItem('villa_theme') || 'default';
+  applyTheme(savedTheme);
+
+  // 2. Apri / Chiudi pannello con il tasto fluttuante
+  pill.addEventListener('click', (e) => {
+    e.stopPropagation();
+    panel.classList.toggle('open');
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      panel.classList.remove('open');
+    });
+  }
+
+  // Chiudi cliccando fuori dal pannello
+  document.addEventListener('click', (e) => {
+    if (!panel.contains(e.target) && !pill.contains(e.target)) {
+      panel.classList.remove('open');
+    }
+  });
+
+  // Chiudi con tasto Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && panel.classList.contains('open')) {
+      panel.classList.remove('open');
+    }
+  });
+
+  // 3. Selezione e cambio palette in tempo reale
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const theme = card.dataset.theme || 'default';
+      applyTheme(theme);
+      localStorage.setItem('villa_theme', theme);
+    });
+  });
+
+  function applyTheme(theme) {
+    if (theme === 'default') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+
+    cards.forEach(c => {
+      c.classList.toggle('active', (c.dataset.theme || 'default') === theme);
     });
   }
 }
