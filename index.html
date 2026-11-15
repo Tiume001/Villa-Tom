@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/leaflet.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.4">
 </head>
 <body>
 
@@ -38,22 +38,17 @@
     <div class="container">
       <div class="top-bar-left">
         <span data-i18n="topWelcome">Benvenuti a Villa Timea • Marsala, Sicilia</span>
-        <span style="opacity: 0.5;">|</span>
+        <span style="opacity: 0.4;">|</span>
         <a href="https://maps.app.goo.gl/ddpPGVBYh4fJH2ks8" target="_blank" rel="noopener">
           📍 Contrada Fontanelle 231, Marsala (TP)
         </a>
       </div>
       <div class="top-bar-right">
         <a href="tel:+393349241047">📞 +39 334 924 1047</a>
+        <span style="opacity: 0.4;">|</span>
         <a href="https://wa.me/393349241047" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <span style="opacity: 0.4;">|</span>
         <a href="mailto:villatimea@gmail.com">✉️ villatimea@gmail.com</a>
-        <button type="button" class="top-theme-btn" id="topThemeBtn" title="Cambia Palette di Stile">
-          <span>🎨 Palette</span>
-        </button>
-        <div class="lang-switch">
-          <button type="button" class="lang-btn active" data-lang="it">IT</button>
-          <button type="button" class="lang-btn" data-lang="en">EN</button>
-        </div>
       </div>
     </div>
   </div>
@@ -80,7 +75,7 @@
         <div class="nav-actions">
           <button type="button" class="nav-theme-btn" id="navThemeBtn" title="Cambia Palette di Stili">
             <span>🎨</span>
-            <span>Palette Stili</span>
+            <span>Palette</span>
           </button>
           <div class="lang-switch">
             <button type="button" class="lang-btn active" data-lang="it">IT</button>
@@ -876,13 +871,6 @@
        Rimuovere questo blocco quando la scelta sarà definitiva.
        ========================================================================== -->
   <aside class="theme-picker-widget" aria-label="Selettore Palette Stili">
-    <!-- Tasto fluttuante discreto in basso a destra -->
-    <button type="button" class="theme-picker-pill" id="themePickerPill" aria-expanded="false" aria-controls="themePickerPanel" title="Prova diverse palette di colori">
-      <span class="pill-dot"></span>
-      <span style="font-size: 1.05rem;">🎨</span>
-      <span>Palette Stili</span>
-    </button>
-
     <!-- Overlay di sfondo per chiudere cliccando fuori -->
     <div class="theme-picker-overlay" id="themePickerOverlay"></div>
 
@@ -989,6 +977,6 @@
   <script src="assets/js/qrcode.min.js"></script>
 
   <!-- Main Website Script -->
-  <script src="assets/js/main.js?v=2.3"></script>
+  <script src="assets/js/main.js?v=2.4"></script>
 </body>
 </html>

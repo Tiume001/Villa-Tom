@@ -89,14 +89,18 @@ Il collegamento corretto a Google Maps per raggiungere Villa Timea in Contrada F
 
 ## 🎨 Selettore Palette Stili (Provvisorio)
 
-In basso a destra è attivo un tasto fluttuante discreto (**🎨 Palette Stili**) che consente al cliente e ai proprietari di testare in tempo reale 5 varianti cromatiche mediterranee studiate per la villa:
+Nella barra superiore di navigazione è attivo il tasto (**🎨 Palette**) che consente al cliente e ai proprietari di testare in tempo reale 5 varianti cromatiche mediterranee studiate per la villa:
 1. **Oceano & Terracotta (Predefinito)**: Blu navy profondo, azzurro mare e cotto siciliano.
 2. **Ulivo & Tufo Nobile**: Verde oliva scuro, salvia e ambra calda (charme naturale ed eco-resort).
 3. **Tramonto sulle Egadi**: Vinaccia, vino Marsala rubino e arancio tramonto.
 4. **Blu Egeo & Riserva Marina**: Azzurro cristallino stile Cala Rossa, blu profondo e corallo.
 5. **Oro Barocco & Sabbia Dorata**: Ebano nobile, ocra dorata e lino chiaro.
 
-La scelta viene memorizzata automaticamente nel browser (`localStorage`). Una volta individuata la combinazione preferita, basterà un attimo per impostarla come definitiva e rimuovere il pulsante provvisorio.
+Layout ottimizzato per tutti i dispositivi:
+- **Su mobile / smartphone**: Il pulsante palette è posizionato esclusivamente in alto nell'header accanto al cambio lingua e al menu, senza alcun tasto fluttuante invasivo in basso.
+- **Su PC / desktop**: Spaziatura fluida e ordinata senza sovrapposizioni tra link di navigazione (`Contatti`) e controlli di azione (`Palette`, `IT/EN`, `Richiedi Disponibilità`).
+
+La scelta viene memorizzata automaticamente nel browser (`localStorage`). Una volta individuata la combinazione preferita, basterà confermarla per renderla permanente.
 
 ---
 
