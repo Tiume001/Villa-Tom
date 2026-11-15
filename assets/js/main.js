@@ -790,40 +790,62 @@ function initMobileNav() {
    ========================================================================== */
 
 function initThemePicker() {
-  const pill = document.getElementById('themePickerPill');
+  const triggers = [
+    document.getElementById('themePickerPill'),
+    document.getElementById('navThemeBtn'),
+    document.getElementById('topThemeBtn'),
+    document.getElementById('mobNavThemeBtn')
+  ].filter(Boolean);
+
   const panel = document.getElementById('themePickerPanel');
+  const overlay = document.getElementById('themePickerOverlay');
   const closeBtn = document.getElementById('themePickerClose');
   const cards = document.querySelectorAll('.theme-card');
 
-  if (!pill || !panel) return;
+  if (!panel) return;
+
+  const togglePanel = (open) => {
+    const isOpen = open !== undefined ? open : !panel.classList.contains('open');
+    panel.classList.toggle('open', isOpen);
+    if (overlay) overlay.classList.toggle('open', isOpen);
+  };
 
   // 1. Carica palette salvata o predefinita
   const savedTheme = localStorage.getItem('villa_theme') || 'default';
   applyTheme(savedTheme);
 
-  // 2. Apri / Chiudi pannello con il tasto fluttuante
-  pill.addEventListener('click', (e) => {
-    e.stopPropagation();
-    panel.classList.toggle('open');
+  // 2. Apri / Chiudi pannello con qualsiasi tasto dedicato
+  triggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const mobNav = document.getElementById('mobile-nav-dialog');
+      if (mobNav && typeof mobNav.close === 'function' && mobNav.open) {
+        mobNav.close();
+      }
+      togglePanel();
+    });
   });
 
   if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      panel.classList.remove('open');
-    });
+    closeBtn.addEventListener('click', () => togglePanel(false));
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', () => togglePanel(false));
   }
 
   // Chiudi cliccando fuori dal pannello
   document.addEventListener('click', (e) => {
-    if (!panel.contains(e.target) && !pill.contains(e.target)) {
-      panel.classList.remove('open');
+    const isTrigger = triggers.some(btn => btn.contains(e.target));
+    if (!panel.contains(e.target) && !isTrigger) {
+      togglePanel(false);
     }
   });
 
   // Chiudi con tasto Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && panel.classList.contains('open')) {
-      panel.classList.remove('open');
+      togglePanel(false);
     }
   });
 
@@ -844,7 +866,9 @@ function initThemePicker() {
     }
 
     cards.forEach(c => {
-      c.classList.toggle('active', (c.dataset.theme || 'default') === theme);
+      const isMatch = (c.dataset.theme || 'default') === theme;
+      c.classList.toggle('active', isMatch);
+      c.setAttribute('aria-checked', isMatch ? 'true' : 'false');
     });
   }
 }

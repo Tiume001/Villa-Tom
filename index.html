@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/leaflet.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
 </head>
 <body>
 
@@ -47,6 +47,9 @@
         <a href="tel:+393349241047">📞 +39 334 924 1047</a>
         <a href="https://wa.me/393349241047" target="_blank" rel="noopener">💬 WhatsApp</a>
         <a href="mailto:villatimea@gmail.com">✉️ villatimea@gmail.com</a>
+        <button type="button" class="top-theme-btn" id="topThemeBtn" title="Cambia Palette di Stile">
+          <span>🎨 Palette</span>
+        </button>
         <div class="lang-switch">
           <button type="button" class="lang-btn active" data-lang="it">IT</button>
           <button type="button" class="lang-btn" data-lang="en">EN</button>
@@ -75,6 +78,10 @@
         </nav>
 
         <div class="nav-actions">
+          <button type="button" class="nav-theme-btn" id="navThemeBtn" title="Cambia Palette di Stili">
+            <span>🎨</span>
+            <span>Palette Stili</span>
+          </button>
           <div class="lang-switch">
             <button type="button" class="lang-btn active" data-lang="it">IT</button>
             <button type="button" class="lang-btn" data-lang="en">EN</button>
@@ -109,6 +116,10 @@
       <a href="#contatti" data-i18n="navContact">Contatti</a>
     </div>
     <div class="mob-nav-footer">
+      <button type="button" class="btn btn-outline btn-sm" id="mobNavThemeBtn" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+        <span>🎨</span>
+        <span>Scegli Palette Stili</span>
+      </button>
       <div class="lang-switch" style="align-self: flex-start;">
         <button type="button" class="lang-btn active" data-lang="it">Italiano</button>
         <button type="button" class="lang-btn" data-lang="en">English</button>
@@ -848,12 +859,15 @@
        Rimuovere questo blocco quando la scelta sarà definitiva.
        ========================================================================== -->
   <aside class="theme-picker-widget" aria-label="Selettore Palette Stili">
-    <!-- Tasto fluttuante discreto -->
+    <!-- Tasto fluttuante discreto in basso a destra -->
     <button type="button" class="theme-picker-pill" id="themePickerPill" aria-expanded="false" aria-controls="themePickerPanel" title="Prova diverse palette di colori">
       <span class="pill-dot"></span>
       <span style="font-size: 1.05rem;">🎨</span>
       <span>Palette Stili</span>
     </button>
+
+    <!-- Overlay di sfondo per chiudere cliccando fuori -->
+    <div class="theme-picker-overlay" id="themePickerOverlay"></div>
 
     <!-- Pannello Popover / Modal -->
     <div class="theme-picker-panel" id="themePickerPanel" role="region" aria-label="Opzioni Stile e Colori">
@@ -958,6 +972,6 @@
   <script src="assets/js/qrcode.min.js"></script>
 
   <!-- Main Website Script -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=2.2"></script>
 </body>
 </html>
