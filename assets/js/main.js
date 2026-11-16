@@ -6,6 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initI18n();
+  initSpaceAlbums();
   initGallery();
   initLightbox();
   initDialogFallbacks();
@@ -64,11 +65,12 @@ const i18nData = {
     amenitiesTag: "Spazi & Caratteristiche",
     amenitiesTitle: "Tutto ciò di cui hai bisogno per un soggiorno perfetto",
     amenitiesDesc: "Dalla piscina all'aria aperta agli interni signorili con parquet e camino, ogni ambiente è pensato per offrire il massimo comfort.",
+    spaceOpenFolder: "Apri cartella foto",
 
     galleryTag: "Tour Fotografico",
     galleryTitle: "Scorci di Villa Timea",
     galleryDesc: "Sfoglia le immagini della proprietà: piscina e tennis ad uso esclusivo, salone, camere panoramiche e cantina storica.",
-    filterAll: "Tutte le foto",
+    filterAll: "Tutte le foto (20)",
     filterPool: "Piscina & Panorama",
     filterInteriors: "Salone & Interni",
     filterRooms: "Camere & Bagni",
@@ -146,11 +148,12 @@ const i18nData = {
     amenitiesTag: "Spaces & Highlights",
     amenitiesTitle: "Everything you need for an unforgettable stay",
     amenitiesDesc: "From the outdoor pool and private court to spacious living areas with fireplace and parquet floors, every detail is curated for maximum comfort.",
+    spaceOpenFolder: "Open photo folder",
 
     galleryTag: "Photo Tour",
     galleryTitle: "Glimpses of Villa Timea",
     galleryDesc: "Browse high-resolution photographs: swimming pool, tennis court, living room, panoramic bedrooms, and historic cellar.",
-    filterAll: "All Photos",
+    filterAll: "All Photos (20)",
     filterPool: "Pool & Panorama",
     filterInteriors: "Living & Interiors",
     filterRooms: "Bedrooms & Baths",
@@ -239,13 +242,13 @@ function applyLanguage(lang) {
 }
 
 /* ==========================================================================
-   2. GALLERY DATA & FILTERING
+   2. GALLERY DATA (20 PHOTOS), SPACE ALBUMS & FILTERING
    ========================================================================== */
 
 const galleryItems = [
   {
     id: 1,
-    src: "assets/images/pool-panorama.jpg",
+    src: "assets/images/piscina-panorama.jpg",
     category: "pool",
     titleIt: "Piscina Panoramica ad Uso Esclusivo & Trampolino",
     titleEn: "Exclusive Private Pool & Diving Board",
@@ -254,16 +257,52 @@ const galleryItems = [
   },
   {
     id: 2,
-    src: "assets/images/pool-terrace.jpg",
+    src: "assets/images/piscina-terrazza.jpg",
     category: "pool",
     titleIt: "Scorcio Piscina e Palme",
     titleEn: "Pool & Palm Tree Haven",
-    descIt: "Ombra rilassante della veranda con vista sull'acqua e sulle isole.",
+    descIt: "Ombra rilassante della veranda con vista sull'acqua e sulle Isole Egadi.",
     descEn: "Refreshing covered veranda view of the pool and distant Egadi islands."
   },
   {
     id: 3,
-    src: "assets/images/terrace-view.jpg",
+    src: "assets/images/piscina-facciata-villa.jpg",
+    category: "pool",
+    titleIt: "Facciata della Villa & Piscina con Trampolino",
+    titleEn: "Villa Facade & Pool with Diving Board",
+    descIt: "Vista frontale della villa circondata da palme, pineta mediterranea e piscina privata.",
+    descEn: "Front view of the villa framed by palm trees, Mediterranean pine forest and private pool."
+  },
+  {
+    id: 4,
+    src: "assets/images/tramonto-piscina-egadi.jpg",
+    category: "pool",
+    titleIt: "Tramonto sulle Isole Egadi dalla Piscina",
+    titleEn: "Sunset over Egadi Islands from the Pool",
+    descIt: "Spettacolare tramonto dorato sul mare e sulle isole con la piscina illuminata sullo sfondo.",
+    descEn: "Spectacular golden sunset over the sea and islands with the illuminated pool below."
+  },
+  {
+    id: 5,
+    src: "assets/images/piscina-crepuscolo-egadi.jpg",
+    category: "pool",
+    titleIt: "Piscina al Crepuscolo & Vista Mare",
+    titleEn: "Pool at Twilight & Sea Horizon",
+    descIt: "Atmosfera serale a bordo piscina ammirando Favignana e Levanzo all'orizzonte.",
+    descEn: "Evening poolside atmosphere overlooking Favignana and Levanzo on the horizon."
+  },
+  {
+    id: 6,
+    src: "assets/images/piscina-notte-illuminata.jpg",
+    category: "pool",
+    titleIt: "Piscina Illuminata di Notte",
+    titleEn: "Illuminated Pool by Night",
+    descIt: "Bagno notturno sotto le stelle con illuminazione subacquea turchese e luci soffuse in giardino.",
+    descEn: "Nighttime swim under the stars with turquoise underwater lighting and warm garden lamps."
+  },
+  {
+    id: 7,
+    src: "assets/images/terrazza-vista-egadi.jpg",
     category: "pool",
     titleIt: "Loggia Panoramica sulle Egadi",
     titleEn: "Panoramic Veranda overlooking Egadi",
@@ -271,17 +310,26 @@ const galleryItems = [
     descEn: "Covered panoramic terrace perfect for sunset dining and Sicilian wine."
   },
   {
-    id: 4,
-    src: "assets/images/panoramic-steps.jpg",
+    id: 8,
+    src: "assets/images/scalinata-panoramica.jpg",
     category: "pool",
     titleIt: "Scalinata Panoramica verso la Piscina",
-    titleEn: "Scenic Spiral Steps to Pool",
+    titleEn: "Scenic Steps to the Pool",
     descIt: "Scorcio architettonico della villa affacciata sulla piana di Marsala.",
     descEn: "Architectural view overlooking the terracotta patios and coastal plain."
   },
   {
-    id: 5,
-    src: "assets/images/tennis-court.jpg",
+    id: 9,
+    src: "assets/images/panorama-notte-tennis-piscina.jpg",
+    category: "sports",
+    titleIt: "Panorama Notturno: Tennis, Veranda & Piscina",
+    titleEn: "Night Panorama: Tennis Court, Veranda & Pool",
+    descIt: "Vista d'insieme serale sul campo da tennis, sulla veranda illuminata, sulla piscina e sulle luci di Marsala.",
+    descEn: "Evening overview of the tennis court, illuminated veranda, pool and Marsala city lights."
+  },
+  {
+    id: 10,
+    src: "assets/images/campo-tennis.jpg",
     category: "sports",
     titleIt: "Campo da Tennis ad Uso Esclusivo",
     titleEn: "Exclusive Regulation Tennis Court",
@@ -289,8 +337,8 @@ const galleryItems = [
     descEn: "Full-size private tennis court exclusively reserved for villa guests."
   },
   {
-    id: 6,
-    src: "assets/images/tennis-veranda.jpg",
+    id: 11,
+    src: "assets/images/veranda-tennis.jpg",
     category: "sports",
     titleIt: "Veranda Tennis & Relax",
     titleEn: "Tennis Veranda & Chillout",
@@ -298,8 +346,8 @@ const galleryItems = [
     descEn: "Shaded spectator veranda overlooking both tennis court and pool."
   },
   {
-    id: 7,
-    src: "assets/images/outdoor-pizza-oven.jpg",
+    id: 12,
+    src: "assets/images/forno-legna-esterno.jpg",
     category: "sports",
     titleIt: "Forno a Legna & Giardino in Pietra",
     titleEn: "Wood-Fired Pizza Oven & Stone Garden",
@@ -307,8 +355,8 @@ const galleryItems = [
     descEn: "Authentic Sicilian stone pizza oven and outdoor BBQ area amidst pines."
   },
   {
-    id: 8,
-    src: "assets/images/living-room-main.jpg",
+    id: 13,
+    src: "assets/images/salone-principale.jpg",
     category: "interior",
     titleIt: "Grande Salone con Camino & Parquet",
     titleEn: "Grand Living Room with Fireplace",
@@ -316,17 +364,17 @@ const galleryItems = [
     descEn: "Spacious, sunlit lounge with cozy linen sofas and rustic brick fireplace."
   },
   {
-    id: 9,
-    src: "assets/images/living-room-fireplace.jpg",
+    id: 14,
+    src: "assets/images/salone-camino.jpg",
     category: "interior",
-    titleIt: "Zona Relax & Salotto",
+    titleIt: "Zona Relax & Ingresso Cantina",
     titleEn: "Living Lounge & Wine Cellar Entrance",
     descIt: "Pavimenti in parquet di legno massello e accesso scenografico alla cantina.",
     descEn: "Hardwood herringbone floors and wrought iron gate leading to the cellar."
   },
   {
-    id: 10,
-    src: "assets/images/dining-room.jpg",
+    id: 15,
+    src: "assets/images/sala-pranzo.jpg",
     category: "interior",
     titleIt: "Sala da Pranzo Conviviale",
     titleEn: "Convivial Dining Hall",
@@ -334,44 +382,44 @@ const galleryItems = [
     descEn: "Large dining table seating 10+ guests for memorable group dinners."
   },
   {
-    id: 11,
-    src: "assets/images/bedroom-window-view.jpg",
+    id: 16,
+    src: "assets/images/camera-vista-egadi.jpg",
     category: "rooms",
-    titleIt: "Camera con Vista sulle Isole Egadi",
-    titleEn: "Bedroom with Egadi Island Views",
+    titleIt: "Camera 1 — Vista sulle Isole Egadi",
+    titleEn: "Bedroom 1 — Egadi Islands View",
     descIt: "Risvegliarsi ogni mattina ammirando Favignana e il mare all'orizzonte.",
     descEn: "Wake up each morning gazing out to Favignana Island and the sea."
   },
   {
-    id: 12,
-    src: "assets/images/bedroom-master.jpg",
+    id: 17,
+    src: "assets/images/camera-matrimoniale.jpg",
     category: "rooms",
-    titleIt: "Camera Matrimoniale di Charme",
-    titleEn: "Master Bedroom with Antique Charm",
+    titleIt: "Camera 2 — Matrimoniale di Charme",
+    titleEn: "Bedroom 2 — Master with Antique Charm",
     descIt: "Letto in ferro battuto decorato, armadio d'epoca e climatizzazione autonoma.",
     descEn: "Ornate wrought iron bed, historic mirrored armoire and air conditioning."
   },
   {
-    id: 13,
-    src: "assets/images/bathroom-vintage.jpg",
+    id: 18,
+    src: "assets/images/bagno-epoca-vasca.jpg",
     category: "rooms",
-    titleIt: "Bagno d'Epoca con Vasca in Ghisa",
-    titleEn: "Vintage Bath with Freestanding Tub",
+    titleIt: "Bagno 1 — Stile d'Epoca con Vasca in Ghisa",
+    titleEn: "Bathroom 1 — Vintage Freestanding Tub",
     descIt: "Vasca freestanding con piedini, maioliche e travi in legno a vista.",
     descEn: "Classic clawfoot soaking tub, handcrafted tiles, and rustic wood beams."
   },
   {
-    id: 14,
-    src: "assets/images/bathroom-modern.jpg",
+    id: 19,
+    src: "assets/images/bagno-moderno-doccia.jpg",
     category: "rooms",
-    titleIt: "Bagno Moderno con Doccia in Cristallo",
-    titleEn: "Modern En-Suite Shower Bathroom",
+    titleIt: "Bagno 2 — Moderno con Doccia in Cristallo",
+    titleEn: "Bathroom 2 — Modern Walk-in Shower",
     descIt: "Box doccia moderno, sanitari sospesi e finiture fresche.",
     descEn: "Glass-enclosed walk-in shower and contemporary fixtures."
   },
   {
-    id: 15,
-    src: "assets/images/wine-cellar.jpg",
+    id: 20,
+    src: "assets/images/cantina-storica-tufo.jpg",
     category: "cellar",
     titleIt: "Cantina Storica Scavata nel Tufo",
     titleEn: "Historic Cellar Carved in Tuff Stone",
@@ -380,8 +428,136 @@ const galleryItems = [
   }
 ];
 
+const spaceAlbums = {
+  pool: {
+    icon: "🏊‍♂️",
+    titleIt: "Piscina Panoramica & Terrazze (Uso Esclusivo)",
+    titleEn: "Panoramic Pool & Terraces (Exclusive Use)",
+    descIt: "Tutte le angolazioni della grande piscina privata ad uso esclusivo: vista diurna sulle palme e sulla facciata della villa, tramonti infuocati sulle Egadi e bagni serali sotto le luci.",
+    descEn: "Every angle of the large private pool reserved exclusively for guests: daytime views, fiery Egadi sunsets, and illuminated evening swims.",
+    photoIds: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  },
+  tennis: {
+    icon: "🎾",
+    titleIt: "Campo da Tennis & Veranda (Uso Esclusivo)",
+    titleEn: "Regulation Tennis Court & Veranda (Exclusive Use)",
+    descIt: "Campo da tennis regolamentare ad uso esclusivo con veranda coperta per gli spettatori e splendida vista serale sull'intera tenuta.",
+    descEn: "Private regulation tennis court for exclusive guest use with shaded spectator veranda and evening views.",
+    photoIds: [10, 11, 9]
+  },
+  cellar: {
+    icon: "🍷",
+    titleIt: "Cantina Storica nel Tufo",
+    titleEn: "Historic Tuff Wine Cellar",
+    descIt: "Suggestivo ipogeo scavato nel tufo marsalese con ingresso scenografico dal salone tramite cancello in ferro battuto.",
+    descEn: "Subterranean cellar carved into Marsala tuff stone with wrought-iron entrance from the living lounge.",
+    photoIds: [20, 14]
+  },
+  outdoor: {
+    icon: "🌿",
+    titleIt: "Spazi Aperti, Pineta & Terrazze",
+    titleEn: "Outdoor Spaces, Pine Grove & Terraces",
+    descIt: "Ampi spazi esterni tra pineta mediterranea, scalinate panoramiche in cotto, logge coperte vista Egadi e forno a legna in pietra per serate all'aperto.",
+    descEn: "Generous outdoor areas across Mediterranean pine groves, scenic terracotta steps, covered Egadi-view terraces, and a stone wood-fired pizza oven.",
+    photoIds: [12, 8, 3, 7]
+  },
+  interior: {
+    icon: "🛋️",
+    titleIt: "Salone Nobile, Camino & Sala da Pranzo",
+    titleEn: "Grand Living Room, Fireplace & Dining Hall",
+    descIt: "Gli ampi spazi interni con parquet a spina di pesce, camino a legna e tavolo conviviale per oltre 10 ospiti.",
+    descEn: "Spacious interiors featuring herringbone hardwood floors, brick fireplace, and dining table for 10+ guests.",
+    photoIds: [13, 14, 15]
+  },
+  rooms: {
+    icon: "🛏️",
+    titleIt: "Camere Panoramiche & Bagni di Charme",
+    titleEn: "Panoramic Bedrooms & Bathrooms",
+    descIt: "Le camere da letto affacciate sul mare e sulle Isole Egadi insieme ai due bagni (vasca freestanding d'epoca e doccia moderna in cristallo).",
+    descEn: "Sea-view bedrooms overlooking the Egadi Islands paired with two bathrooms (vintage clawfoot tub and modern walk-in shower).",
+    photoIds: [16, 17, 18, 19]
+  }
+};
+
 let activeLightboxIndex = 0;
 let filteredItems = [...galleryItems];
+let activeLightboxItems = [...galleryItems];
+
+function initSpaceAlbums() {
+  const albumDialog = document.getElementById('space-album-dialog');
+  const closeBtn = document.getElementById('space-album-close');
+
+  if (closeBtn && albumDialog) {
+    closeBtn.addEventListener('click', () => albumDialog.close());
+  }
+
+  document.querySelectorAll('.amenity-card[data-space]').forEach(card => {
+    const spaceKey = card.dataset.space;
+    const openAlbum = () => openSpaceAlbum(spaceKey);
+
+    card.addEventListener('click', openAlbum);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openAlbum();
+      }
+    });
+  });
+}
+
+function openSpaceAlbum(spaceKey) {
+  const album = spaceAlbums[spaceKey];
+  const dialog = document.getElementById('space-album-dialog');
+  const iconEl = document.getElementById('space-album-icon');
+  const titleEl = document.getElementById('space-album-title');
+  const countEl = document.getElementById('space-album-count');
+  const descEl = document.getElementById('space-album-desc');
+  const gridEl = document.getElementById('space-album-grid');
+
+  if (!album || !dialog || !gridEl) return;
+
+  const albumPhotos = album.photoIds
+    .map(id => galleryItems.find(item => item.id === id))
+    .filter(Boolean);
+
+  if (iconEl) iconEl.textContent = album.icon;
+  if (titleEl) titleEl.textContent = currentLang === 'it' ? album.titleIt : album.titleEn;
+  if (descEl) descEl.textContent = currentLang === 'it' ? album.descIt : album.descEn;
+  if (countEl) {
+    countEl.textContent = currentLang === 'it'
+      ? `${albumPhotos.length} foto nella cartella`
+      : `${albumPhotos.length} photos in folder`;
+  }
+
+  gridEl.innerHTML = '';
+  albumPhotos.forEach((item, idx) => {
+    const title = currentLang === 'it' ? item.titleIt : item.titleEn;
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'space-album-card';
+    card.setAttribute('aria-label', title);
+
+    card.innerHTML = `
+      <div class="space-album-thumb">
+        <img src="${item.src}" alt="${title}" loading="lazy">
+        <span class="space-album-zoom-badge" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+        </span>
+      </div>
+      <div class="space-album-caption">${title}</div>
+    `;
+
+    card.addEventListener('click', () => {
+      openLightbox(idx, albumPhotos);
+    });
+
+    gridEl.appendChild(card);
+  });
+
+  if (typeof dialog.showModal === 'function') {
+    dialog.showModal();
+  }
+}
 
 function initGallery() {
   const grid = document.getElementById('gallery-grid');
@@ -397,21 +573,6 @@ function initGallery() {
       const cat = e.currentTarget.dataset.filter;
       renderGalleryGrid(cat);
     });
-  });
-
-  // Make amenity section photos clickable to open in lightbox and zoom
-  document.querySelectorAll('.amenity-card').forEach(card => {
-    const img = card.querySelector('.amenity-media img');
-    if (img) {
-      card.querySelector('.amenity-media').addEventListener('click', () => {
-        const src = img.getAttribute('src');
-        const matchIdx = galleryItems.findIndex(item => item.src === src);
-        if (matchIdx !== -1) {
-          filteredItems = [...galleryItems];
-          openLightbox(matchIdx);
-        }
-      });
-    }
   });
 }
 
@@ -446,11 +607,11 @@ function renderGalleryGrid(category) {
       </div>
     `;
 
-    card.addEventListener('click', () => openLightbox(index));
+    card.addEventListener('click', () => openLightbox(index, filteredItems));
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openLightbox(index);
+        openLightbox(index, filteredItems);
       }
     });
 
@@ -459,46 +620,84 @@ function renderGalleryGrid(category) {
 }
 
 /* ==========================================================================
-   3. ACCESSIBLE DIALOG LIGHTBOX WITH INTERACTIVE ZOOM & PAN
+   3. CINEMA LIGHTBOX WITH CLAMPED PAN, POINTER ZOOM, SWIPE & THUMBNAILS
    ========================================================================== */
 
 let currentZoom = 1;
 let panX = 0;
 let panY = 0;
+let swipeOffsetX = 0;
 let isDragging = false;
+let isSwiping = false;
 let startDragX = 0;
 let startDragY = 0;
+let rafPending = false;
 
-function applyZoom(newZoom) {
+function clampPan() {
+  const wrap = document.getElementById('lightbox-img-wrap');
+  const img = document.getElementById('lightbox-img');
+  if (!wrap || !img || currentZoom <= 1) {
+    panX = 0;
+    panY = 0;
+    return;
+  }
+
+  const maxX = Math.max(0, (img.clientWidth * currentZoom - wrap.clientWidth) / 2);
+  const maxY = Math.max(0, (img.clientHeight * currentZoom - wrap.clientHeight) / 2);
+
+  panX = Math.min(Math.max(panX, -maxX), maxX);
+  panY = Math.min(Math.max(panY, -maxY), maxY);
+}
+
+function scheduleTransformRender() {
+  if (rafPending) return;
+  rafPending = true;
+  requestAnimationFrame(() => {
+    rafPending = false;
+    const img = document.getElementById('lightbox-img');
+    if (img) {
+      const tx = currentZoom <= 1 ? swipeOffsetX : panX;
+      const ty = currentZoom <= 1 ? 0 : panY;
+      img.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${currentZoom})`;
+    }
+  });
+}
+
+function applyZoom(newZoom, focusClientX = null, focusClientY = null) {
   const minZoom = 1;
   const maxZoom = 3.5;
+  const prevZoom = currentZoom;
   currentZoom = Math.min(Math.max(newZoom, minZoom), maxZoom);
   currentZoom = Math.round(currentZoom * 100) / 100;
+
+  const wrap = document.getElementById('lightbox-img-wrap');
+  const zoomLevel = document.getElementById('lightbox-zoom-level');
+  const zoomInBtn = document.getElementById('lightbox-zoom-in');
+  const zoomOutBtn = document.getElementById('lightbox-zoom-out');
 
   if (currentZoom <= 1.02) {
     currentZoom = 1;
     panX = 0;
     panY = 0;
+  } else if (wrap && focusClientX !== null && focusClientY !== null && prevZoom !== currentZoom) {
+    const rect = wrap.getBoundingClientRect();
+    const offsetX = focusClientX - rect.left - rect.width / 2;
+    const offsetY = focusClientY - rect.top - rect.height / 2;
+    const ratio = currentZoom / prevZoom;
+    panX = panX * ratio - offsetX * (ratio - 1);
+    panY = panY * ratio - offsetY * (ratio - 1);
   }
 
-  const wrap = document.getElementById('lightbox-img-wrap');
-  const img = document.getElementById('lightbox-img');
-  const zoomLevel = document.getElementById('lightbox-zoom-level');
-  const zoomInBtn = document.getElementById('lightbox-zoom-in');
-  const zoomOutBtn = document.getElementById('lightbox-zoom-out');
-
-  if (img) {
-    img.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
-  }
+  swipeOffsetX = 0;
+  clampPan();
+  scheduleTransformRender();
 
   if (wrap) {
     wrap.classList.toggle('is-zoomed', currentZoom > 1);
   }
-
   if (zoomLevel) {
     zoomLevel.textContent = `${Math.round(currentZoom * 100)}%`;
   }
-
   if (zoomInBtn) {
     zoomInBtn.disabled = currentZoom >= maxZoom;
   }
@@ -510,7 +709,13 @@ function applyZoom(newZoom) {
 function resetZoom() {
   panX = 0;
   panY = 0;
+  swipeOffsetX = 0;
   isDragging = false;
+  isSwiping = false;
+  const wrap = document.getElementById('lightbox-img-wrap');
+  if (wrap) {
+    wrap.classList.remove('is-interacting', 'is-dragging');
+  }
   applyZoom(1);
 }
 
@@ -525,7 +730,6 @@ function initLightbox() {
   const zoomOutBtn = document.getElementById('lightbox-zoom-out');
   const zoomResetBtn = document.getElementById('lightbox-zoom-reset');
   const wrap = document.getElementById('lightbox-img-wrap');
-  const img = document.getElementById('lightbox-img');
 
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
@@ -536,26 +740,20 @@ function initLightbox() {
 
   dialog.addEventListener('close', () => resetZoom());
 
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => navigateLightbox(-1));
-  }
+  if (prevBtn) prevBtn.addEventListener('click', () => navigateLightbox(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => navigateLightbox(1));
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => navigateLightbox(1));
-  }
-
-  // Zoom Button Controls
   if (zoomInBtn) {
     zoomInBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      applyZoom(currentZoom + 0.5);
+      applyZoom(currentZoom + 0.6);
     });
   }
 
   if (zoomOutBtn) {
     zoomOutBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      applyZoom(currentZoom - 0.5);
+      applyZoom(currentZoom - 0.6);
     });
   }
 
@@ -567,94 +765,100 @@ function initLightbox() {
   }
 
   if (wrap) {
-    // 1. Double Click / Double Tap to Zoom
+    // 1. Double Click to Zoom (pointer-centered)
     wrap.addEventListener('dblclick', (e) => {
       e.preventDefault();
       if (currentZoom > 1.05) {
         resetZoom();
       } else {
-        const rect = wrap.getBoundingClientRect();
-        const clickX = e.clientX - rect.left - rect.width / 2;
-        const clickY = e.clientY - rect.top - rect.height / 2;
-        panX = -clickX * 0.7;
-        panY = -clickY * 0.7;
-        applyZoom(2.2);
+        applyZoom(2.25, e.clientX, e.clientY);
       }
     });
 
-    // 2. Mouse Wheel to Zoom
+    // 2. Mouse Wheel to Zoom (pointer-centered)
     wrap.addEventListener('wheel', (e) => {
       e.preventDefault();
-      const delta = e.deltaY < 0 ? 0.35 : -0.35;
-      applyZoom(currentZoom + delta);
+      const delta = e.deltaY < 0 ? 0.3 : -0.3;
+      applyZoom(currentZoom + delta, e.clientX, e.clientY);
     }, { passive: false });
 
     // 3. Mouse Drag to Pan when Zoomed
     wrap.addEventListener('mousedown', (e) => {
       if (currentZoom <= 1) return;
+      e.preventDefault();
       isDragging = true;
       startDragX = e.clientX - panX;
       startDragY = e.clientY - panY;
-      wrap.classList.add('is-dragging');
+      wrap.classList.add('is-dragging', 'is-interacting');
     });
 
     window.addEventListener('mousemove', (e) => {
       if (!isDragging || currentZoom <= 1) return;
       panX = e.clientX - startDragX;
       panY = e.clientY - startDragY;
-      if (img) {
-        img.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
-      }
+      clampPan();
+      scheduleTransformRender();
     });
 
     window.addEventListener('mouseup', () => {
       if (isDragging) {
         isDragging = false;
-        wrap.classList.remove('is-dragging');
+        wrap.classList.remove('is-dragging', 'is-interacting');
       }
     });
 
-    // 4. Touch Gestures: Pinch to Zoom & Touch Pan
+    // 4. Touch Gestures: Pinch-to-Zoom, Pan & Smooth Horizontal Swipe
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartPanX = 0;
     let touchStartPanY = 0;
     let touchDistance = 0;
     let initialTouchZoom = 1;
+    let pinchCenterX = 0;
+    let pinchCenterY = 0;
     let lastTapTime = 0;
 
     wrap.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) {
+        const touch = e.touches[0];
         const now = Date.now();
-        if (now - lastTapTime < 300) {
-          // Double Tap
+        if (now - lastTapTime < 280) {
           e.preventDefault();
           if (currentZoom > 1.05) {
             resetZoom();
           } else {
-            applyZoom(2.2);
+            applyZoom(2.25, touch.clientX, touch.clientY);
           }
           lastTapTime = 0;
           return;
         }
         lastTapTime = now;
 
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+
         if (currentZoom > 1) {
           isDragging = true;
-          touchStartX = e.touches[0].clientX;
-          touchStartY = e.touches[0].clientY;
+          isSwiping = false;
           touchStartPanX = panX;
           touchStartPanY = panY;
-          wrap.classList.add('is-dragging');
+          wrap.classList.add('is-dragging', 'is-interacting');
         } else {
-          touchStartX = e.touches[0].screenX;
+          isSwiping = true;
+          swipeOffsetX = 0;
+          wrap.classList.add('is-interacting');
         }
       } else if (e.touches.length === 2) {
         isDragging = false;
+        isSwiping = false;
+        swipeOffsetX = 0;
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
         touchDistance = Math.hypot(dx, dy);
         initialTouchZoom = currentZoom;
+        pinchCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        pinchCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+        wrap.classList.add('is-interacting');
       }
     }, { passive: false });
 
@@ -663,35 +867,43 @@ function initLightbox() {
         e.preventDefault();
         panX = touchStartPanX + (e.touches[0].clientX - touchStartX);
         panY = touchStartPanY + (e.touches[0].clientY - touchStartY);
-        if (img) {
-          img.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${currentZoom})`;
-        }
+        clampPan();
+        scheduleTransformRender();
+      } else if (e.touches.length === 1 && currentZoom <= 1 && isSwiping) {
+        e.preventDefault();
+        swipeOffsetX = e.touches[0].clientX - touchStartX;
+        scheduleTransformRender();
       } else if (e.touches.length === 2 && touchDistance > 0) {
         e.preventDefault();
         const dx = e.touches[0].clientX - e.touches[1].clientX;
         const dy = e.touches[0].clientY - e.touches[1].clientY;
         const dist = Math.hypot(dx, dy);
         const scaleFactor = dist / touchDistance;
-        applyZoom(initialTouchZoom * scaleFactor);
+        applyZoom(initialTouchZoom * scaleFactor, pinchCenterX, pinchCenterY);
       }
     }, { passive: false });
 
     wrap.addEventListener('touchend', (e) => {
+      wrap.classList.remove('is-dragging', 'is-interacting');
       if (isDragging) {
         isDragging = false;
-        wrap.classList.remove('is-dragging');
       }
       if (e.touches.length === 0) {
         touchDistance = 0;
-        // Swipe navigation when at normal scale (1x)
-        if (currentZoom <= 1 && e.changedTouches && e.changedTouches.length === 1) {
-          const endX = e.changedTouches[0].screenX;
-          if (touchStartX - endX > 60) {
+        if (isSwiping && currentZoom <= 1) {
+          const threshold = 55;
+          if (swipeOffsetX < -threshold) {
+            swipeOffsetX = 0;
             navigateLightbox(1);
-          } else if (endX - touchStartX > 60) {
+          } else if (swipeOffsetX > threshold) {
+            swipeOffsetX = 0;
             navigateLightbox(-1);
+          } else {
+            swipeOffsetX = 0;
+            scheduleTransformRender();
           }
         }
+        isSwiping = false;
       }
     }, { passive: true });
   }
@@ -703,21 +915,23 @@ function initLightbox() {
     } else if (e.key === 'ArrowRight') {
       navigateLightbox(1);
     } else if (e.key === '+' || e.key === '=') {
-      applyZoom(currentZoom + 0.5);
+      applyZoom(currentZoom + 0.6);
     } else if (e.key === '-' || e.key === '_') {
-      applyZoom(currentZoom - 0.5);
+      applyZoom(currentZoom - 0.6);
     } else if (e.key === '0') {
       resetZoom();
     }
   });
 }
 
-function openLightbox(index) {
+function openLightbox(index, itemsList = filteredItems) {
   const dialog = document.getElementById('gallery-lightbox');
-  if (!dialog) return;
+  if (!dialog || !itemsList || !itemsList.length) return;
 
-  activeLightboxIndex = index;
+  activeLightboxItems = itemsList;
+  activeLightboxIndex = Math.max(0, Math.min(index, activeLightboxItems.length - 1));
   resetZoom();
+  renderLightboxThumbs();
   updateLightboxContent();
 
   if (typeof dialog.showModal === 'function') {
@@ -726,14 +940,45 @@ function openLightbox(index) {
 }
 
 function navigateLightbox(direction) {
-  if (!filteredItems.length) return;
-  activeLightboxIndex = (activeLightboxIndex + direction + filteredItems.length) % filteredItems.length;
+  if (!activeLightboxItems.length) return;
+  activeLightboxIndex = (activeLightboxIndex + direction + activeLightboxItems.length) % activeLightboxItems.length;
   resetZoom();
   updateLightboxContent();
 }
 
+function renderLightboxThumbs() {
+  const thumbsEl = document.getElementById('lightbox-thumbs');
+  if (!thumbsEl) return;
+
+  thumbsEl.innerHTML = '';
+  activeLightboxItems.forEach((item, idx) => {
+    const title = currentLang === 'it' ? item.titleIt : item.titleEn;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'lightbox-thumb-btn';
+    btn.setAttribute('aria-label', title);
+    btn.innerHTML = `<img src="${item.src}" alt="${title}" loading="lazy">`;
+    btn.addEventListener('click', () => {
+      activeLightboxIndex = idx;
+      resetZoom();
+      updateLightboxContent();
+    });
+    thumbsEl.appendChild(btn);
+  });
+}
+
+function preloadAdjacentLightboxImages() {
+  if (activeLightboxItems.length < 2) return;
+  const nextIdx = (activeLightboxIndex + 1) % activeLightboxItems.length;
+  const prevIdx = (activeLightboxIndex - 1 + activeLightboxItems.length) % activeLightboxItems.length;
+  [nextIdx, prevIdx].forEach(i => {
+    const preloadImg = new Image();
+    preloadImg.src = activeLightboxItems[i].src;
+  });
+}
+
 function updateLightboxContent() {
-  const item = filteredItems[activeLightboxIndex];
+  const item = activeLightboxItems[activeLightboxIndex];
   if (!item) return;
 
   const img = document.getElementById('lightbox-img');
@@ -742,12 +987,8 @@ function updateLightboxContent() {
   const desc = document.getElementById('lightbox-desc');
 
   if (img) {
-    img.style.opacity = '0.3';
-    setTimeout(() => {
-      img.src = item.src;
-      img.alt = currentLang === 'it' ? item.titleIt : item.titleEn;
-      img.style.opacity = '1';
-    }, 120);
+    img.src = item.src;
+    img.alt = currentLang === 'it' ? item.titleIt : item.titleEn;
   }
 
   if (title) {
@@ -759,8 +1000,19 @@ function updateLightboxContent() {
   }
 
   if (counter) {
-    counter.textContent = `${activeLightboxIndex + 1} / ${filteredItems.length}`;
+    counter.textContent = `${activeLightboxIndex + 1} / ${activeLightboxItems.length}`;
   }
+
+  const thumbs = document.querySelectorAll('.lightbox-thumb-btn');
+  thumbs.forEach((btn, idx) => {
+    const isActive = idx === activeLightboxIndex;
+    btn.classList.toggle('active', isActive);
+    if (isActive) {
+      btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  });
+
+  preloadAdjacentLightboxImages();
 }
 
 /* ==========================================================================

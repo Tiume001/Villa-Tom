@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Villa Timea | Esclusiva Villa Panoramica a Marsala, Sicilia">
   <meta property="og:description" content="Piscina panoramica e campo da tennis ad uso esclusivo per gli ospiti, cantina storica nel tufo e vista sulle Isole Egadi. Scopri la villa e prenota direttamente.">
-  <meta property="og:image" content="assets/images/pool-panorama.jpg">
+  <meta property="og:image" content="assets/images/piscina-panorama.jpg">
   <meta property="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/leaflet.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
 </head>
 <body>
 
@@ -131,7 +131,7 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <img src="assets/images/pool-panorama.jpg" alt="Piscina panoramica Villa Timea Marsala">
+      <img src="assets/images/piscina-panorama.jpg" alt="Piscina panoramica Villa Timea Marsala">
     </div>
     <div class="hero-overlay"></div>
 
@@ -253,7 +253,7 @@
 
         <div class="story-media">
           <div class="story-img-main">
-            <img src="assets/images/terrace-view.jpg" alt="Terrazza panoramica Villa Timea con vista sulle isole Egadi">
+            <img src="assets/images/terrazza-vista-egadi.jpg" alt="Terrazza panoramica Villa Timea con vista sulle isole Egadi">
           </div>
           <div class="story-badge-floating">
             <div class="story-badge-icon">🌅</div>
@@ -279,10 +279,11 @@
 
       <div class="amenities-grid">
         <!-- Amenity 1: Piscina -->
-        <article class="amenity-card">
+        <article class="amenity-card" data-space="pool" role="button" tabindex="0" aria-label="Apri cartella foto Piscina Panoramica">
           <div class="amenity-media">
-            <img src="assets/images/pool-terrace.jpg" alt="Grande piscina panoramica ad uso esclusivo con trampolino">
+            <img src="assets/images/piscina-terrazza.jpg" alt="Grande piscina panoramica ad uso esclusivo con trampolino">
             <span class="amenity-tag">Outdoor</span>
+            <span class="amenity-photo-count">📷 9 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
@@ -299,14 +300,19 @@
               <span class="amenity-chip">Vista aperta sulle Egadi</span>
               <span class="amenity-chip">Privacy assoluta</span>
             </div>
+            <div class="amenity-card-cta">
+              <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
+              <span aria-hidden="true">→</span>
+            </div>
           </div>
         </article>
 
         <!-- Amenity 2: Tennis -->
-        <article class="amenity-card">
+        <article class="amenity-card" data-space="tennis" role="button" tabindex="0" aria-label="Apri cartella foto Campo da Tennis">
           <div class="amenity-media">
-            <img src="assets/images/tennis-court.jpg" alt="Campo da tennis regolamentare ad uso esclusivo">
+            <img src="assets/images/campo-tennis.jpg" alt="Campo da tennis regolamentare ad uso esclusivo">
             <span class="amenity-tag">Sport & Fitness</span>
+            <span class="amenity-photo-count">📷 3 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
@@ -322,14 +328,19 @@
               <span class="amenity-chip">Veranda spettatori</span>
               <span class="amenity-chip">Massima Privacy</span>
             </div>
+            <div class="amenity-card-cta">
+              <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
+              <span aria-hidden="true">→</span>
+            </div>
           </div>
         </article>
 
         <!-- Amenity 3: Cantina Storica -->
-        <article class="amenity-card">
+        <article class="amenity-card" data-space="cellar" role="button" tabindex="0" aria-label="Apri cartella foto Cantina Storica">
           <div class="amenity-media">
-            <img src="assets/images/wine-cellar.jpg" alt="Antica cantina sotterranea nel tufo">
+            <img src="assets/images/cantina-storica-tufo.jpg" alt="Antica cantina sotterranea nel tufo">
             <span class="amenity-tag">Tradizione Siciliana</span>
+            <span class="amenity-photo-count">📷 2 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
@@ -345,37 +356,47 @@
               <span class="amenity-chip">Atmosfera autentica</span>
               <span class="amenity-chip">Clima fresco naturale</span>
             </div>
+            <div class="amenity-card-cta">
+              <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
+              <span aria-hidden="true">→</span>
+            </div>
           </div>
         </article>
 
-        <!-- Amenity 4: Forno a Legna & BBQ -->
-        <article class="amenity-card">
+        <!-- Amenity 4: Spazi Aperti, Pineta & Terrazze -->
+        <article class="amenity-card" data-space="outdoor" role="button" tabindex="0" aria-label="Apri cartella foto Spazi Aperti, Pineta e Terrazze">
           <div class="amenity-media">
-            <img src="assets/images/outdoor-pizza-oven.jpg" alt="Forno a legna e barbecue in pietra">
-            <span class="amenity-tag">Gastronomia</span>
+            <img src="assets/images/forno-legna-esterno.jpg" alt="Spazi aperti, giardino in pietra e forno a legna immersi nella pineta">
+            <span class="amenity-tag">Giardino & Terrazze</span>
+            <span class="amenity-photo-count">📷 4 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
-              <div class="amenity-icon">🍕</div>
-              <h3 class="amenity-title">Forno a Legna & Area BBQ</h3>
+              <div class="amenity-icon">🌿</div>
+              <h3 class="amenity-title">Spazi Aperti, Pineta & Terrazze</h3>
             </div>
             <p class="amenity-desc">
-              Forno in pietra e mattoni refrattari per preparare autentiche pizze siciliane all'aperto, circondati dal profumo dei pini e delle piante grasse.
+              Ampi spazi esterni tra pineta mediterranea, scalinate panoramiche e logge coperte con vista sulle Isole Egadi, completi di forno a legna in pietra per cene all'aperto.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">Forno tradizionale</span>
-              <span class="amenity-chip">Zona barbecue</span>
-              <span class="amenity-chip">Piazzale in cotto</span>
-              <span class="amenity-chip">Tavoli all'aperto</span>
+              <span class="amenity-chip">Pineta & Giardino</span>
+              <span class="amenity-chip">Terrazze Panoramiche</span>
+              <span class="amenity-chip">Forno a Legna</span>
+              <span class="amenity-chip">Cene all'aperto</span>
+            </div>
+            <div class="amenity-card-cta">
+              <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
+              <span aria-hidden="true">→</span>
             </div>
           </div>
         </article>
 
         <!-- Amenity 5: Salone & Dining -->
-        <article class="amenity-card">
+        <article class="amenity-card" data-space="interior" role="button" tabindex="0" aria-label="Apri cartella foto Salone e Sala da Pranzo">
           <div class="amenity-media">
-            <img src="assets/images/living-room-main.jpg" alt="Ampio salone con camino e parquet">
+            <img src="assets/images/salone-principale.jpg" alt="Ampio salone con camino e parquet">
             <span class="amenity-tag">Spazi Interni</span>
+            <span class="amenity-photo-count">📷 3 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
@@ -391,14 +412,19 @@
               <span class="amenity-chip">Tavolo 10+ coperti</span>
               <span class="amenity-chip">Luminosità naturale</span>
             </div>
+            <div class="amenity-card-cta">
+              <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
+              <span aria-hidden="true">→</span>
+            </div>
           </div>
         </article>
 
         <!-- Amenity 6: Camere & Bagni -->
-        <article class="amenity-card">
+        <article class="amenity-card" data-space="rooms" role="button" tabindex="0" aria-label="Apri cartella foto Camere e Bagni">
           <div class="amenity-media">
-            <img src="assets/images/bedroom-window-view.jpg" alt="Camera matrimoniale con vista mare">
+            <img src="assets/images/camera-matrimoniale.jpg" alt="Camera matrimoniale di charme con letto in ferro battuto e armadio d'epoca">
             <span class="amenity-tag">Notte & Benessere</span>
+            <span class="amenity-photo-count">📷 4 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
@@ -413,6 +439,10 @@
               <span class="amenity-chip">Aria Condizionata</span>
               <span class="amenity-chip">Vasca freestanding</span>
               <span class="amenity-chip">Doccia moderna in cristallo</span>
+            </div>
+            <div class="amenity-card-cta">
+              <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
+              <span aria-hidden="true">→</span>
             </div>
           </div>
         </article>
@@ -433,7 +463,7 @@
 
       <!-- Category Filter Pills -->
       <div class="gallery-filters" role="tablist" aria-label="Filtri Galleria">
-        <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Tutte le foto (15)</button>
+        <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Tutte le foto (20)</button>
         <button type="button" class="filter-btn" data-filter="pool" data-i18n="filterPool">Piscina & Panorama</button>
         <button type="button" class="filter-btn" data-filter="interior" data-i18n="filterInteriors">Salone & Interni</button>
         <button type="button" class="filter-btn" data-filter="rooms" data-i18n="filterRooms">Camere & Bagni</button>
@@ -448,13 +478,35 @@
     </div>
   </section>
 
-  <!-- Modern Accessible Lightbox Dialog with Zoom & Pan -->
+  <!-- Space Album Folder Dialog (Comfort & Spazi) -->
+  <dialog id="space-album-dialog" closedby="any" aria-labelledby="space-album-title">
+    <div class="space-album-wrap">
+      <div class="space-album-header">
+        <div class="space-album-heading">
+          <div class="space-album-icon" id="space-album-icon">🏊‍♂️</div>
+          <div>
+            <div class="space-album-eyebrow" id="space-album-count">9 foto</div>
+            <h3 class="space-album-title" id="space-album-title">Titolo Spazio</h3>
+          </div>
+        </div>
+        <button type="button" class="space-album-close" id="space-album-close" aria-label="Chiudi cartella">&times;</button>
+      </div>
+
+      <div class="space-album-body">
+        <p class="space-album-desc" id="space-album-desc"></p>
+        <div class="space-album-grid" id="space-album-grid">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modern Accessible Lightbox Dialog with Zoom, Pan & Thumbnail Strip -->
   <dialog id="gallery-lightbox" closedby="any" aria-labelledby="lightbox-title">
     <div class="lightbox-wrap">
       <div class="lightbox-header">
-        <span class="lightbox-counter" id="lightbox-counter">1 / 15</span>
-        <h3 class="lightbox-title" id="lightbox-title">Titolo Foto</h3>
-        
+        <span class="lightbox-counter" id="lightbox-counter">1 / 20</span>
+
         <!-- Zoom Controls Toolbar -->
         <div class="lightbox-tools" role="toolbar" aria-label="Controlli Zoom Immagine">
           <button type="button" class="lightbox-tool-btn" id="lightbox-zoom-out" title="Rimpicciolisci (Zoom -)" aria-label="Rimpicciolisci">
@@ -474,17 +526,21 @@
       <div class="lightbox-body">
         <button type="button" class="lightbox-nav-btn lightbox-prev" id="lightbox-prev" aria-label="Foto precedente">&#10094;</button>
         <div class="lightbox-img-wrap" id="lightbox-img-wrap" title="Doppio click per ingrandire o rotella mouse">
-          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img" draggable="false">
         </div>
         <button type="button" class="lightbox-nav-btn lightbox-next" id="lightbox-next" aria-label="Foto successiva">&#10095;</button>
       </div>
 
       <div class="lightbox-footer">
-        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
-          <span id="lightbox-desc">Descrizione foto</span>
-          <span class="lightbox-hint">🔍 Doppio click o rotella mouse per zoomare • Trascina per esplorare i dettagli</span>
+        <div class="lightbox-caption-info">
+          <h3 class="lightbox-title" id="lightbox-title">Titolo Foto</h3>
+          <span id="lightbox-desc" class="lightbox-desc-text">Descrizione foto</span>
         </div>
-        <span style="font-size: 0.8rem; opacity: 0.7;">Villa Timea • Marsala</span>
+        <span class="lightbox-hint">🔍 Doppio click o rotella per zoom • Trascina per muoverti</span>
+      </div>
+
+      <div class="lightbox-thumbs" id="lightbox-thumbs" aria-label="Anteprime foto">
+        <!-- Rendered dynamically by main.js -->
       </div>
     </div>
   </dialog>
@@ -977,6 +1033,6 @@
   <script src="assets/js/qrcode.min.js"></script>
 
   <!-- Main Website Script -->
-  <script src="assets/js/main.js?v=2.4"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
 </body>
 </html>

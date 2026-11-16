@@ -121,20 +121,25 @@ Villa Tom/
     │   ├── main.js              # Logica interattiva (lightbox, i18n, form, mappa)
     │   ├── leaflet.js           # Libreria mappe locale
     │   └── qrcode.min.js        # Generatore QR code locale
-    └── images/                  # Immagini ottimizzate con nomi semantici
-        ├── pool-panorama.jpg
-        ├── pool-terrace.jpg
-        ├── terrace-view.jpg
-        ├── panoramic-steps.jpg
-        ├── tennis-court.jpg
-        ├── tennis-veranda.jpg
-        ├── living-room-main.jpg
-        ├── living-room-fireplace.jpg
-        ├── dining-room.jpg
-        ├── bedroom-window-view.jpg
-        ├── bedroom-master.jpg
-        ├── bathroom-vintage.jpg
-        ├── bathroom-modern.jpg
-        ├── outdoor-pizza-oven.jpg
-        └── wine-cellar.jpg
+    └── images/                  # 20 immagini ottimizzate con nomi semantici italiani
+        ├── piscina-panorama.jpg
+        ├── piscina-terrazza.jpg
+        ├── piscina-facciata-villa.jpg
+        ├── tramonto-piscina-egadi.jpg
+        ├── piscina-crepuscolo-egadi.jpg
+        ├── piscina-notte-illuminata.jpg
+        ├── terrazza-vista-egadi.jpg
+        ├── scalinata-panoramica.jpg
+        ├── panorama-notte-tennis-piscina.jpg
+        ├── campo-tennis.jpg
+        ├── veranda-tennis.jpg
+        ├── forno-legna-esterno.jpg
+        ├── salone-principale.jpg
+        ├── salone-camino.jpg
+        ├── sala-pranzo.jpg
+        ├── camera-vista-egadi.jpg
+        ├── camera-matrimoniale.jpg
+        ├── bagno-epoca-vasca.jpg
+        ├── bagno-moderno-doccia.jpg
+        └── cantina-storica-tufo.jpg
 ```
