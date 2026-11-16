@@ -765,8 +765,9 @@ function initLightbox() {
   }
 
   if (wrap) {
-    // 1. Double Click to Zoom (pointer-centered)
+    // 1. Double Click to Zoom (desktop pointer only; touch uses classic pinch-to-zoom)
     wrap.addEventListener('dblclick', (e) => {
+      if (window.matchMedia('(pointer: coarse)').matches) return;
       e.preventDefault();
       if (currentZoom > 1.05) {
         resetZoom();
@@ -807,7 +808,7 @@ function initLightbox() {
       }
     });
 
-    // 4. Touch Gestures: Pinch-to-Zoom, Pan & Smooth Horizontal Swipe
+    // 4. Touch Gestures: Classic Pinch-to-Zoom, Pan & Smooth Horizontal Swipe
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartPanX = 0;
@@ -816,24 +817,10 @@ function initLightbox() {
     let initialTouchZoom = 1;
     let pinchCenterX = 0;
     let pinchCenterY = 0;
-    let lastTapTime = 0;
 
     wrap.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) {
         const touch = e.touches[0];
-        const now = Date.now();
-        if (now - lastTapTime < 280) {
-          e.preventDefault();
-          if (currentZoom > 1.05) {
-            resetZoom();
-          } else {
-            applyZoom(2.25, touch.clientX, touch.clientY);
-          }
-          lastTapTime = 0;
-          return;
-        }
-        lastTapTime = now;
-
         touchStartX = touch.clientX;
         touchStartY = touch.clientY;
 
@@ -849,6 +836,7 @@ function initLightbox() {
           wrap.classList.add('is-interacting');
         }
       } else if (e.touches.length === 2) {
+        e.preventDefault();
         isDragging = false;
         isSwiping = false;
         swipeOffsetX = 0;
@@ -884,6 +872,20 @@ function initLightbox() {
     }, { passive: false });
 
     wrap.addEventListener('touchend', (e) => {
+      if (e.touches.length === 1) {
+        touchDistance = 0;
+        if (currentZoom > 1) {
+          isDragging = true;
+          isSwiping = false;
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchStartPanX = panX;
+          touchStartPanY = panY;
+          wrap.classList.add('is-dragging', 'is-interacting');
+          return;
+        }
+      }
+
       wrap.classList.remove('is-dragging', 'is-interacting');
       if (isDragging) {
         isDragging = false;
