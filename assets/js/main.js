@@ -61,7 +61,7 @@ const i18nData = {
 
     storyTag: "L'Esperienza",
     storyTitle: "Un'oasi di pace tra il mare di Marsala e le Isole Egadi",
-    storyLead: "Immersa nella quiete della campagna marsalese, Villa Timea è una proprietà unica dove gli ampi spazi, la bellezza del paesaggio e il piacere della vita all'aria aperta si fondono in un'esperienza straordinaria.",
+    storyLead: "Immersa nella quiete della campagna marsalese, Villa Timea è una proprietà unica con 5 camere da letto (di cui una in dependance privata) e 4 bagni, dove gli ampi spazi, la bellezza del paesaggio e il piacere della vita all'aria aperta si fondono in un'esperienza straordinaria.",
     storyP1: "Il suo punto di forza è senza dubbio la posizione panoramica: dalle terrazze lo sguardo abbraccia il mare e le Isole Egadi (Favignana, Levanzo e Marettimo), regalando uno scenario spettacolare soprattutto nelle ore del tramonto, quando il sole scende lentamente all'orizzonte tingendo il paesaggio di colori caldi e suggestivi.",
     storyP2: "All'esterno, la grande piscina privata ad uso esclusivo per gli ospiti è il cuore pulsante della tenuta. Circondata da palme e aree relax, offre lo spazio ideale per trascorrere intere giornate al sole, rinfrescarsi nelle acque cristalline e godersi momenti di autentica tranquillità in totale privacy. La presenza del trampolino aggiunge un tocco di divertimento irresistibile per famiglie e amici.",
     storyP3: "Per gli amanti dello sport, il campo da tennis privato e regolamentare ad uso esclusivo per gli ospiti e le aree fitness consentono di alternare il riposo all'attività fisica in assoluta riservatezza senza mai dover condividere gli spazi con altri, immersi in una pineta verde con vialetti illuminati di sera.",
@@ -270,7 +270,7 @@ const i18nData = {
 
     storyTag: "The Experience",
     storyTitle: "An oasis of peace between Marsala's sea and the Egadi Islands",
-    storyLead: "Nestled in the quiet Marsala countryside, Villa Timea is a unique property where generous spaces, scenic beauty, and open-air living blend into an unforgettable vacation experience.",
+    storyLead: "Nestled in the quiet Marsala countryside, Villa Timea is a unique estate with 5 bedrooms (including one in a private dependance) and 4 bathrooms, where generous spaces, scenic beauty, and open-air living blend into an unforgettable vacation experience.",
     storyP1: "Its greatest highlight is undoubtedly the panoramic vantage point: from the terraces, your gaze sweeps over the sparkling sea and the Egadi Islands (Favignana, Levanzo, and Marettimo), treating you to glorious sunset vistas each evening.",
     storyP2: "Outside, the large private pool reserved exclusively for guests is the vibrant heart of the estate. Framed by palm trees and sun terraces, it is the ideal place to soak up the Sicilian sun, dive into crystal clear water, and unwind in complete serenity and absolute privacy. The diving board adds fun for friends and family alike.",
     storyP3: "For sports lovers, the private regulation tennis court reserved exclusively for guests allows you to alternate deep relaxation with spirited matches without ever having to share spaces, surrounded by a peaceful pine forest with illuminated evening paths.",
