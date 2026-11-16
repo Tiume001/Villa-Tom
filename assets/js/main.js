@@ -478,8 +478,8 @@ const spaceAlbums = {
     icon: "🛏️",
     titleIt: "Camere Panoramiche & Bagni di Charme",
     titleEn: "Panoramic Bedrooms & Bathrooms",
-    descIt: "Le camere da letto affacciate sul mare e sulle Isole Egadi insieme ai due bagni (vasca freestanding d'epoca e doccia moderna in cristallo).",
-    descEn: "Sea-view bedrooms overlooking the Egadi Islands paired with two bathrooms (vintage clawfoot tub and modern walk-in shower).",
+    descIt: "La proprietà offre 5 camere da letto, 4 bagni (con vasca freestanding d'epoca e doccia moderna in cristallo) e una comoda dependance privata.",
+    descEn: "The estate features 5 bedrooms, 4 bathrooms (including a vintage clawfoot tub and modern walk-in shower) plus a private dependance.",
     photoIds: [16, 17, 18, 19]
   }
 };
