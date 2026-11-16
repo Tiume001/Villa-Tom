@@ -5,6 +5,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Prevent iOS Safari page-level pinch/double-tap zoom outside the photo viewer
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(evt => {
+    document.addEventListener(evt, (e) => e.preventDefault(), { passive: false });
+  });
+
   initI18n();
   initSpaceAlbums();
   initGallery();
