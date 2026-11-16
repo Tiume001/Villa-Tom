@@ -119,7 +119,7 @@ const i18nData = {
     statPrivacyLabel: "Privacy & Relax Esclusivo",
     statGuestsLabel: "Ospiti & Grandi Spazi",
     statRoomsNum: "5 Camere",
-    statRoomsLabel: "Da letto + Dependance",
+    statRoomsLabel: "Da letto (incl. Dependance)",
     statBathsNum: "4 Bagni",
     statBathsLabel: "Completi di charme",
 
@@ -172,10 +172,10 @@ const i18nData = {
     amRoomsTag: "Notte & Benessere",
     amRoomsCount: "📷 4 foto",
     amRoomsTitle: "Camere Panoramiche & Bagni di Charme",
-    amRoomsDesc: "5 camere da letto e 4 bagni con vista sul mare e sulle isole, arredi d'epoca, aria condizionata e vasca in ghisa vintage o doccia moderna. La tenuta dispone inoltre di una comoda dependance privata.",
+    amRoomsDesc: "5 camere da letto (di cui una in dependance privata) e 4 bagni con vista sul mare e sulle isole, arredi d'epoca, aria condizionata e vasca in ghisa vintage o doccia moderna.",
     amRoomsChip1: "5 Camere da Letto",
     amRoomsChip2: "4 Bagni",
-    amRoomsChip3: "Dependance Privata",
+    amRoomsChip3: "Dependance Inclusa",
     amRoomsChip4: "Vista Isole Egadi",
     amRoomsChip5: "Aria Condizionata",
 
@@ -328,7 +328,7 @@ const i18nData = {
     statPrivacyLabel: "Exclusive Privacy & Relax",
     statGuestsLabel: "Guests & Spacious Grounds",
     statRoomsNum: "5 Bedrooms",
-    statRoomsLabel: "+ Private Dependance",
+    statRoomsLabel: "Incl. Private Dependance",
     statBathsNum: "4 Bathrooms",
     statBathsLabel: "Charming & well-appointed",
 
@@ -381,10 +381,10 @@ const i18nData = {
     amRoomsTag: "Sleep & Wellness",
     amRoomsCount: "📷 4 photos",
     amRoomsTitle: "Panoramic Bedrooms & Charming Baths",
-    amRoomsDesc: "5 bedrooms and 4 bathrooms with sea and island views, antique furnishings, air conditioning, and a vintage clawfoot tub or modern walk-in shower. The estate also includes a private dependance.",
+    amRoomsDesc: "5 bedrooms (including one in a private dependance) and 4 bathrooms with sea and island views, antique furnishings, air conditioning, and a vintage clawfoot tub or modern walk-in shower.",
     amRoomsChip1: "5 Bedrooms",
     amRoomsChip2: "4 Bathrooms",
-    amRoomsChip3: "Private Dependance",
+    amRoomsChip3: "Dependance Included",
     amRoomsChip4: "Egadi Islands View",
     amRoomsChip5: "Air Conditioning",
 
@@ -734,8 +734,8 @@ const spaceAlbums = {
     icon: "🛏️",
     titleIt: "Camere Panoramiche & Bagni di Charme",
     titleEn: "Panoramic Bedrooms & Bathrooms",
-    descIt: "La proprietà offre 5 camere da letto, 4 bagni (con vasca freestanding d'epoca e doccia moderna in cristallo) e una comoda dependance privata.",
-    descEn: "The estate features 5 bedrooms, 4 bathrooms (including a vintage clawfoot tub and modern walk-in shower) plus a private dependance.",
+    descIt: "La proprietà offre 5 camere da letto (di cui una in dependance privata) e 4 bagni (con vasca freestanding d'epoca e doccia moderna in cristallo).",
+    descEn: "The estate features 5 bedrooms (including one in a private dependance) and 4 bathrooms (with a vintage clawfoot tub and modern walk-in shower).",
     photoIds: [16, 17, 18, 19]
   }
 };
