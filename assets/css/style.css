@@ -2206,10 +2206,84 @@ dialog {
   }
   .amenities-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+  .amenity-card {
+    border-radius: var(--radius-md);
   }
   .amenity-media {
-    height: 200px;
+    height: 165px;
+  }
+  .amenity-content {
+    padding: 1.15rem;
+  }
+  .amenity-icon-title {
+    gap: 0.6rem;
+    margin-bottom: 0.55rem;
+  }
+  .amenity-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+  }
+  .amenity-title {
+    font-size: 1.12rem;
+    line-height: 1.25;
+  }
+  .amenity-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.85rem;
+  }
+  .amenity-list {
+    padding-top: 0.75rem;
+    gap: 0.35rem;
+  }
+  .amenity-chip {
+    font-size: 0.72rem;
+    padding: 0.22rem 0.55rem;
+  }
+  .amenity-card-cta {
+    margin-top: 0.75rem;
+    padding-top: 0.65rem;
+    font-size: 0.82rem;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-sm);
+  }
+  .gallery-item-overlay {
+    padding: 0.55rem;
+  }
+  .gallery-item-caption {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+  .gallery-item-category {
+    display: none;
+  }
+  .territory-grid {
+    gap: 1rem;
+  }
+  .territory-card {
+    padding: 1.15rem;
+    border-radius: var(--radius-md);
+  }
+  .territory-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.45rem;
+  }
+  .territory-title {
+    font-size: 1.08rem;
+  }
+  .territory-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
   .form-row {
     grid-template-columns: 1fr;
@@ -2223,42 +2297,6 @@ dialog {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  /* Lightbox Mobile Adjustments */
-  #gallery-lightbox {
-    width: 96vw;
-    max-width: 96vw;
-    height: 88vh;
-    max-height: 88vh;
-  }
-  .lightbox-header {
-    padding: 0.75rem 1rem;
-  }
-  .lightbox-title {
-    font-size: 1.05rem;
-    max-width: 65%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .lightbox-body {
-    padding: 0.75rem 0.25rem;
-  }
-  .lightbox-nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-  .lightbox-prev {
-    left: 0.35rem;
-  }
-  .lightbox-next {
-    right: 0.35rem;
-  }
-  .lightbox-footer {
-    padding: 0.75rem 1rem;
-    font-size: 0.82rem;
   }
 
   /* Map Mobile Floating Card Adjustment */
@@ -2285,7 +2323,13 @@ dialog {
     padding: 0 1rem;
   }
   .section {
-    padding: 3.5rem 0;
+    padding: 2.75rem 0;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .section-desc {
+    font-size: 0.9rem;
   }
   .logo-title {
     font-size: 1.32rem;
