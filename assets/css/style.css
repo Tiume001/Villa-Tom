@@ -2177,8 +2177,8 @@ dialog {
     gap: 0.45rem;
   }
   .hero {
-    min-height: 76dvh;
-    padding: 1.5rem 0 1.25rem;
+    min-height: calc(100dvh - 108px - env(safe-area-inset-bottom, 0px));
+    padding: 1.5rem 0 1rem;
     display: flex;
     align-items: stretch;
   }
