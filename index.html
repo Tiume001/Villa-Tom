@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/leaflet.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.5">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.6">
 </head>
 <body>
 
@@ -75,7 +75,7 @@
         <div class="nav-actions">
           <button type="button" class="nav-theme-btn" id="navThemeBtn" title="Cambia Palette di Stili">
             <span>🎨</span>
-            <span>Palette</span>
+            <span data-i18n="navPalette">Palette</span>
           </button>
           <div class="lang-switch">
             <button type="button" class="lang-btn active" data-lang="it">IT</button>
@@ -113,13 +113,13 @@
     <div class="mob-nav-footer">
       <button type="button" class="btn btn-outline btn-sm" id="mobNavThemeBtn" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.75rem;">
         <span>🎨</span>
-        <span>Scegli Palette Stili</span>
+        <span data-i18n="mobChoosePalette">Scegli Palette Stili</span>
       </button>
       <div class="lang-switch" style="align-self: flex-start;">
         <button type="button" class="lang-btn active" data-lang="it">Italiano</button>
         <button type="button" class="lang-btn" data-lang="en">English</button>
       </div>
-      <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%;">
+      <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%;" data-i18n="mobWaDirect">
         💬 Chat WhatsApp Diretta
       </a>
       <a href="#contatti" class="btn btn-primary" style="width: 100%;" data-i18n="btnBookNow">
@@ -149,7 +149,7 @@
       <div class="hero-cta-group">
         <a href="#galleria" class="btn btn-primary" data-i18n="heroExplore">Esplora la Villa</a>
         <a href="#contatti" class="btn btn-outline-white" data-i18n="heroInquire">Prenota o Richiedi Info</a>
-        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btnWaDirect">
           💬 WhatsApp Diretto
         </a>
       </div>
@@ -202,10 +202,10 @@
         <a href="#contatti" class="btn btn-primary btn-sm" data-i18n="btnDirectContact">
           🌟 Contatto Diretto (Miglior Tariffa)
         </a>
-        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm" data-i18n="btnWaDirect">
           💬 WhatsApp Diretto
         </a>
-        <a href="tel:+393349241047" class="btn btn-outline btn-sm">
+        <a href="tel:+393349241047" class="btn btn-outline btn-sm" data-i18n="btnCallNow">
           📞 Chiama Ora
         </a>
       </div>
@@ -237,19 +237,19 @@
           <div class="story-highlights">
             <div class="story-stat">
               <div class="story-stat-number">100%</div>
-              <div class="story-stat-label">Privacy & Relax Esclusivo</div>
+              <div class="story-stat-label" data-i18n="statPrivacyLabel">Privacy & Relax Esclusivo</div>
             </div>
             <div class="story-stat">
               <div class="story-stat-number">12+</div>
-              <div class="story-stat-label">Ospiti & Grandi Spazi</div>
+              <div class="story-stat-label" data-i18n="statGuestsLabel">Ospiti & Grandi Spazi</div>
             </div>
             <div class="story-stat">
-              <div class="story-stat-number">5 Camere</div>
-              <div class="story-stat-label">Da letto + Dependance</div>
+              <div class="story-stat-number" data-i18n="statRoomsNum">5 Camere</div>
+              <div class="story-stat-label" data-i18n="statRoomsLabel">Da letto + Dependance</div>
             </div>
             <div class="story-stat">
-              <div class="story-stat-number">4 Bagni</div>
-              <div class="story-stat-label">Completi di charme</div>
+              <div class="story-stat-number" data-i18n="statBathsNum">4 Bagni</div>
+              <div class="story-stat-label" data-i18n="statBathsLabel">Completi di charme</div>
             </div>
           </div>
 
@@ -290,23 +290,23 @@
         <article class="amenity-card" data-space="pool" role="button" tabindex="0" aria-label="Apri cartella foto Piscina Panoramica">
           <div class="amenity-media">
             <img src="assets/images/piscina-terrazza.jpg" alt="Grande piscina panoramica ad uso esclusivo con trampolino">
-            <span class="amenity-tag">Outdoor</span>
-            <span class="amenity-photo-count">📷 9 foto</span>
+            <span class="amenity-tag" data-i18n="amPoolTag">Outdoor</span>
+            <span class="amenity-photo-count" data-i18n="amPoolCount">📷 9 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
               <div class="amenity-icon">🏊‍♂️</div>
-              <h3 class="amenity-title">Piscina Panoramica (Uso Esclusivo)</h3>
+              <h3 class="amenity-title" data-i18n="amPoolTitle">Piscina Panoramica (Uso Esclusivo)</h3>
             </div>
-            <p class="amenity-desc">
+            <p class="amenity-desc" data-i18n="amPoolDesc">
               Grande vasca ad uso totalmente esclusivo per gli ospiti della villa, immersa tra palme e vegetazione mediterranea, completa di trampolino per i tuffi, lettini prendisole e solarium con vista aperta sulle Isole Egadi.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">Uso Esclusivo Ospiti</span>
-              <span class="amenity-chip">Trampolino tuffi</span>
-              <span class="amenity-chip">Solarium con lettini</span>
-              <span class="amenity-chip">Vista aperta sulle Egadi</span>
-              <span class="amenity-chip">Privacy assoluta</span>
+              <span class="amenity-chip" data-i18n="amPoolChip1">Uso Esclusivo Ospiti</span>
+              <span class="amenity-chip" data-i18n="amPoolChip2">Trampolino tuffi</span>
+              <span class="amenity-chip" data-i18n="amPoolChip3">Solarium con lettini</span>
+              <span class="amenity-chip" data-i18n="amPoolChip4">Vista aperta sulle Egadi</span>
+              <span class="amenity-chip" data-i18n="amPoolChip5">Privacy assoluta</span>
             </div>
             <div class="amenity-card-cta">
               <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
@@ -319,22 +319,22 @@
         <article class="amenity-card" data-space="tennis" role="button" tabindex="0" aria-label="Apri cartella foto Campo da Tennis">
           <div class="amenity-media">
             <img src="assets/images/campo-tennis.jpg" alt="Campo da tennis regolamentare ad uso esclusivo">
-            <span class="amenity-tag">Sport & Fitness</span>
-            <span class="amenity-photo-count">📷 3 foto</span>
+            <span class="amenity-tag" data-i18n="amTennisTag">Sport & Fitness</span>
+            <span class="amenity-photo-count" data-i18n="amTennisCount">📷 3 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
               <div class="amenity-icon">🎾</div>
-              <h3 class="amenity-title">Campo da Tennis (Uso Esclusivo)</h3>
+              <h3 class="amenity-title" data-i18n="amTennisTitle">Campo da Tennis (Uso Esclusivo)</h3>
             </div>
-            <p class="amenity-desc">
+            <p class="amenity-desc" data-i18n="amTennisDesc">
               Campo da tennis regolamentare privato, riservato ad uso esclusivo degli ospiti della villa per partite, tornei amichevoli o sessioni di allenamento con la fresca brezza collinare e senza condivisione di spazi.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">Uso Esclusivo Ospiti</span>
-              <span class="amenity-chip">Misure Regolamentari</span>
-              <span class="amenity-chip">Veranda spettatori</span>
-              <span class="amenity-chip">Massima Privacy</span>
+              <span class="amenity-chip" data-i18n="amTennisChip1">Uso Esclusivo Ospiti</span>
+              <span class="amenity-chip" data-i18n="amTennisChip2">Misure Regolamentari</span>
+              <span class="amenity-chip" data-i18n="amTennisChip3">Veranda spettatori</span>
+              <span class="amenity-chip" data-i18n="amTennisChip4">Massima Privacy</span>
             </div>
             <div class="amenity-card-cta">
               <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
@@ -347,22 +347,22 @@
         <article class="amenity-card" data-space="cellar" role="button" tabindex="0" aria-label="Apri cartella foto Cantina Storica">
           <div class="amenity-media">
             <img src="assets/images/cantina-storica-tufo.jpg" alt="Antica cantina sotterranea nel tufo">
-            <span class="amenity-tag">Tradizione Siciliana</span>
-            <span class="amenity-photo-count">📷 2 foto</span>
+            <span class="amenity-tag" data-i18n="amCellarTag">Tradizione Siciliana</span>
+            <span class="amenity-photo-count" data-i18n="amCellarCount">📷 2 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
               <div class="amenity-icon">🍷</div>
-              <h3 class="amenity-title">Cantina Storica nel Tufo</h3>
+              <h3 class="amenity-title" data-i18n="amCellarTitle">Cantina Storica nel Tufo</h3>
             </div>
-            <p class="amenity-desc">
+            <p class="amenity-desc" data-i18n="amCellarDesc">
               Un suggestivo ipogeo scavato nella roccia di tufo marsalese con cancello in ferro battuto, custode delle migliori annate di vino siciliano.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">Scavata nella roccia</span>
-              <span class="amenity-chip">Bottiglie storiche Marsala</span>
-              <span class="amenity-chip">Atmosfera autentica</span>
-              <span class="amenity-chip">Clima fresco naturale</span>
+              <span class="amenity-chip" data-i18n="amCellarChip1">Scavata nella roccia</span>
+              <span class="amenity-chip" data-i18n="amCellarChip2">Bottiglie storiche Marsala</span>
+              <span class="amenity-chip" data-i18n="amCellarChip3">Atmosfera autentica</span>
+              <span class="amenity-chip" data-i18n="amCellarChip4">Clima fresco naturale</span>
             </div>
             <div class="amenity-card-cta">
               <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
@@ -375,22 +375,22 @@
         <article class="amenity-card" data-space="outdoor" role="button" tabindex="0" aria-label="Apri cartella foto Spazi Aperti, Pineta e Terrazze">
           <div class="amenity-media">
             <img src="assets/images/piscina-facciata-villa.jpg" alt="Facciata della villa immersa nella pineta e nei giardini di Villa Timea">
-            <span class="amenity-tag">Giardino & Terrazze</span>
-            <span class="amenity-photo-count">📷 4 foto</span>
+            <span class="amenity-tag" data-i18n="amOutdoorTag">Giardino & Terrazze</span>
+            <span class="amenity-photo-count" data-i18n="amOutdoorCount">📷 4 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
               <div class="amenity-icon">🌿</div>
-              <h3 class="amenity-title">Spazi Aperti, Pineta & Terrazze</h3>
+              <h3 class="amenity-title" data-i18n="amOutdoorTitle">Spazi Aperti, Pineta & Terrazze</h3>
             </div>
-            <p class="amenity-desc">
+            <p class="amenity-desc" data-i18n="amOutdoorDesc">
               Ampi spazi esterni tra pineta mediterranea, scalinate panoramiche e logge coperte con vista sulle Isole Egadi, completi di forno a legna in pietra per cene all'aperto.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">Pineta & Giardino</span>
-              <span class="amenity-chip">Terrazze Panoramiche</span>
-              <span class="amenity-chip">Forno a Legna</span>
-              <span class="amenity-chip">Cene all'aperto</span>
+              <span class="amenity-chip" data-i18n="amOutdoorChip1">Pineta & Giardino</span>
+              <span class="amenity-chip" data-i18n="amOutdoorChip2">Terrazze Panoramiche</span>
+              <span class="amenity-chip" data-i18n="amOutdoorChip3">Forno a Legna</span>
+              <span class="amenity-chip" data-i18n="amOutdoorChip4">Cene all'aperto</span>
             </div>
             <div class="amenity-card-cta">
               <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
@@ -403,22 +403,22 @@
         <article class="amenity-card" data-space="interior" role="button" tabindex="0" aria-label="Apri cartella foto Salone e Sala da Pranzo">
           <div class="amenity-media">
             <img src="assets/images/salone-principale.jpg" alt="Ampio salone con camino e parquet">
-            <span class="amenity-tag">Spazi Interni</span>
-            <span class="amenity-photo-count">📷 3 foto</span>
+            <span class="amenity-tag" data-i18n="amInteriorTag">Spazi Interni</span>
+            <span class="amenity-photo-count" data-i18n="amInteriorCount">📷 3 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
               <div class="amenity-icon">🛋️</div>
-              <h3 class="amenity-title">Salone Nobile con Camino</h3>
+              <h3 class="amenity-title" data-i18n="amInteriorTitle">Salone Nobile con Camino</h3>
             </div>
-            <p class="amenity-desc">
+            <p class="amenity-desc" data-i18n="amInteriorDesc">
               Grande salone con pavimenti in parquet a spina di pesce, divani confortevoli, camino in mattoni a vista e tavolo da pranzo per oltre 10 persone.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">Parquet pregiato</span>
-              <span class="amenity-chip">Camino a legna</span>
-              <span class="amenity-chip">Tavolo 10+ coperti</span>
-              <span class="amenity-chip">Luminosità naturale</span>
+              <span class="amenity-chip" data-i18n="amInteriorChip1">Parquet pregiato</span>
+              <span class="amenity-chip" data-i18n="amInteriorChip2">Camino a legna</span>
+              <span class="amenity-chip" data-i18n="amInteriorChip3">Tavolo 10+ coperti</span>
+              <span class="amenity-chip" data-i18n="amInteriorChip4">Luminosità naturale</span>
             </div>
             <div class="amenity-card-cta">
               <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
@@ -431,23 +431,23 @@
         <article class="amenity-card" data-space="rooms" role="button" tabindex="0" aria-label="Apri cartella foto Camere e Bagni">
           <div class="amenity-media">
             <img src="assets/images/camera-matrimoniale.jpg" alt="Camera matrimoniale di charme con letto in ferro battuto e armadio d'epoca">
-            <span class="amenity-tag">Notte & Benessere</span>
-            <span class="amenity-photo-count">📷 4 foto</span>
+            <span class="amenity-tag" data-i18n="amRoomsTag">Notte & Benessere</span>
+            <span class="amenity-photo-count" data-i18n="amRoomsCount">📷 4 foto</span>
           </div>
           <div class="amenity-content">
             <div class="amenity-icon-title">
               <div class="amenity-icon">🛏️</div>
-              <h3 class="amenity-title">Camere Panoramiche & Bagni di Charme</h3>
+              <h3 class="amenity-title" data-i18n="amRoomsTitle">Camere Panoramiche & Bagni di Charme</h3>
             </div>
-            <p class="amenity-desc">
+            <p class="amenity-desc" data-i18n="amRoomsDesc">
               5 camere da letto e 4 bagni con vista sul mare e sulle isole, arredi d'epoca, aria condizionata e vasca in ghisa vintage o doccia moderna. La tenuta dispone inoltre di una comoda dependance privata.
             </p>
             <div class="amenity-list">
-              <span class="amenity-chip">5 Camere da Letto</span>
-              <span class="amenity-chip">4 Bagni</span>
-              <span class="amenity-chip">Dependance Privata</span>
-              <span class="amenity-chip">Vista Isole Egadi</span>
-              <span class="amenity-chip">Aria Condizionata</span>
+              <span class="amenity-chip" data-i18n="amRoomsChip1">5 Camere da Letto</span>
+              <span class="amenity-chip" data-i18n="amRoomsChip2">4 Bagni</span>
+              <span class="amenity-chip" data-i18n="amRoomsChip3">Dependance Privata</span>
+              <span class="amenity-chip" data-i18n="amRoomsChip4">Vista Isole Egadi</span>
+              <span class="amenity-chip" data-i18n="amRoomsChip5">Aria Condizionata</span>
             </div>
             <div class="amenity-card-cta">
               <span data-i18n="spaceOpenFolder">Apri cartella foto</span>
@@ -549,7 +549,7 @@
           <h3 class="lightbox-title" id="lightbox-title">Titolo Foto</h3>
           <span id="lightbox-desc" class="lightbox-desc-text">Descrizione foto</span>
         </div>
-        <span class="lightbox-hint">🔍 Doppio click o rotella per zoom • Trascina per muoverti</span>
+        <span class="lightbox-hint" data-i18n="lightboxHint">🔍 Doppio click o rotella per zoom • Trascina per muoverti</span>
       </div>
 
       <div class="lightbox-thumbs" id="lightbox-thumbs" aria-label="Anteprime foto">
@@ -572,19 +572,19 @@
           <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <span style="font-size: 1.3rem;">📱</span>
-              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;">
+              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet1">
                 Perfetto per QR posizionati in casa (Wi-Fi, regole, piscina e tennis ad uso esclusivo, contatti rapidi)
               </span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <span style="font-size: 1.3rem;">🗺️</span>
-              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;">
+              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet2">
                 Navigazione GPS one-touch verso Contrada Fontanelle 231
               </span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <span style="font-size: 1.3rem;">🌐</span>
-              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;">
+              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet3">
                 Bilingue Italiano / Inglese con cambio istantaneo per ospiti internazionali
               </span>
             </div>
@@ -604,10 +604,10 @@
           <div id="qr-canvas-holder">
             <!-- Dynamic QR Code rendered via local qrcode.min.js -->
           </div>
-          <div style="font-weight: 700; color: var(--c-navy); font-size: 1.05rem; margin-bottom: 0.25rem;">
+          <div style="font-weight: 700; color: var(--c-navy); font-size: 1.05rem; margin-bottom: 0.25rem;" data-i18n="qrScanTitle">
             Scansiona con la Fotocamera
           </div>
-          <div style="font-size: 0.8rem; color: var(--c-text-muted);">
+          <div style="font-size: 0.8rem; color: var(--c-text-muted);" data-i18n="qrScanSub">
             Apri direttamente questo sito sul tuo smartphone
           </div>
         </div>
@@ -629,56 +629,56 @@
       <div class="territory-grid">
         <article class="territory-card">
           <span class="territory-icon">🏝️</span>
-          <h3 class="territory-title">Isole Egadi (Favignana, Levanzo e Marettimo)</h3>
-          <p class="territory-desc">
+          <h3 class="territory-title" data-i18n="terr1Title">Isole Egadi (Favignana, Levanzo e Marettimo)</h3>
+          <p class="territory-desc" data-i18n="terr1Desc">
             Visibili direttamente dalle terrazze della villa! L'arcipelago delle Egadi — Favignana con le sue celebri cale turchesi (Cala Rossa, Cala Azzurra), la caratteristica Levanzo e la selvaggia ed incontaminata Marettimo con le sue grotte marine — è comodamente raggiungibile: l'imbarco degli aliscafi dal porto di Marsala dista solo 10 minuti di auto.
           </p>
-          <div class="territory-dist">⏱️ 10 min al porto di Marsala</div>
+          <div class="territory-dist" data-i18n="terr1Dist">⏱️ 10 min al porto di Marsala</div>
         </article>
 
         <article class="territory-card">
           <span class="territory-icon">🦩</span>
-          <h3 class="territory-title">Riserva dello Stagnone & Saline</h3>
-          <p class="territory-desc">
+          <h3 class="territory-title" data-i18n="terr2Title">Riserva dello Stagnone & Saline</h3>
+          <p class="territory-desc" data-i18n="terr2Desc">
             Mulini a vento storici, cumuli di sale e fenicotteri rosa. Famosa a livello mondiale per il kitesurf e per uno dei tramonti più fotografati d'Europa, con l'antica isola fenicia di Mozia.
           </p>
-          <div class="territory-dist">⏱️ 12 min di auto</div>
+          <div class="territory-dist" data-i18n="terr2Dist">⏱️ 12 min di auto</div>
         </article>
 
         <article class="territory-card">
           <span class="territory-icon">🍷</span>
-          <h3 class="territory-title">Cantine Storiche del Vino Marsala</h3>
-          <p class="territory-desc">
+          <h3 class="territory-title" data-i18n="terr3Title">Cantine Storiche del Vino Marsala</h3>
+          <p class="territory-desc" data-i18n="terr3Desc">
             Patria del celebre vino liquoroso DOC. Visita le storiche botti monumentali delle Cantine Florio, Donnafugata e Pellegrino con tour di degustazione e cucina tipica siciliana.
           </p>
-          <div class="territory-dist">⏱️ 8-12 min dalle principali cantine</div>
+          <div class="territory-dist" data-i18n="terr3Dist">⏱️ 8-12 min dalle principali cantine</div>
         </article>
 
         <article class="territory-card">
           <span class="territory-icon">🏖️</span>
-          <h3 class="territory-title">Spiagge Dorate del Litorale Sud</h3>
-          <p class="territory-desc">
+          <h3 class="territory-title" data-i18n="terr4Title">Spiagge Dorate del Litorale Sud</h3>
+          <p class="territory-desc" data-i18n="terr4Desc">
             Chilometri di lidi attrezzati e spiagge libere di sabbia dorata con fondali bassi e acqua cristallina (Lido Signorino, Torrazza, Tiburon Beach).
           </p>
-          <div class="territory-dist">⏱️ 15 min dal litorale</div>
+          <div class="territory-dist" data-i18n="terr4Dist">⏱️ 15 min dal litorale</div>
         </article>
 
         <article class="territory-card">
           <span class="territory-icon">🏛️</span>
-          <h3 class="territory-title">Centro Storico di Marsala</h3>
-          <p class="territory-desc">
+          <h3 class="territory-title" data-i18n="terr5Title">Centro Storico di Marsala</h3>
+          <p class="territory-desc" data-i18n="terr5Desc">
             Passeggia per l'elegante isola pedonale, scopri Porta Garibaldi, la Cattedrale barocca, il Museo Archeologico con la Nave Punica e i vivaci wine-bar serali.
           </p>
-          <div class="territory-dist">⏱️ 8 min dal centro</div>
+          <div class="territory-dist" data-i18n="terr5Dist">⏱️ 8 min dal centro</div>
         </article>
 
         <article class="territory-card">
           <span class="territory-icon">✈️</span>
-          <h3 class="territory-title">Aeroporti Vicini</h3>
-          <p class="territory-desc">
+          <h3 class="territory-title" data-i18n="terr6Title">Aeroporti Vicini</h3>
+          <p class="territory-desc" data-i18n="terr6Desc">
             Facilmente e rapidamente raggiungibile: Aeroporto di Trapani-Birgi (Vincenzo Florio) con numerosi voli Ryanair e nazionali a soli 10 minuti di auto; Aeroporto Internazionale Falcone-Borsellino di Palermo a circa 1 ora.
           </p>
-          <div class="territory-dist">⏱️ 10 min (Trapani-Birgi) • 60 min (Palermo)</div>
+          <div class="territory-dist" data-i18n="terr6Dist">⏱️ 10 min (Trapani-Birgi) • 60 min (Palermo)</div>
         </article>
       </div>
     </div>
@@ -701,7 +701,7 @@
           <form id="inquiry-form" onsubmit="return false;">
             <div class="form-group">
               <label for="inq-name" class="form-label" data-i18n="formName">Nome e Cognome *</label>
-              <input type="text" id="inq-name" class="form-input" placeholder="Es. Marco Rossi" required>
+              <input type="text" id="inq-name" class="form-input" placeholder="Es. Marco Rossi" data-i18n-ph="formNamePh" required>
             </div>
 
             <div class="form-row">
@@ -729,17 +729,17 @@
             <div class="form-group">
               <label for="inq-guests" class="form-label" data-i18n="formGuests">Numero Ospiti</label>
               <select id="inq-guests" class="form-select">
-                <option value="1-2">1-2 Ospiti</option>
-                <option value="3-4">3-4 Ospiti</option>
-                <option value="5-6">5-6 Ospiti</option>
-                <option value="7-8">7-8 Ospiti</option>
-                <option value="9-12+">9-12+ Ospiti (Gruppo / Famiglie)</option>
+                <option value="1-2" data-i18n="optGuests12">1-2 Ospiti</option>
+                <option value="3-4" data-i18n="optGuests34">3-4 Ospiti</option>
+                <option value="5-6" data-i18n="optGuests56">5-6 Ospiti</option>
+                <option value="7-8" data-i18n="optGuests78">7-8 Ospiti</option>
+                <option value="9-12+" data-i18n="optGuests912">9-12+ Ospiti (Gruppo / Famiglie)</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="inq-notes" class="form-label" data-i18n="formMsg">Messaggio o Richieste Speciali</label>
-              <textarea id="inq-notes" class="form-textarea" placeholder="Desidero conoscere la disponibilità e le tariffe per il periodo..."></textarea>
+              <textarea id="inq-notes" class="form-textarea" placeholder="Desidero conoscere la disponibilità e le tariffe per il periodo..." data-i18n-ph="formMsgPh"></textarea>
             </div>
 
             <div class="form-actions">
@@ -759,21 +759,21 @@
             <div class="info-card-header">
               <div class="info-card-icon">📞</div>
               <div>
-                <h3 class="info-card-title">Contatti Diretti</h3>
-                <span style="font-size: 0.8rem; color: var(--c-text-muted);">Siamo a tua disposizione</span>
+                <h3 class="info-card-title" data-i18n="infoDirectTitle">Contatti Diretti</h3>
+                <span style="font-size: 0.8rem; color: var(--c-text-muted);" data-i18n="infoDirectSub">Siamo a tua disposizione</span>
               </div>
             </div>
             <div class="info-list-item">
               <span class="info-list-icon">📱</span>
               <div>
-                <strong>Telefono / WhatsApp:</strong><br>
+                <strong data-i18n="infoPhoneLabel">Telefono / WhatsApp:</strong><br>
                 <a href="tel:+393349241047" style="color: var(--c-ocean); font-weight: 600;">+39 334 924 1047</a>
               </div>
             </div>
             <div class="info-list-item">
               <span class="info-list-icon">✉️</span>
               <div>
-                <strong>Email Direzione:</strong><br>
+                <strong data-i18n="infoEmailLabel">Email Direzione:</strong><br>
                 <a href="mailto:villatimea@gmail.com" style="color: var(--c-ocean);">villatimea@gmail.com</a><br>
                 <a href="mailto:Info@larosadeiventibb.com" style="color: var(--c-ocean); font-size: 0.85rem;">Info@larosadeiventibb.com</a>
               </div>
@@ -781,7 +781,7 @@
             <div class="info-list-item">
               <span class="info-list-icon">📍</span>
               <div>
-                <strong>Indirizzo:</strong><br>
+                <strong data-i18n="infoAddressLabel">Indirizzo:</strong><br>
                 Contrada Fontanelle 231, 91025 Marsala (TP), Sicilia
               </div>
             </div>
@@ -791,22 +791,22 @@
             <div class="info-card-header">
               <div class="info-card-icon" style="background: #fff7ed; color: var(--c-terracotta);">⭐</div>
               <div>
-                <h3 class="info-card-title">Vantaggi Prenotazione Diretta</h3>
-                <span style="font-size: 0.8rem; color: var(--c-text-muted);">Miglior tariffa garantita & zero commissioni</span>
+                <h3 class="info-card-title" data-i18n="infoPerksTitle">Vantaggi Prenotazione Diretta</h3>
+                <span style="font-size: 0.8rem; color: var(--c-text-muted);" data-i18n="infoPerksSub">Miglior tariffa garantita & zero commissioni</span>
               </div>
             </div>
             <ul style="font-size: 0.88rem; color: var(--c-text); margin: 0.5rem 0 1.25rem 1.2rem; line-height: 1.6;">
-              <li><strong>Nessun costo di agenzia:</strong> miglior prezzo garantito senza intermediari</li>
-              <li><strong>Uso esclusivo garantito:</strong> piscina e campo da tennis riservati solo a voi</li>
-              <li><strong>Contatto diretto e trasparente:</strong> assistenza immediata con i proprietari</li>
-              <li><strong>Flessibilità:</strong> accordi personalizzati su check-in e check-out</li>
+              <li data-i18n="infoPerk1">Nessun costo di agenzia: miglior prezzo garantito senza intermediari</li>
+              <li data-i18n="infoPerk2">Uso esclusivo garantito: piscina e campo da tennis riservati solo a voi</li>
+              <li data-i18n="infoPerk3">Contatto diretto e trasparente: assistenza immediata con i proprietari</li>
+              <li data-i18n="infoPerk4">Flessibilità: accordi personalizzati su check-in e check-out</li>
             </ul>
             <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-              <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" style="justify-content: center;">
-                <span>💬 Scrivici subito su WhatsApp</span>
+              <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" style="justify-content: center;" data-i18n="infoWaBtn">
+                💬 Scrivici subito su WhatsApp
               </a>
-              <a href="tel:+393349241047" class="btn btn-outline" style="justify-content: center;">
-                <span>📞 Chiama +39 334 924 1047</span>
+              <a href="tel:+393349241047" class="btn btn-outline" style="justify-content: center;" data-i18n="infoCallBtn">
+                📞 Chiama +39 334 924 1047
               </a>
             </div>
           </div>
@@ -859,7 +859,7 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Navigazione</h4>
+          <h4 class="footer-col-title" data-i18n="footerColNav">Navigazione</h4>
           <ul class="footer-links">
             <li><a href="#villa" data-i18n="navAbout">La Villa</a></li>
             <li><a href="#comfort" data-i18n="navComfort">Comfort & Spazi</a></li>
@@ -871,17 +871,17 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Prenotazioni & Info</h4>
+          <h4 class="footer-col-title" data-i18n="footerColBook">Prenotazioni & Info</h4>
           <ul class="footer-links">
-            <li><a href="#contatti">Richiesta Preventivo</a></li>
+            <li><a href="#contatti" data-i18n="footerQuote">Richiesta Preventivo</a></li>
             <li><a href="https://wa.me/393349241047" target="_blank" rel="noopener">WhatsApp +39 334 924 1047</a></li>
-            <li><a href="tel:+393349241047">Chiama Direttamente</a></li>
-            <li><a href="mailto:villatimea@gmail.com">Scrivici via Email</a></li>
+            <li><a href="tel:+393349241047" data-i18n="footerCall">Chiama Direttamente</a></li>
+            <li><a href="mailto:villatimea@gmail.com" data-i18n="footerEmail">Scrivici via Email</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Contatti & Info</h4>
+          <h4 class="footer-col-title" data-i18n="footerColContacts">Contatti & Info</h4>
           <div class="footer-contact-item">
             <span>📍</span>
             <span>Contrada Fontanelle 231, Marsala (TP)</span>
@@ -917,7 +917,7 @@
     <div class="mobile-action-bar-inner">
       <a href="tel:+393349241047" class="mob-action-btn">
         <span class="icon">📞</span>
-        <span>Chiama</span>
+        <span data-i18n="mobCall">Chiama</span>
       </a>
       <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="mob-action-btn">
         <span class="icon">💬</span>
@@ -925,11 +925,11 @@
       </a>
       <a href="https://maps.app.goo.gl/ddpPGVBYh4fJH2ks8" target="_blank" rel="noopener" class="mob-action-btn">
         <span class="icon">📍</span>
-        <span>Mappa</span>
+        <span data-i18n="mobMap">Mappa</span>
       </a>
       <a href="#contatti" class="mob-action-btn highlight">
         <span class="icon">📅</span>
-        <span>Prenota</span>
+        <span data-i18n="mobBook">Prenota</span>
       </a>
     </div>
   </aside>
@@ -1046,6 +1046,6 @@
   <script src="assets/js/qrcode.min.js"></script>
 
   <!-- Main Website Script -->
-  <script src="assets/js/main.js?v=3.5"></script>
+  <script src="assets/js/main.js?v=3.6"></script>
 </body>
 </html>

@@ -109,7 +109,133 @@ const i18nData = {
     mapDesc: "Situata in Contrada Fontanelle 231, in collina con vista mare ma a pochi minuti dal centro storico, dalle spiagge e dall'imbarco per le Egadi.",
 
     footerDesc: "Villa Timea: esclusiva villa con piscina panoramica e campo da tennis entrambi ad uso esclusivo per gli ospiti, cantina storica nel tufo e vista mozzafiato sulle Isole Egadi a Marsala (Trapani), Sicilia.",
-    footerRights: "Tutti i diritti riservati. Villa Timea Marsala."
+    footerRights: "Tutti i diritti riservati. Villa Timea Marsala.",
+
+    navPalette: "Palette",
+    mobChoosePalette: "Scegli Palette Stili",
+    mobWaDirect: "💬 Chat WhatsApp Diretta",
+    btnWaDirect: "💬 WhatsApp Diretto",
+    btnCallNow: "📞 Chiama Ora",
+    statPrivacyLabel: "Privacy & Relax Esclusivo",
+    statGuestsLabel: "Ospiti & Grandi Spazi",
+    statRoomsNum: "5 Camere",
+    statRoomsLabel: "Da letto + Dependance",
+    statBathsNum: "4 Bagni",
+    statBathsLabel: "Completi di charme",
+
+    amPoolTag: "Outdoor",
+    amPoolCount: "📷 9 foto",
+    amPoolTitle: "Piscina Panoramica (Uso Esclusivo)",
+    amPoolDesc: "Grande vasca ad uso totalmente esclusivo per gli ospiti della villa, immersa tra palme e vegetazione mediterranea, completa di trampolino per i tuffi, lettini prendisole e solarium con vista aperta sulle Isole Egadi.",
+    amPoolChip1: "Uso Esclusivo Ospiti",
+    amPoolChip2: "Trampolino tuffi",
+    amPoolChip3: "Solarium con lettini",
+    amPoolChip4: "Vista aperta sulle Egadi",
+    amPoolChip5: "Privacy assoluta",
+
+    amTennisTag: "Sport & Fitness",
+    amTennisCount: "📷 3 foto",
+    amTennisTitle: "Campo da Tennis (Uso Esclusivo)",
+    amTennisDesc: "Campo da tennis regolamentare privato, riservato ad uso esclusivo degli ospiti della villa per partite, tornei amichevoli o sessioni di allenamento con la fresca brezza collinare e senza condivisione di spazi.",
+    amTennisChip1: "Uso Esclusivo Ospiti",
+    amTennisChip2: "Misure Regolamentari",
+    amTennisChip3: "Veranda spettatori",
+    amTennisChip4: "Massima Privacy",
+
+    amCellarTag: "Tradizione Siciliana",
+    amCellarCount: "📷 2 foto",
+    amCellarTitle: "Cantina Storica nel Tufo",
+    amCellarDesc: "Un suggestivo ipogeo scavato nella roccia di tufo marsalese con cancello in ferro battuto, custode delle migliori annate di vino siciliano.",
+    amCellarChip1: "Scavata nella roccia",
+    amCellarChip2: "Bottiglie storiche Marsala",
+    amCellarChip3: "Atmosfera autentica",
+    amCellarChip4: "Clima fresco naturale",
+
+    amOutdoorTag: "Giardino & Terrazze",
+    amOutdoorCount: "📷 4 foto",
+    amOutdoorTitle: "Spazi Aperti, Pineta & Terrazze",
+    amOutdoorDesc: "Ampi spazi esterni tra pineta mediterranea, scalinate panoramiche e logge coperte con vista sulle Isole Egadi, completi di forno a legna in pietra per cene all'aperto.",
+    amOutdoorChip1: "Pineta & Giardino",
+    amOutdoorChip2: "Terrazze Panoramiche",
+    amOutdoorChip3: "Forno a Legna",
+    amOutdoorChip4: "Cene all'aperto",
+
+    amInteriorTag: "Spazi Interni",
+    amInteriorCount: "📷 3 foto",
+    amInteriorTitle: "Salone Nobile con Camino",
+    amInteriorDesc: "Grande salone con pavimenti in parquet a spina di pesce, divani confortevoli, camino in mattoni a vista e tavolo da pranzo per oltre 10 persone.",
+    amInteriorChip1: "Parquet pregiato",
+    amInteriorChip2: "Camino a legna",
+    amInteriorChip3: "Tavolo 10+ coperti",
+    amInteriorChip4: "Luminosità naturale",
+
+    amRoomsTag: "Notte & Benessere",
+    amRoomsCount: "📷 4 foto",
+    amRoomsTitle: "Camere Panoramiche & Bagni di Charme",
+    amRoomsDesc: "5 camere da letto e 4 bagni con vista sul mare e sulle isole, arredi d'epoca, aria condizionata e vasca in ghisa vintage o doccia moderna. La tenuta dispone inoltre di una comoda dependance privata.",
+    amRoomsChip1: "5 Camere da Letto",
+    amRoomsChip2: "4 Bagni",
+    amRoomsChip3: "Dependance Privata",
+    amRoomsChip4: "Vista Isole Egadi",
+    amRoomsChip5: "Aria Condizionata",
+
+    lightboxHint: "🔍 Doppio click o rotella per zoom • Trascina per muoverti",
+    qrBullet1: "Perfetto per QR posizionati in casa (Wi-Fi, regole, piscina e tennis ad uso esclusivo, contatti rapidi)",
+    qrBullet2: "Navigazione GPS one-touch verso Contrada Fontanelle 231",
+    qrBullet3: "Bilingue Italiano / Inglese con cambio istantaneo per ospiti internazionali",
+    qrScanTitle: "Scansiona con la Fotocamera",
+    qrScanSub: "Apri direttamente questo sito sul tuo smartphone",
+
+    terr1Title: "Isole Egadi (Favignana, Levanzo e Marettimo)",
+    terr1Desc: "Visibili direttamente dalle terrazze della villa! L'arcipelago delle Egadi — Favignana con le sue celebri cale turchesi (Cala Rossa, Cala Azzurra), la caratteristica Levanzo e la selvaggia ed incontaminata Marettimo con le sue grotte marine — è comodamente raggiungibile: l'imbarco degli aliscafi dal porto di Marsala dista solo 10 minuti di auto.",
+    terr1Dist: "⏱️ 10 min al porto di Marsala",
+    terr2Title: "Riserva dello Stagnone & Saline",
+    terr2Desc: "Mulini a vento storici, cumuli di sale e fenicotteri rosa. Famosa a livello mondiale per il kitesurf e per uno dei tramonti più fotografati d'Europa, con l'antica isola fenicia di Mozia.",
+    terr2Dist: "⏱️ 12 min di auto",
+    terr3Title: "Cantine Storiche del Vino Marsala",
+    terr3Desc: "Patria del celebre vino liquoroso DOC. Visita le storiche botti monumentali delle Cantine Florio, Donnafugata e Pellegrino con tour di degustazione e cucina tipica siciliana.",
+    terr3Dist: "⏱️ 8-12 min dalle principali cantine",
+    terr4Title: "Spiagge Dorate del Litorale Sud",
+    terr4Desc: "Chilometri di lidi attrezzati e spiagge libere di sabbia dorata con fondali bassi e acqua cristallina (Lido Signorino, Torrazza, Tiburon Beach).",
+    terr4Dist: "⏱️ 15 min dal litorale",
+    terr5Title: "Centro Storico di Marsala",
+    terr5Desc: "Passeggia per l'elegante isola pedonale, scopri Porta Garibaldi, la Cattedrale barocca, il Museo Archeologico con la Nave Punica e i vivaci wine-bar serali.",
+    terr5Dist: "⏱️ 8 min dal centro",
+    terr6Title: "Aeroporti Vicini",
+    terr6Desc: "Facilmente e rapidamente raggiungibile: Aeroporto di Trapani-Birgi (Vincenzo Florio) con numerosi voli Ryanair e nazionali a soli 10 minuti di auto; Aeroporto Internazionale Falcone-Borsellino di Palermo a circa 1 ora.",
+    terr6Dist: "⏱️ 10 min (Trapani-Birgi) • 60 min (Palermo)",
+
+    formNamePh: "Es. Marco Rossi",
+    formMsgPh: "Desidero conoscere la disponibilità e le tariffe per il periodo...",
+    optGuests12: "1-2 Ospiti",
+    optGuests34: "3-4 Ospiti",
+    optGuests56: "5-6 Ospiti",
+    optGuests78: "7-8 Ospiti",
+    optGuests912: "9-12+ Ospiti (Gruppo / Famiglie)",
+
+    infoDirectTitle: "Contatti Diretti",
+    infoDirectSub: "Siamo a tua disposizione",
+    infoPhoneLabel: "Telefono / WhatsApp:",
+    infoEmailLabel: "Email Direzione:",
+    infoAddressLabel: "Indirizzo:",
+    infoPerksTitle: "Vantaggi Prenotazione Diretta",
+    infoPerksSub: "Miglior tariffa garantita & zero commissioni",
+    infoPerk1: "Nessun costo di agenzia: miglior prezzo garantito senza intermediari",
+    infoPerk2: "Uso esclusivo garantito: piscina e campo da tennis riservati solo a voi",
+    infoPerk3: "Contatto diretto e trasparente: assistenza immediata con i proprietari",
+    infoPerk4: "Flessibilità: accordi personalizzati su check-in e check-out",
+    infoWaBtn: "💬 Scrivici subito su WhatsApp",
+    infoCallBtn: "📞 Chiama +39 334 924 1047",
+
+    footerColNav: "Navigazione",
+    footerColBook: "Prenotazioni & Info",
+    footerQuote: "Richiesta Preventivo",
+    footerCall: "Chiama Direttamente",
+    footerEmail: "Scrivici via Email",
+    footerColContacts: "Contatti & Info",
+    mobCall: "Chiama",
+    mobMap: "Mappa",
+    mobBook: "Prenota"
   },
   en: {
     metaTitle: "Villa Timea | Villa with Exclusive Pool & Tennis, Egadi Views in Marsala",
@@ -192,7 +318,133 @@ const i18nData = {
     mapDesc: "Located in Contrada Fontanelle 231, on a gentle hill with sea breezes, just minutes from the historic center, sandy beaches, and Egadi ferry port.",
 
     footerDesc: "Villa Timea: exclusive villa with panoramic swimming pool and regulation tennis court reserved exclusively for guests, historic wine cellar, and Egadi views in Marsala (Trapani), Sicily.",
-    footerRights: "All rights reserved. Villa Timea Marsala."
+    footerRights: "All rights reserved. Villa Timea Marsala.",
+
+    navPalette: "Palette",
+    mobChoosePalette: "Choose Color Palette",
+    mobWaDirect: "💬 Direct WhatsApp Chat",
+    btnWaDirect: "💬 Direct WhatsApp",
+    btnCallNow: "📞 Call Now",
+    statPrivacyLabel: "Exclusive Privacy & Relax",
+    statGuestsLabel: "Guests & Spacious Grounds",
+    statRoomsNum: "5 Bedrooms",
+    statRoomsLabel: "+ Private Dependance",
+    statBathsNum: "4 Bathrooms",
+    statBathsLabel: "Charming & well-appointed",
+
+    amPoolTag: "Outdoor",
+    amPoolCount: "📷 9 photos",
+    amPoolTitle: "Panoramic Pool (Exclusive Use)",
+    amPoolDesc: "Large private swimming pool reserved exclusively for villa guests, surrounded by palm trees and Mediterranean greenery, featuring a diving board, sun loungers, and solarium overlooking the Egadi Islands.",
+    amPoolChip1: "Exclusive Guest Use",
+    amPoolChip2: "Diving board",
+    amPoolChip3: "Sun loungers & solarium",
+    amPoolChip4: "Open Egadi views",
+    amPoolChip5: "Complete privacy",
+
+    amTennisTag: "Sport & Fitness",
+    amTennisCount: "📷 3 photos",
+    amTennisTitle: "Tennis Court (Exclusive Use)",
+    amTennisDesc: "Private regulation-size tennis court reserved exclusively for villa guests for friendly matches, tournaments, or training sessions in the fresh hillside breeze with zero shared spaces.",
+    amTennisChip1: "Exclusive Guest Use",
+    amTennisChip2: "Regulation Size",
+    amTennisChip3: "Spectator veranda",
+    amTennisChip4: "Total Privacy",
+
+    amCellarTag: "Sicilian Tradition",
+    amCellarCount: "📷 2 photos",
+    amCellarTitle: "Historic Tuff Wine Cellar",
+    amCellarDesc: "An evocative subterranean cellar carved into Marsala tuff stone with a wrought-iron gate, housing fine vintages of Sicilian wine.",
+    amCellarChip1: "Carved in tuff rock",
+    amCellarChip2: "Historic Marsala bottles",
+    amCellarChip3: "Authentic atmosphere",
+    amCellarChip4: "Naturally cool",
+
+    amOutdoorTag: "Garden & Terraces",
+    amOutdoorCount: "📷 4 photos",
+    amOutdoorTitle: "Outdoor Spaces, Pine Grove & Terraces",
+    amOutdoorDesc: "Expansive outdoor areas across a Mediterranean pine grove, scenic steps, and covered loggias overlooking the Egadi Islands, complete with a stone wood-fired pizza oven for al-fresco dining.",
+    amOutdoorChip1: "Pine Grove & Garden",
+    amOutdoorChip2: "Panoramic Terraces",
+    amOutdoorChip3: "Wood-Fired Oven",
+    amOutdoorChip4: "Al-fresco dining",
+
+    amInteriorTag: "Interiors",
+    amInteriorCount: "📷 3 photos",
+    amInteriorTitle: "Grand Living Room with Fireplace",
+    amInteriorDesc: "Spacious lounge with herringbone hardwood floors, comfortable sofas, exposed brick fireplace, and dining table seating over 10 guests.",
+    amInteriorChip1: "Fine parquet floors",
+    amInteriorChip2: "Wood fireplace",
+    amInteriorChip3: "10+ seat dining table",
+    amInteriorChip4: "Natural sunlight",
+
+    amRoomsTag: "Sleep & Wellness",
+    amRoomsCount: "📷 4 photos",
+    amRoomsTitle: "Panoramic Bedrooms & Charming Baths",
+    amRoomsDesc: "5 bedrooms and 4 bathrooms with sea and island views, antique furnishings, air conditioning, and a vintage clawfoot tub or modern walk-in shower. The estate also includes a private dependance.",
+    amRoomsChip1: "5 Bedrooms",
+    amRoomsChip2: "4 Bathrooms",
+    amRoomsChip3: "Private Dependance",
+    amRoomsChip4: "Egadi Islands View",
+    amRoomsChip5: "Air Conditioning",
+
+    lightboxHint: "🔍 Double-click or scroll to zoom • Drag to pan",
+    qrBullet1: "Ideal for in-villa QR codes (Wi-Fi, house rules, exclusive pool & tennis, quick contacts)",
+    qrBullet2: "One-touch GPS navigation to Contrada Fontanelle 231",
+    qrBullet3: "Instant Italian / English switch for international guests",
+    qrScanTitle: "Scan with Your Camera",
+    qrScanSub: "Open this website directly on your smartphone",
+
+    terr1Title: "Egadi Islands (Favignana, Levanzo & Marettimo)",
+    terr1Desc: "Visible right from the villa's terraces! The Egadi archipelago — Favignana with its turquoise coves (Cala Rossa, Cala Azzurra), picturesque Levanzo, and unspoiled Marettimo with its sea caves — is easily reached: hydrofoils depart from Marsala port just 10 minutes away by car.",
+    terr1Dist: "⏱️ 10 min to Marsala port",
+    terr2Title: "Stagnone Nature Reserve & Salt Pans",
+    terr2Desc: "Historic windmills, white salt mounds, and pink flamingos. World-famous for kitesurfing and one of Europe's most photographed sunsets, alongside the ancient Phoenician island of Mozia.",
+    terr2Dist: "⏱️ 12 min by car",
+    terr3Title: "Historic Marsala Wineries",
+    terr3Desc: "Home of the world-renowned DOC fortified wine. Tour the monumental oak barrels of Cantine Florio, Donnafugata, and Pellegrino with guided tastings and Sicilian cuisine.",
+    terr3Dist: "⏱️ 8-12 min to top wineries",
+    terr4Title: "Golden Beaches of the South Coast",
+    terr4Desc: "Miles of equipped beach clubs and free golden sand beaches with shallow, crystal-clear water (Lido Signorino, Torrazza, Tiburon Beach).",
+    terr4Dist: "⏱️ 15 min to the coast",
+    terr5Title: "Marsala Historic Center",
+    terr5Desc: "Stroll through the elegant pedestrian old town, discover Porta Garibaldi, the Baroque Cathedral, the Punic Ship Archaeological Museum, and lively evening wine bars.",
+    terr5Dist: "⏱️ 8 min to town center",
+    terr6Title: "Nearby Airports",
+    terr6Desc: "Quick and easy to reach: Trapani-Birgi Airport (Vincenzo Florio) with domestic and Ryanair flights is just 10 minutes away; Palermo International Airport (Falcone-Borsellino) is about 1 hour away.",
+    terr6Dist: "⏱️ 10 min (Trapani-Birgi) • 60 min (Palermo)",
+
+    formNamePh: "e.g. John Smith",
+    formMsgPh: "I would like to check availability and rates for the dates...",
+    optGuests12: "1-2 Guests",
+    optGuests34: "3-4 Guests",
+    optGuests56: "5-6 Guests",
+    optGuests78: "7-8 Guests",
+    optGuests912: "9-12+ Guests (Group / Families)",
+
+    infoDirectTitle: "Direct Contacts",
+    infoDirectSub: "We are at your disposal",
+    infoPhoneLabel: "Phone / WhatsApp:",
+    infoEmailLabel: "Management Email:",
+    infoAddressLabel: "Address:",
+    infoPerksTitle: "Direct Booking Benefits",
+    infoPerksSub: "Best rate guaranteed & zero commissions",
+    infoPerk1: "No agency fees: guaranteed best price without intermediaries",
+    infoPerk2: "Exclusive use guaranteed: pool and tennis court reserved solely for you",
+    infoPerk3: "Direct & transparent contact: immediate assistance from the owners",
+    infoPerk4: "Flexibility: tailored arrangements for check-in and check-out",
+    infoWaBtn: "💬 Message us on WhatsApp",
+    infoCallBtn: "📞 Call +39 334 924 1047",
+
+    footerColNav: "Navigation",
+    footerColBook: "Booking & Info",
+    footerQuote: "Request a Quote",
+    footerCall: "Call Directly",
+    footerEmail: "Email Us",
+    footerColContacts: "Contacts & Info",
+    mobCall: "Call",
+    mobMap: "Map",
+    mobBook: "Book"
   }
 };
 
@@ -243,6 +495,10 @@ function applyLanguage(lang) {
 
   if (dict.metaTitle) {
     document.title = dict.metaTitle;
+  }
+
+  if (typeof currentGalleryCategory !== 'undefined') {
+    renderGalleryGrid(currentGalleryCategory);
   }
 }
 
@@ -485,6 +741,7 @@ const spaceAlbums = {
 };
 
 let activeLightboxIndex = 0;
+let currentGalleryCategory = 'all';
 let filteredItems = [...galleryItems];
 let activeLightboxItems = [...galleryItems];
 
@@ -582,6 +839,7 @@ function initGallery() {
 }
 
 function renderGalleryGrid(category) {
+  currentGalleryCategory = category;
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
 
