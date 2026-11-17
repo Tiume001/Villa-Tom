@@ -732,11 +732,14 @@ ul {
 /* Desktop & Laptop Specific Refinements: showcase the stunning photo without text/button clutter */
 @media (min-width: 769px) {
   .hero {
-    min-height: 94vh;
+    height: calc(100vh - 108px);
+    height: calc(100dvh - 108px);
+    min-height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3.5rem 0 2rem;
+    padding: 1.8rem 0 1.25rem;
+    box-sizing: border-box;
   }
 
   .hero-bg img {
@@ -767,20 +770,22 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: calc(94vh - 5.5rem);
+    align-items: center;
+    height: 100%;
+    min-height: 0;
     width: 100%;
   }
 
   .hero-content-top {
-    max-width: 940px;
+    max-width: 960px;
     margin: 0 auto;
     text-align: center;
   }
 
   .hero-badge {
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.75rem;
     font-size: 0.82rem;
-    padding: 0.4rem 1.15rem;
+    padding: 0.35rem 1.15rem;
     background: rgba(7, 35, 56, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.32);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
@@ -789,59 +794,43 @@ ul {
   }
 
   .hero-title {
-    font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+    font-size: clamp(2rem, 3.6vw, 3.4rem);
     line-height: 1.16;
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.75rem;
     letter-spacing: -0.015em;
     text-shadow: 0 3px 20px rgba(0, 0, 0, 0.75), 0 1px 4px rgba(0, 0, 0, 0.9);
   }
 
   .hero-subtitle {
-    font-size: clamp(1rem, 1.3vw, 1.15rem);
-    line-height: 1.55;
-    max-width: 760px;
-    margin: 0 auto 1.4rem;
+    font-size: clamp(0.92rem, 1.2vw, 1.08rem);
+    line-height: 1.5;
+    max-width: 740px;
+    margin: 0 auto;
     color: #f7f3ee;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.95);
     font-weight: 400;
   }
 
+  /* Rimosso gruppo tasti al centro su desktop: barra di navigazione e quick booking bar coprono già tutte le azioni */
   .hero-cta-group {
-    margin-bottom: 1.5rem;
-    gap: 0.85rem;
+    display: none !important;
   }
 
-  .hero-cta-group .btn {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.92rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-
-  .hero-cta-group .btn-outline-white {
-    background: rgba(7, 35, 56, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1.5px solid rgba(255, 255, 255, 0.45);
-  }
-
-  .hero-cta-group .btn-outline-white:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: #fff;
-    color: #fff;
-  }
-
-  /* Dock the 4 highlights at the bottom edge as a slim, refined bar */
+  /* Dock the 4 highlights at the bottom edge as a slim, refined bar - fully visible within viewport */
   .hero-features {
     margin-top: auto;
+    margin-bottom: 0.25rem;
     max-width: 1140px;
     width: 100%;
-    background: rgba(7, 28, 46, 0.52);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(7, 28, 46, 0.58);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
     border-radius: var(--radius-lg);
-    padding: 0.85rem 1.35rem;
+    padding: 0.75rem 1.25rem;
     gap: 1rem;
   }
 
@@ -864,6 +853,14 @@ ul {
   .hero-feat-desc {
     font-size: 0.74rem;
     opacity: 0.9;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+  .hero-features {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.65rem 1rem;
+    gap: 0.65rem 1rem;
   }
 }
 
