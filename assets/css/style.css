@@ -743,7 +743,7 @@ ul {
   }
 
   .hero-bg img {
-    object-position: center 36%;
+    object-position: center 50%;
     animation: heroKenBurnsDesktop 25s infinite alternate ease-in-out;
   }
 
