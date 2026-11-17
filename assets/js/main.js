@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const i18nData = {
   it: {
-    metaTitle: "Villa Timea | Villa con Piscina e Tennis ad Uso Esclusivo, Vista Egadi a Marsala",
+    metaTitle: "Villa Timea Piscina e Tennis Vista Isole Egadi | Marsala (Sicilia)",
     topWelcome: "Benvenuti a Villa Timea • Marsala, Sicilia",
     topCall: "Chiamaci / WhatsApp",
     navAbout: "La Villa",
@@ -41,7 +41,7 @@ const i18nData = {
     btnBookNow: "Richiedi Disponibilità",
 
     heroBadge: "Marsala • Vista Isole Egadi",
-    heroTitle: "Il Tuo Rifugio Esclusivo nel Cuore della Sicilia",
+    heroTitle: "Villa Timea Piscina e Tennis Vista Isole Egadi",
     heroSubtitle: "Piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, pineta mediterranea e un'autentica cantina storica scavata nel tufo.",
     heroExplore: "Esplora la Villa",
     heroInquire: "Prenota o Richiedi Info",
@@ -182,7 +182,7 @@ const i18nData = {
     lightboxHint: "🔍 Doppio click o rotella per zoom • Trascina per muoverti",
     qrBullet1: "Perfetto per QR posizionati in casa (Wi-Fi, regole, piscina e tennis ad uso esclusivo, contatti rapidi)",
     qrBullet2: "Navigazione GPS one-touch verso Contrada Fontanelle 231",
-    qrBullet3: "Bilingue Italiano / Inglese con cambio istantaneo per ospiti internazionali",
+    qrBullet3: "Multilingue Italiano / Inglese / Tedesco con cambio istantaneo per ospiti internazionali",
     qrScanTitle: "Scansiona con la Fotocamera",
     qrScanSub: "Apri direttamente questo sito sul tuo smartphone",
 
@@ -207,11 +207,25 @@ const i18nData = {
 
     formNamePh: "Es. Marco Rossi",
     formMsgPh: "Desidero conoscere la disponibilità e le tariffe per il periodo...",
+    optGuests1: "1 Ospite (Singolo)",
+    optGuests2: "2 Ospiti",
+    optGuests3: "3 Ospiti",
+    optGuests4: "4 Ospiti",
+    optGuests5: "5 Ospiti",
+    optGuests6: "6 Ospiti",
+    optGuests7: "7 Ospiti",
+    optGuests8: "8 Ospiti",
+    optGuests9: "9 Ospiti",
+    optGuests10: "10 Ospiti",
+    optGuests11: "11 Ospiti",
+    optGuests12: "12 Ospiti",
+    optGuests12Plus: "Oltre 12 Ospiti (Gruppo / Famiglie)",
     optGuests12: "1-2 Ospiti",
     optGuests34: "3-4 Ospiti",
     optGuests56: "5-6 Ospiti",
     optGuests78: "7-8 Ospiti",
     optGuests912: "9-12+ Ospiti (Gruppo / Famiglie)",
+    mobLangLabel: "Lingua",
 
     infoDirectTitle: "Contatti Diretti",
     infoDirectSub: "Siamo a tua disposizione",
@@ -238,7 +252,7 @@ const i18nData = {
     mobBook: "Prenota"
   },
   en: {
-    metaTitle: "Villa Timea | Villa with Exclusive Pool & Tennis, Egadi Views in Marsala",
+    metaTitle: "Villa Timea | Exclusive Pool & Tennis, Egadi Islands View in Marsala",
     topWelcome: "Welcome to Villa Timea • Marsala, Sicily",
     topCall: "Call us / WhatsApp",
     navAbout: "The Villa",
@@ -250,7 +264,7 @@ const i18nData = {
     btnBookNow: "Check Availability",
 
     heroBadge: "Marsala • Egadi Islands View",
-    heroTitle: "Your Exclusive Retreat in the Heart of Western Sicily",
+    heroTitle: "Villa Timea — Pool & Tennis with Egadi Islands View",
     heroSubtitle: "Panoramic swimming pool with diving board and regulation tennis court reserved exclusively for guests, Mediterranean pine grove, and authentic historic wine cellar carved in tuff.",
     heroExplore: "Explore the Villa",
     heroInquire: "Book or Inquire",
@@ -391,7 +405,7 @@ const i18nData = {
     lightboxHint: "🔍 Double-click or scroll to zoom • Drag to pan",
     qrBullet1: "Ideal for in-villa QR codes (Wi-Fi, house rules, exclusive pool & tennis, quick contacts)",
     qrBullet2: "One-touch GPS navigation to Contrada Fontanelle 231",
-    qrBullet3: "Instant Italian / English switch for international guests",
+    qrBullet3: "Multilingual support in Italian, English, and German with instant switching for international guests",
     qrScanTitle: "Scan with Your Camera",
     qrScanSub: "Open this website directly on your smartphone",
 
@@ -416,11 +430,25 @@ const i18nData = {
 
     formNamePh: "e.g. John Smith",
     formMsgPh: "I would like to check availability and rates for the dates...",
+    optGuests1: "1 Guest (Single)",
+    optGuests2: "2 Guests",
+    optGuests3: "3 Guests",
+    optGuests4: "4 Guests",
+    optGuests5: "5 Guests",
+    optGuests6: "6 Guests",
+    optGuests7: "7 Guests",
+    optGuests8: "8 Guests",
+    optGuests9: "9 Guests",
+    optGuests10: "10 Guests",
+    optGuests11: "11 Guests",
+    optGuests12: "12 Guests",
+    optGuests12Plus: "12+ Guests (Group / Families)",
     optGuests12: "1-2 Guests",
     optGuests34: "3-4 Guests",
     optGuests56: "5-6 Guests",
     optGuests78: "7-8 Guests",
     optGuests912: "9-12+ Guests (Group / Families)",
+    mobLangLabel: "Language",
 
     infoDirectTitle: "Direct Contacts",
     infoDirectSub: "We are at your disposal",
@@ -445,19 +473,291 @@ const i18nData = {
     mobCall: "Call",
     mobMap: "Map",
     mobBook: "Book"
+  },
+  de: {
+    metaTitle: "Villa Timea | Pool & Tennis zur Alleinnutzung, Ägadische Inseln Blick in Marsala",
+    topWelcome: "Willkommen in der Villa Timea • Marsala, Sizilien",
+    topCall: "Rufen Sie uns an / WhatsApp",
+    navAbout: "Die Villa",
+    navComfort: "Komfort & Räume",
+    navGallery: "Galerie",
+    navTerritory: "Umgebung",
+    navQr: "Gäste-QR",
+    navContact: "Kontakt",
+    btnBookNow: "Verfügbarkeit anfragen",
+
+    heroBadge: "✨ Marsala • Blick auf die Ägadischen Inseln",
+    heroTitle: "Villa Timea — Pool & Tennis mit Blick auf die Ägadischen Inseln",
+    heroSubtitle: "Panoramapool mit Sprungbrett und Tennisplatz nach offiziellen Maßen zur exklusiven Nutzung für Gäste, mediterraner Pinienhain und historischer Weinkeller im Tuffstein.",
+    heroExplore: "Villa entdecken",
+    heroInquire: "Buchen oder Anfragen",
+
+    heroFeatPool: "Panoramapool",
+    heroFeatPoolDesc: "Exklusive Nutzung, Sprungbrett & Meerblick",
+    heroFeatTennis: "Tennisplatz",
+    heroFeatTennisDesc: "Exklusive Gästenutzung, offizielles Maß",
+    heroFeatSunset: "Blick auf die Ägadischen Inseln",
+    heroFeatSunsetDesc: "Favignana, Levanzo & Marettimo",
+    heroFeatCellar: "Weinkeller im Tuffstein",
+    heroFeatCellarDesc: "Historischer Marsala-Weinkeller",
+
+    channelsTitle: "Direktbuchung mit Bestpreisgarantie",
+    channelsSubtitle: "Keine Vermittlungsgebühren: direkter Kontakt mit den Eigentümern und persönliche Betreuung",
+    btnDirectContact: "Direktkontakt (Bester Preis)",
+
+    storyTag: "Das Erlebnis",
+    storyTitle: "Eine Oase der Ruhe zwischen dem Meer von Marsala und den Ägadischen Inseln",
+    storyLead: "Eingebettet in die Ruhe der sizilianischen Landschaft von Marsala ist die Villa Timea ein einzigartiges Anwesen mit 5 Schlafzimmern (eines davon in einer privaten Dependance) und 4 Bädern, in dem großzügige Räume, landschaftliche Schönheit und das Leben im Freien zu einem unvergesslichen Urlaubserlebnis verschmelzen.",
+    storyP1: "Das absolute Highlight ist die Panoramalage: Von den Terrassen aus schweift der Blick über das glitzernde Meer und die Ägadischen Inseln (Favignana, Levanzo und Marettimo) – ein spektakuläres Panorama, insbesondere bei Sonnenuntergang, wenn der Himmel in warme, magische Farben getaucht wird.",
+    storyP2: "Im Außenbereich ist der große private Pool zur exklusiven Nutzung für die Gäste das Herzstück der Villa. Umgeben von Palmen und Ruheoasen bietet er den perfekten Ort, um sonnige Tage zu verbringen, sich im kristallklaren Wasser zu erfrischen und absolute Privatsphäre zu genießen. Das Sprungbrett sorgt für zusätzlichen Spaß bei Familien und Freunden.",
+    storyP3: "Für Sportbegeisterte bietet die Villa Timea einen privaten Tennisplatz nach offiziellen Maßen zur exklusiven Nutzung der Gäste sowie weitere Bereiche für Fitness und Freizeit. Ein seltenes Privileg, das Entspannung mit sportlichen Matches verbindet, ohne jemals das Anwesen verlassen oder Bereiche mit Fremden teilen zu müssen.",
+    storyBadge: "Blick auf die Ägadischen Inseln & Traumhafte Sonnenuntergänge",
+
+    amenitiesTag: "Räume & Ausstattung",
+    amenitiesTitle: "Alles, was Sie für einen perfekten Aufenthalt benötigen",
+    amenitiesDesc: "Vom privaten Außenpool und Tennisplatz bis hin zu den herrschaftlichen Innenräumen mit Fischgrät-Parkett und Kamin ist jedes Detail für maximalen Komfort gestaltet.",
+    spaceOpenFolder: "Fotoalbum öffnen",
+
+    galleryTag: "Fototour",
+    galleryTitle: "Einblicke in die Villa Timea",
+    galleryDesc: "Entdecken Sie die Bilder des Anwesens: Pool und Tennis zur Alleinnutzung, Salon, Panoramaschlafzimmer und historischer Weinkeller.",
+    filterAll: "Alle Fotos (20)",
+    filterPool: "Pool & Panorama",
+    filterInteriors: "Salon & Innenräume",
+    filterRooms: "Zimmer & Bäder",
+    filterSports: "Tennis & Garten",
+    filterCellar: "Historischer Keller",
+
+    qrTag: "QR-Code & Gästeführer",
+    qrTitle: "Villa teilen & Gäste willkommen heißen",
+    qrDesc: "Diese Website ist für den schnellen Zugriff per QR-Code optimiert: Platzieren Sie ihn in der Villa oder auf Broschüren, damit Gäste mit einem Smartphone-Scan Karte, Kontakte und Services aufrufen können.",
+    qrBtnDownload: "QR-Code herunterladen (PNG)",
+    qrBtnPrint: "Villa-Übersicht drucken",
+
+    territoryTag: "Marsala & Trapani entdecken",
+    territoryTitle: "Die Schätze Westsiziliens",
+    territoryDesc: "Villa Timea ist der perfekte Ausgangspunkt für historische Sehenswürdigkeiten, Naturschutzgebiete und traumhafte Strände.",
+
+    bookingTag: "Buchung & Kontakt",
+    bookingTitle: "Informationen anfordern oder direkt buchen",
+    bookingDesc: "Füllen Sie das Formular aus, um uns eine Anfrage per WhatsApp oder E-Mail zu senden. Wir antworten umgehend!",
+    formName: "Vor- und Nachname *",
+    formEmail: "E-Mail",
+    formPhone: "Telefon / WhatsApp *",
+    formDates: "Reisedaten (Check-in / Check-out)",
+    formGuests: "Anzahl der Gäste",
+    formMsg: "Nachricht oder besondere Wünsche",
+    btnSendWhatsApp: "Anfrage per WhatsApp senden",
+    btnSendEmail: "Per E-Mail senden",
+
+    mapTag: "Standort",
+    mapTitle: "Panoramalage in Marsala",
+    mapDesc: "In Contrada Fontanelle 231 gelegen, auf einem Hügel mit Meeresbrise, nur wenige Minuten vom historischen Zentrum, den Stränden und dem Fährhafen zu den Ägadischen Inseln entfernt.",
+
+    footerDesc: "Villa Timea: Exklusive Villa mit Panoramapool und Tennisplatz zur Alleinnutzung, historischem Weinkeller im Tuffstein und atemberaubendem Blick auf die Ägadischen Inseln in Marsala (Trapani), Sizilien.",
+    footerRights: "Alle Rechte vorbehalten. Villa Timea Marsala.",
+
+    navPalette: "Palette",
+    mobChoosePalette: "Farbpalette wählen",
+    mobWaDirect: "💬 WhatsApp Direktchat",
+    btnWaDirect: "💬 WhatsApp Direkt",
+    btnCallNow: "📞 Jetzt anrufen",
+    statPrivacyLabel: "100% Privatsphäre & Exklusive Erholung",
+    statGuestsLabel: "Gäste & Großzügige Weite",
+    statRoomsNum: "5 Schlafzimmer",
+    statRoomsLabel: "Inklusive privater Dependance",
+    statBathsNum: "4 Badezimmer",
+    statBathsLabel: "Stilvoll & komfortabel",
+
+    amPoolTag: "Außenbereich",
+    amPoolCount: "📷 9 Fotos",
+    amPoolTitle: "Panoramapool (Exklusive Nutzung)",
+    amPoolDesc: "Großzügiges Schwimmbecken zur vollkommen exklusiven Nutzung der Gäste, umrahmt von Palmen und mediterraner Vegetation, mit Sprungbrett, Sonnenliegen und Sonnendeck mit weitem Blick auf die Ägadischen Inseln.",
+    amPoolChip1: "Exklusive Gästenutzung",
+    amPoolChip2: "Sprungbrett",
+    amPoolChip3: "Sonnendeck mit Liegen",
+    amPoolChip4: "Freier Inselblick",
+    amPoolChip5: "Absolute Privatsphäre",
+
+    amTennisTag: "Sport & Fitness",
+    amTennisCount: "📷 3 Fotos",
+    amTennisTitle: "Tennisplatz (Exklusive Nutzung)",
+    amTennisDesc: "Privater Tennisplatz nach offiziellen Maßen, exklusiv für Gäste der Villa reserviert für Matches, Training oder Freizeit in frischer Hügelbrise ohne jegliche Gemeinschaftsnutzung.",
+    amTennisChip1: "Exklusive Gästenutzung",
+    amTennisChip2: "Offizielle Maße",
+    amTennisChip3: "Zuschauer-Veranda",
+    amTennisChip4: "Maximale Privatsphäre",
+
+    amCellarTag: "Sizilianische Tradition",
+    amCellarCount: "📷 2 Fotos",
+    amCellarTitle: "Historischer Tuffstein-Weinkeller",
+    amCellarDesc: "Ein stimmungsvoller, in den Marsala-Tuffstein gehauener Felsenkeller mit schmiedeeisernem Tor, in dem edle Jahrgänge sizilianischer Weine lagern.",
+    amCellarChip1: "In den Fels gehauen",
+    amCellarChip2: "Historische Marsala-Weine",
+    amCellarChip3: "Authentische Atmosphäre",
+    amCellarChip4: "Natürlich kühles Klima",
+
+    amOutdoorTag: "Garten & Terrassen",
+    amOutdoorCount: "📷 4 Fotos",
+    amOutdoorTitle: "Freiflächen, Pinienhain & Terrassen",
+    amOutdoorDesc: "Weitläufige Außenbereiche mit Pinienhain, Panoramatreppen und überdachten Terrassen mit Meerblick sowie traditionellem Holzofen aus Stein für gesellige Abende im Freien.",
+    amOutdoorChip1: "Pinienhain & Garten",
+    amOutdoorChip2: "Panoramaterrassen",
+    amOutdoorChip3: "Holzbackofen",
+    amOutdoorChip4: "Essen im Freien",
+
+    amInteriorTag: "Innenräume",
+    amInteriorCount: "📷 3 Fotos",
+    amInteriorTitle: "Herrschaftlicher Salon mit Kamin",
+    amInteriorDesc: "Großer Wohnsalon mit edlem Fischgrät-Parkett, bequemen Sofas, gemauertem Kamin und großem Esstisch für über 10 Personen.",
+    amInteriorChip1: "Edles Parkett",
+    amInteriorChip2: "Holzkamin",
+    amInteriorChip3: "Tisch für 10+ Personen",
+    amInteriorChip4: "Viel Tageslicht",
+
+    amRoomsTag: "Schlafbereich & Wellness",
+    amRoomsCount: "📷 4 Fotos",
+    amRoomsTitle: "Panoramazimmer & Stilvolle Bäder",
+    amRoomsDesc: "5 Schlafzimmer (darunter eine private Dependance) und 4 Bäder mit Blick auf das Meer und die Inseln, antiken Möbeln, Klimaanlage und freistehender Vintage-Gussbadewanne oder moderner Dusche.",
+    amRoomsChip1: "5 Schlafzimmer",
+    amRoomsChip2: "4 Badezimmer",
+    amRoomsChip3: "Inklusive Dependance",
+    amRoomsChip4: "Blick auf Ägadische Inseln",
+    amRoomsChip5: "Klimaanlage",
+
+    lightboxHint: "🔍 Doppelklick oder Scrollen zum Zoomen • Ziehen zum Bewegen",
+    qrBullet1: "Ideal für QR-Codes im Haus (WLAN, Hausordnung, Pool & Tennis zur Alleinnutzung, Kontakte)",
+    qrBullet2: "One-Touch-GPS-Navigation zur Contrada Fontanelle 231",
+    qrBullet3: "Mehrsprachig: Italienisch / Englisch / Deutsch mit sofortiger Umschaltung",
+    qrScanTitle: "Mit der Kamera scannen",
+    qrScanSub: "Diese Website direkt auf Ihrem Smartphone öffnen",
+
+    terr1Title: "Ägadische Inseln (Favignana, Levanzo & Marettimo)",
+    terr1Desc: "Direkt von den Terrassen der Villa aus sichtbar! Der Ägadische Archipel — Favignana mit seinen türkisfarbenen Buchten (Cala Rossa, Cala Azzurra), das malerische Levanzo und das unberührte Marettimo mit seinen Meeresgrotten — ist bequem erreichbar: Die Tragflächenboote legen im nur 10 Autominuten entfernten Hafen von Marsala ab.",
+    terr1Dist: "⏱️ 10 Min. zum Hafen von Marsala",
+    terr2Title: "Naturreservat Stagnone & Salinen",
+    terr2Desc: "Historische Windmühlen, weiße Salzberge und rosa Flamingos. Weltbekannt für Kitesurfen und einen der spektakulärsten Sonnenuntergänge Europas, neben der antiken phönizischen Insel Mozia.",
+    terr2Dist: "⏱️ 12 Min. mit dem Auto",
+    terr3Title: "Historische Marsala-Weingüter",
+    terr3Desc: "Heimat des berühmten DOC-Weines. Besuchen Sie die monumentalen Eichenfässer von Cantine Florio, Donnafugata und Pellegrino mit Weinproben und typisch sizilianischer Küche.",
+    terr3Dist: "⏱️ 8–12 Min. zu den bekanntesten Kellereien",
+    terr4Title: "Goldene Sandstrände der Südküste",
+    terr4Desc: "Kilometerlange ausgestattete Strandbäder und freie Sandstrände mit flachem, glasklarem Wasser (Lido Signorino, Torrazza, Tiburon Beach).",
+    terr4Dist: "⏱️ 15 Min. zur Küste",
+    terr5Title: "Historisches Zentrum von Marsala",
+    terr5Desc: "Flanieren Sie durch die Fußgängerzone, entdecken Sie Porta Garibaldi, die barocke Kathedrale, das Archäologische Museum mit dem punischen Kriegsschiff und lebendige Weinbars.",
+    terr5Dist: "⏱️ 8 Min. ins Zentrum",
+    terr6Title: "Flughäfen in der Nähe",
+    terr6Desc: "Bequem und schnell erreichbar: Flughafen Trapani-Birgi (Vincenzo Florio) mit vielen Flügen ist nur 10 Autominuten entfernt; der internationale Flughafen Palermo (Falcone-Borsellino) liegt etwa 1 Stunde entfernt.",
+    terr6Dist: "⏱️ 10 Min. (Trapani-Birgi) • 60 Min. (Palermo)",
+
+    formNamePh: "z.B. Anna Schmidt",
+    formMsgPh: "Ich möchte die Verfügbarkeit und Preise für den folgenden Zeitraum anfragen...",
+    optGuests1: "1 Gast (Einzelperson)",
+    optGuests2: "2 Gäste",
+    optGuests3: "3 Gäste",
+    optGuests4: "4 Gäste",
+    optGuests5: "5 Gäste",
+    optGuests6: "6 Gäste",
+    optGuests7: "7 Gäste",
+    optGuests8: "8 Gäste",
+    optGuests9: "9 Gäste",
+    optGuests10: "10 Gäste",
+    optGuests11: "11 Gäste",
+    optGuests12: "12 Gäste",
+    optGuests12Plus: "12+ Gäste (Gruppe / Familien)",
+    optGuests12: "1-2 Gäste",
+    optGuests34: "3-4 Gäste",
+    optGuests56: "5-6 Gäste",
+    optGuests78: "7-8 Gäste",
+    optGuests912: "9-12+ Gäste (Gruppe / Familien)",
+    mobLangLabel: "Sprache",
+
+    infoDirectTitle: "Direktkontakt",
+    infoDirectSub: "Wir stehen Ihnen gerne zur Verfügung",
+    infoPhoneLabel: "Telefon / WhatsApp:",
+    infoEmailLabel: "E-Mail der Direktion:",
+    infoAddressLabel: "Adresse:",
+    infoPerksTitle: "Vorteile der Direktbuchung",
+    infoPerksSub: "Bestpreisgarantie & ohne Vermittlungsgebühren",
+    infoPerk1: "Keine Agenturgebühren: garantierter Bestpreis direkt beim Eigentümer",
+    infoPerk2: "Garantierte Exklusivität: Pool und Tennisplatz stehen ausschließlich Ihnen zur Verfügung",
+    infoPerk3: "Direkter Kontakt: persönliche Betreuung und schnelle Antworten",
+    infoPerk4: "Flexibilität: individuelle Absprachen für Check-in und Check-out",
+    infoWaBtn: "💬 Jetzt auf WhatsApp schreiben",
+    infoCallBtn: "📞 Anrufen: +39 334 924 1047",
+
+    footerColNav: "Navigation",
+    footerColBook: "Buchung & Info",
+    footerQuote: "Angebot anfordern",
+    footerCall: "Direkt anrufen",
+    footerEmail: "E-Mail schreiben",
+    footerColContacts: "Kontakt & Info",
+    mobCall: "Anrufen",
+    mobMap: "Karte",
+    mobBook: "Buchen"
   }
 };
 
 let currentLang = 'it';
 
+const langFlagsSvg = {
+  it: '<svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h640v480H0z"/><path fill="#009246" d="M0 0h213.3v480H0z"/><path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/></g></svg>',
+  en: '<svg viewBox="0 0 60 30" width="18" height="13" aria-hidden="true"><clipPath id="uk-clip-dyn"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="uk-diag-dyn"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk-clip-dyn)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-diag-dyn)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>',
+  de: '<svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><path fill="#000" d="M0 0h640v160H0z"/><path fill="#d00" d="M0 160h640v160H0z"/><path fill="#ffce00" d="M0 320h640v160H0z"/></svg>'
+};
+
 function initI18n() {
   const savedLang = localStorage.getItem('villa_lang');
-  if (savedLang && (savedLang === 'it' || savedLang === 'en')) {
+  if (savedLang && (savedLang === 'it' || savedLang === 'en' || savedLang === 'de')) {
     currentLang = savedLang;
   }
 
   applyLanguage(currentLang);
 
+  // Modern Language Dropdown (Desktop)
+  const dropdown = document.getElementById('langDropdown');
+  const dropdownBtn = document.getElementById('langDropdownBtn');
+
+  if (dropdown && dropdownBtn) {
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.toggle('open');
+      dropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && dropdown.classList.contains('open')) {
+        dropdown.classList.remove('open');
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Handle dropdown menu selection
+  document.querySelectorAll('.lang-menu-item').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const lang = e.currentTarget.dataset.lang;
+      if (lang && lang !== currentLang) {
+        currentLang = lang;
+        localStorage.setItem('villa_lang', lang);
+        applyLanguage(lang);
+      }
+      if (dropdown) {
+        dropdown.classList.remove('open');
+        if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Handle mobile dialog and any other .lang-btn
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const lang = e.currentTarget.dataset.lang;
@@ -489,9 +789,23 @@ function applyLanguage(lang) {
     }
   });
 
+  // Update active states on both dropdown menu and mobile buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  document.querySelectorAll('.lang-menu-item').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // Update header dropdown flag and code
+  const currentFlagEl = document.getElementById('currentLangFlag');
+  const currentCodeEl = document.getElementById('currentLangCode');
+  if (currentFlagEl && langFlagsSvg[lang]) {
+    currentFlagEl.innerHTML = langFlagsSvg[lang];
+  }
+  if (currentCodeEl) {
+    currentCodeEl.textContent = lang.toUpperCase();
+  }
 
   if (dict.metaTitle) {
     document.title = dict.metaTitle;
@@ -500,6 +814,18 @@ function applyLanguage(lang) {
   if (typeof currentGalleryCategory !== 'undefined') {
     renderGalleryGrid(currentGalleryCategory);
   }
+}
+
+/* Helper for localized gallery & album fields */
+function getLocalizedItem(item, prop) {
+  if (!item) return '';
+  if (currentLang === 'de') {
+    return item[prop + 'De'] || item[prop + 'En'] || item[prop + 'It'] || '';
+  }
+  if (currentLang === 'en') {
+    return item[prop + 'En'] || item[prop + 'It'] || '';
+  }
+  return item[prop + 'It'] || item[prop + 'En'] || '';
 }
 
 /* ==========================================================================
@@ -513,8 +839,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Piscina Panoramica ad Uso Esclusivo & Trampolino",
     titleEn: "Exclusive Private Pool & Diving Board",
+    titleDe: "Panoramapool zur Alleinnutzung & Sprungbrett",
     descIt: "Ampia piscina ad uso esclusivo per gli ospiti immersa nel verde con solarium e vista aperta sul mare.",
-    descEn: "Generous swimming pool for exclusive guest use surrounded by lush greenery with sea view sun deck."
+    descEn: "Generous swimming pool for exclusive guest use surrounded by lush greenery with sea view sun deck.",
+    descDe: "Großzügiger privater Pool für Gäste im Grünen mit Sonnendeck und weitem Meerblick."
   },
   {
     id: 2,
@@ -522,8 +850,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Scorcio Piscina e Palme",
     titleEn: "Pool & Palm Tree Haven",
+    titleDe: "Blick auf Pool und Palmen",
     descIt: "Ombra rilassante della veranda con vista sull'acqua e sulle Isole Egadi.",
-    descEn: "Refreshing covered veranda view of the pool and distant Egadi islands."
+    descEn: "Refreshing covered veranda view of the pool and distant Egadi islands.",
+    descDe: "Erholsamer Schatten der Veranda mit Blick auf das Wasser und die Ägadischen Inseln."
   },
   {
     id: 3,
@@ -531,8 +861,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Facciata della Villa & Piscina con Trampolino",
     titleEn: "Villa Facade & Pool with Diving Board",
+    titleDe: "Villafassade & Pool mit Sprungbrett",
     descIt: "Vista frontale della villa circondata da palme, pineta mediterranea e piscina privata.",
-    descEn: "Front view of the villa framed by palm trees, Mediterranean pine forest and private pool."
+    descEn: "Front view of the villa framed by palm trees, Mediterranean pine forest and private pool.",
+    descDe: "Frontansicht der Villa umgeben von Palmen, Pinienhain und privatem Pool."
   },
   {
     id: 4,
@@ -540,8 +872,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Tramonto sulle Isole Egadi dalla Piscina",
     titleEn: "Sunset over Egadi Islands from the Pool",
+    titleDe: "Sonnenuntergang über den Ägadischen Inseln vom Pool",
     descIt: "Spettacolare tramonto dorato sul mare e sulle isole con la piscina illuminata sullo sfondo.",
-    descEn: "Spectacular golden sunset over the sea and islands with the illuminated pool below."
+    descEn: "Spectacular golden sunset over the sea and islands with the illuminated pool below.",
+    descDe: "Spektakulärer goldener Sonnenuntergang über dem Meer und den Inseln mit beleuchtetem Pool im Vordergrund."
   },
   {
     id: 5,
@@ -549,8 +883,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Piscina al Crepuscolo & Vista Mare",
     titleEn: "Pool at Twilight & Sea Horizon",
+    titleDe: "Pool in der Abenddämmerung & Meerblick",
     descIt: "Atmosfera serale a bordo piscina ammirando Favignana e Levanzo all'orizzonte.",
-    descEn: "Evening poolside atmosphere overlooking Favignana and Levanzo on the horizon."
+    descEn: "Evening poolside atmosphere overlooking Favignana and Levanzo on the horizon.",
+    descDe: "Abendliche Atmosphäre am Pool mit Blick auf Favignana und Levanzo am Horizont."
   },
   {
     id: 6,
@@ -558,8 +894,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Piscina Illuminata di Notte",
     titleEn: "Illuminated Pool by Night",
+    titleDe: "Nachts beleuchteter Pool",
     descIt: "Bagno notturno sotto le stelle con illuminazione subacquea turchese e luci soffuse in giardino.",
-    descEn: "Nighttime swim under the stars with turquoise underwater lighting and warm garden lamps."
+    descEn: "Nighttime swim under the stars with turquoise underwater lighting and warm garden lamps.",
+    descDe: "Nächtliches Schwimmen unter dem Sternenhimmel mit türkiser Unterwasserbeleuchtung und warmen Gartenlichtern."
   },
   {
     id: 7,
@@ -567,8 +905,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Loggia Panoramica sulle Egadi",
     titleEn: "Panoramic Veranda overlooking Egadi",
+    titleDe: "Panoramaloggia mit Blick auf die Ägadischen Inseln",
     descIt: "Terrazza coperta panoramica per cene e aperitivi con vista tramonto.",
-    descEn: "Covered panoramic terrace perfect for sunset dining and Sicilian wine."
+    descEn: "Covered panoramic terrace perfect for sunset dining and Sicilian wine.",
+    descDe: "Überdachte Panoramaterrasse für Abendessen und Aperitifs mit Blick auf den Sonnenuntergang."
   },
   {
     id: 8,
@@ -576,8 +916,10 @@ const galleryItems = [
     category: "pool",
     titleIt: "Scalinata Panoramica verso la Piscina",
     titleEn: "Scenic Steps to the Pool",
+    titleDe: "Panoramatreppe zum Pool",
     descIt: "Scorcio architettonico della villa affacciata sulla piana di Marsala.",
-    descEn: "Architectural view overlooking the terracotta patios and coastal plain."
+    descEn: "Architectural view overlooking the terracotta patios and coastal plain.",
+    descDe: "Architektonischer Blick auf die Cotto-Terrassen der Villa und die Küstenebene von Marsala."
   },
   {
     id: 9,
@@ -585,8 +927,10 @@ const galleryItems = [
     category: "sports",
     titleIt: "Panorama Notturno: Tennis, Veranda & Piscina",
     titleEn: "Night Panorama: Tennis Court, Veranda & Pool",
+    titleDe: "Nachtpanorama: Tennisplatz, Veranda & Pool",
     descIt: "Vista d'insieme serale sul campo da tennis, sulla veranda illuminata, sulla piscina e sulle luci di Marsala.",
-    descEn: "Evening overview of the tennis court, illuminated veranda, pool and Marsala city lights."
+    descEn: "Evening overview of the tennis court, illuminated veranda, pool and Marsala city lights.",
+    descDe: "Abendlicher Überblick über Tennisplatz, beleuchtete Veranda, Pool und die Lichter von Marsala."
   },
   {
     id: 10,
@@ -594,8 +938,10 @@ const galleryItems = [
     category: "sports",
     titleIt: "Campo da Tennis ad Uso Esclusivo",
     titleEn: "Exclusive Regulation Tennis Court",
+    titleDe: "Tennisplatz zur Alleinnutzung",
     descIt: "Campo da tennis regolamentare riservato ad uso esclusivo degli ospiti della villa.",
-    descEn: "Full-size private tennis court exclusively reserved for villa guests."
+    descEn: "Full-size private tennis court exclusively reserved for villa guests.",
+    descDe: "Tennisplatz nach offiziellen Maßen, exklusiv für Gäste der Villa reserviert."
   },
   {
     id: 11,
@@ -603,8 +949,10 @@ const galleryItems = [
     category: "sports",
     titleIt: "Veranda Tennis & Relax",
     titleEn: "Tennis Veranda & Chillout",
+    titleDe: "Tennis-Veranda & Entspannung",
     descIt: "Area relax coperta affacciata direttamente sul campo da tennis e sulla piscina.",
-    descEn: "Shaded spectator veranda overlooking both tennis court and pool."
+    descEn: "Shaded spectator veranda overlooking both tennis court and pool.",
+    descDe: "Überdachter Loungebereich mit direktem Blick auf Tennisplatz und Pool."
   },
   {
     id: 12,
@@ -612,8 +960,10 @@ const galleryItems = [
     category: "sports",
     titleIt: "Forno a Legna & Giardino in Pietra",
     titleEn: "Wood-Fired Pizza Oven & Stone Garden",
+    titleDe: "Holzbackofen & Steingarten",
     descIt: "Forno tradizionale in pietra lavica e tufo per pizze all'aperto e barbecue.",
-    descEn: "Authentic Sicilian stone pizza oven and outdoor BBQ area amidst pines."
+    descEn: "Authentic Sicilian stone pizza oven and outdoor BBQ area amidst pines.",
+    descDe: "Traditioneller sizilianischer Steinofen und Grillbereich unter Pinien für Pizzaabende im Freien."
   },
   {
     id: 13,
@@ -621,8 +971,10 @@ const galleryItems = [
     category: "interior",
     titleIt: "Grande Salone con Camino & Parquet",
     titleEn: "Grand Living Room with Fireplace",
+    titleDe: "Großer Salon mit Kamin & Parkett",
     descIt: "Spazio giorno luminoso ed elegante con divani in lino e camino d'atmosfera.",
-    descEn: "Spacious, sunlit lounge with cozy linen sofas and rustic brick fireplace."
+    descEn: "Spacious, sunlit lounge with cozy linen sofas and rustic brick fireplace.",
+    descDe: "Heller, eleganter Wohnbereich mit bequemen Leinencouches und stimmungsvollem Kamin."
   },
   {
     id: 14,
@@ -630,8 +982,10 @@ const galleryItems = [
     category: "interior",
     titleIt: "Zona Relax & Ingresso Cantina",
     titleEn: "Living Lounge & Wine Cellar Entrance",
+    titleDe: "Loungebereich & Weinkeller-Eingang",
     descIt: "Pavimenti in parquet di legno massello e accesso scenografico alla cantina.",
-    descEn: "Hardwood herringbone floors and wrought iron gate leading to the cellar."
+    descEn: "Hardwood herringbone floors and wrought iron gate leading to the cellar.",
+    descDe: "Massivholz-Fischgrätparkett und schmiedeeisernes Tor zum historischen Weinkeller."
   },
   {
     id: 15,
@@ -639,8 +993,10 @@ const galleryItems = [
     category: "interior",
     titleIt: "Sala da Pranzo Conviviale",
     titleEn: "Convivial Dining Hall",
+    titleDe: "Geselliger Speisesaal",
     descIt: "Tavolo da pranzo per oltre 10 ospiti, ideale per ritrovi con amici e famiglie.",
-    descEn: "Large dining table seating 10+ guests for memorable group dinners."
+    descEn: "Large dining table seating 10+ guests for memorable group dinners.",
+    descDe: "Großer Esstisch für über 10 Gäste, ideal für gesellige Runden mit Familie und Freunden."
   },
   {
     id: 16,
@@ -648,8 +1004,10 @@ const galleryItems = [
     category: "rooms",
     titleIt: "Camera 1 — Vista sulle Isole Egadi",
     titleEn: "Bedroom 1 — Egadi Islands View",
+    titleDe: "Zimmer 1 — Blick auf die Ägadischen Inseln",
     descIt: "Risvegliarsi ogni mattina ammirando Favignana e il mare all'orizzonte.",
-    descEn: "Wake up each morning gazing out to Favignana Island and the sea."
+    descEn: "Wake up each morning gazing out to Favignana Island and the sea.",
+    descDe: "Jeden Morgen mit Blick auf die Insel Favignana und das offene Meer erwachen."
   },
   {
     id: 17,
@@ -657,8 +1015,10 @@ const galleryItems = [
     category: "rooms",
     titleIt: "Camera 2 — Matrimoniale di Charme",
     titleEn: "Bedroom 2 — Master with Antique Charm",
+    titleDe: "Zimmer 2 — Herrschaftliches Doppelzimmer",
     descIt: "Letto in ferro battuto decorato, armadio d'epoca e climatizzazione autonoma.",
-    descEn: "Ornate wrought iron bed, historic mirrored armoire and air conditioning."
+    descEn: "Ornate wrought iron bed, historic mirrored armoire and air conditioning.",
+    descDe: "Verziertes Schmiedeeisenbett, antiker Spiegelschrank und eigene Klimaanlage."
   },
   {
     id: 18,
@@ -666,8 +1026,10 @@ const galleryItems = [
     category: "rooms",
     titleIt: "Bagno 1 — Stile d'Epoca con Vasca in Ghisa",
     titleEn: "Bathroom 1 — Vintage Freestanding Tub",
+    titleDe: "Badezimmer 1 — Historischer Stil mit Gussbadewanne",
     descIt: "Vasca freestanding con piedini, maioliche e travi in legno a vista.",
-    descEn: "Classic clawfoot soaking tub, handcrafted tiles, and rustic wood beams."
+    descEn: "Classic clawfoot soaking tub, handcrafted tiles, and rustic wood beams.",
+    descDe: "Freistehende Badewanne auf Füßen, handgefertigte Fliesen und sichtbare Holzbalken."
   },
   {
     id: 19,
@@ -675,8 +1037,10 @@ const galleryItems = [
     category: "rooms",
     titleIt: "Bagno 2 — Moderno con Doccia in Cristallo",
     titleEn: "Bathroom 2 — Modern Walk-in Shower",
+    titleDe: "Badezimmer 2 — Modern mit Glasdusche",
     descIt: "Box doccia moderno, sanitari sospesi e finiture fresche.",
-    descEn: "Glass-enclosed walk-in shower and contemporary fixtures."
+    descEn: "Glass-enclosed walk-in shower and contemporary fixtures.",
+    descDe: "Moderne begehbare Glasdusche und zeitgemäße Sanitärausstattung."
   },
   {
     id: 20,
@@ -684,8 +1048,10 @@ const galleryItems = [
     category: "cellar",
     titleIt: "Cantina Storica Scavata nel Tufo",
     titleEn: "Historic Cellar Carved in Tuff Stone",
+    titleDe: "Historischer Weinkeller im Tuffstein",
     descIt: "Un autentico tesoro sotterraneo che celebra la tradizione del vino Marsala.",
-    descEn: "An authentic subterranean tuff cellar honoring historic Marsala wines."
+    descEn: "An authentic subterranean tuff cellar honoring historic Marsala wines.",
+    descDe: "Ein authentischer unterirdischer Schatz, der die berühmte Weintradition von Marsala ehrt."
   }
 ];
 
@@ -694,48 +1060,60 @@ const spaceAlbums = {
     icon: "🏊‍♂️",
     titleIt: "Piscina Panoramica & Terrazze (Uso Esclusivo)",
     titleEn: "Panoramic Pool & Terraces (Exclusive Use)",
+    titleDe: "Panoramapool & Terrassen (Alleinnutzung)",
     descIt: "Tutte le angolazioni della grande piscina privata ad uso esclusivo: vista diurna sulle palme e sulla facciata della villa, tramonti infuocati sulle Egadi e bagni serali sotto le luci.",
     descEn: "Every angle of the large private pool reserved exclusively for guests: daytime views, fiery Egadi sunsets, and illuminated evening swims.",
+    descDe: "Alle Perspektiven des großen privaten Pools zur exklusiven Nutzung: Blick auf Palmen und Villafassade, goldene Sonnenuntergänge über den Ägadischen Inseln und abendliches Schwimmen.",
     photoIds: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
   tennis: {
     icon: "🎾",
     titleIt: "Campo da Tennis & Veranda (Uso Esclusivo)",
     titleEn: "Regulation Tennis Court & Veranda (Exclusive Use)",
+    titleDe: "Tennisplatz & Veranda (Alleinnutzung)",
     descIt: "Campo da tennis regolamentare ad uso esclusivo con veranda coperta per gli spettatori e splendida vista serale sull'intera tenuta.",
     descEn: "Private regulation tennis court for exclusive guest use with shaded spectator veranda and evening views.",
+    descDe: "Tennisplatz nach offiziellen Maßen zur Alleinnutzung mit überdachter Zuschauer-Veranda und herrlichem Abendblick.",
     photoIds: [10, 11, 9]
   },
   cellar: {
     icon: "🍷",
     titleIt: "Cantina Storica nel Tufo",
     titleEn: "Historic Tuff Wine Cellar",
+    titleDe: "Historischer Tuffstein-Weinkeller",
     descIt: "Suggestivo ipogeo scavato nel tufo marsalese con ingresso scenografico dal salone tramite cancello in ferro battuto.",
     descEn: "Subterranean cellar carved into Marsala tuff stone with wrought-iron entrance from the living lounge.",
+    descDe: "Faszinierender Felsenkeller im Marsala-Tuffstein mit stilvollem Eingang vom Salon durch ein schmiedeeisernes Tor.",
     photoIds: [20, 14]
   },
   outdoor: {
     icon: "🌿",
     titleIt: "Spazi Aperti, Pineta & Terrazze",
     titleEn: "Outdoor Spaces, Pine Grove & Terraces",
+    titleDe: "Freiflächen, Pinienhain & Terrassen",
     descIt: "Ampi spazi esterni tra pineta mediterranea, scalinate panoramiche in cotto, logge coperte vista Egadi e forno a legna in pietra per serate all'aperto.",
     descEn: "Generous outdoor areas across Mediterranean pine groves, scenic terracotta steps, covered Egadi-view terraces, and a stone wood-fired pizza oven.",
+    descDe: "Weitläufige Außenbereiche im Pinienhain, Panoramatreppen, überdachte Loggien mit Inselblick und Holzofen für Abende im Freien.",
     photoIds: [12, 8, 3, 7]
   },
   interior: {
     icon: "🛋️",
     titleIt: "Salone Nobile, Camino & Sala da Pranzo",
     titleEn: "Grand Living Room, Fireplace & Dining Hall",
+    titleDe: "Herrschaftlicher Salon, Kamin & Speisesaal",
     descIt: "Gli ampi spazi interni con parquet a spina di pesce, camino a legna e tavolo conviviale per oltre 10 ospiti.",
     descEn: "Spacious interiors featuring herringbone hardwood floors, brick fireplace, and dining table for 10+ guests.",
+    descDe: "Großzügige Innenräume mit Fischgrätparkett, gemauertem Holzkamin und Esstisch für über 10 Gäste.",
     photoIds: [13, 14, 15]
   },
   rooms: {
     icon: "🛏️",
     titleIt: "Camere Panoramiche & Bagni di Charme",
     titleEn: "Panoramic Bedrooms & Bathrooms",
+    titleDe: "Panoramazimmer & Stilvolle Bäder",
     descIt: "La proprietà offre 5 camere da letto (di cui una in dependance privata) e 4 bagni (con vasca freestanding d'epoca e doccia moderna in cristallo).",
     descEn: "The estate features 5 bedrooms (including one in a private dependance) and 4 bathrooms (with a vintage clawfoot tub and modern walk-in shower).",
+    descDe: "Das Anwesen bietet 5 Schlafzimmer (darunter eine private Dependance) und 4 Bäder mit Vintage-Gussbadewanne und moderner Dusche.",
     photoIds: [16, 17, 18, 19]
   }
 };
@@ -783,17 +1161,19 @@ function openSpaceAlbum(spaceKey) {
     .filter(Boolean);
 
   if (iconEl) iconEl.textContent = album.icon;
-  if (titleEl) titleEl.textContent = currentLang === 'it' ? album.titleIt : album.titleEn;
-  if (descEl) descEl.textContent = currentLang === 'it' ? album.descIt : album.descEn;
+  if (titleEl) titleEl.textContent = getLocalizedItem(album, 'title');
+  if (descEl) descEl.textContent = getLocalizedItem(album, 'desc');
   if (countEl) {
     countEl.textContent = currentLang === 'it'
       ? `${albumPhotos.length} foto nella cartella`
-      : `${albumPhotos.length} photos in folder`;
+      : (currentLang === 'de'
+        ? `${albumPhotos.length} Fotos im Album`
+        : `${albumPhotos.length} photos in folder`);
   }
 
   gridEl.innerHTML = '';
   albumPhotos.forEach((item, idx) => {
-    const title = currentLang === 'it' ? item.titleIt : item.titleEn;
+    const title = getLocalizedItem(item, 'title');
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'space-album-card';
@@ -854,10 +1234,10 @@ function renderGalleryGrid(category) {
     card.className = 'gallery-item';
     card.setAttribute('tabindex', '0');
     card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', currentLang === 'it' ? item.titleIt : item.titleEn);
+    card.setAttribute('aria-label', getLocalizedItem(item, 'title'));
 
-    const title = currentLang === 'it' ? item.titleIt : item.titleEn;
-    const desc = currentLang === 'it' ? item.descIt : item.descEn;
+    const title = getLocalizedItem(item, 'title');
+    const desc = getLocalizedItem(item, 'desc');
 
     card.innerHTML = `
       <img src="${item.src}" alt="${title}" loading="lazy">
@@ -1217,7 +1597,7 @@ function renderLightboxThumbs() {
 
   thumbsEl.innerHTML = '';
   activeLightboxItems.forEach((item, idx) => {
-    const title = currentLang === 'it' ? item.titleIt : item.titleEn;
+    const title = getLocalizedItem(item, 'title');
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'lightbox-thumb-btn';
@@ -1251,17 +1631,20 @@ function updateLightboxContent() {
   const counter = document.getElementById('lightbox-counter');
   const desc = document.getElementById('lightbox-desc');
 
+  const itemTitle = getLocalizedItem(item, 'title');
+  const itemDesc = getLocalizedItem(item, 'desc');
+
   if (img) {
     img.src = item.src;
-    img.alt = currentLang === 'it' ? item.titleIt : item.titleEn;
+    img.alt = itemTitle;
   }
 
   if (title) {
-    title.textContent = currentLang === 'it' ? item.titleIt : item.titleEn;
+    title.textContent = itemTitle;
   }
 
   if (desc) {
-    desc.textContent = currentLang === 'it' ? item.descIt : item.descEn;
+    desc.textContent = itemDesc;
   }
 
   if (counter) {
@@ -1376,7 +1759,8 @@ function initBookingForm() {
     const phone = document.getElementById('inq-phone')?.value.trim() || '';
     const checkin = document.getElementById('inq-checkin')?.value || 'Da definire';
     const checkout = document.getElementById('inq-checkout')?.value || 'Da definire';
-    const guests = document.getElementById('inq-guests')?.value || '2';
+    const guestsEl = document.getElementById('inq-guests');
+    const guests = guestsEl ? (guestsEl.options[guestsEl.selectedIndex]?.text || guestsEl.value) : '2';
     const notes = document.getElementById('inq-notes')?.value.trim() || 'Nessuna nota aggiuntiva';
 
     return { name, email, phone, checkin, checkout, guests, notes };

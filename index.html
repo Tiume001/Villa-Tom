@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Villa Timea | Villa con Piscina e Tennis ad Uso Esclusivo, Vista Egadi a Marsala (Sicilia)</title>
-  <meta name="description" content="Esclusiva villa con piscina panoramica e campo da tennis entrambi ad uso esclusivo per gli ospiti, pineta mediterranea e cantina storica scavata nel tufo a Marsala, con vista mozzafiato sulle Isole Egadi.">
+  <title>Villa Timea Piscina e Tennis Vista Isole Egadi | Marsala (Sicilia)</title>
+  <meta name="description" content="Villa Timea: esclusiva villa con piscina panoramica e campo da tennis entrambi ad uso esclusivo per gli ospiti, pineta mediterranea e cantina storica scavata nel tufo a Marsala, con vista mozzafiato sulle Isole Egadi.">
   <meta name="keywords" content="Villa Timea, Marsala, Villa con piscina uso esclusivo Sicilia, Isole Egadi Favignana Levanzo Marettimo, Campo da tennis uso esclusivo villa vacanze, Affitto villa Marsala, Cantina vino Marsala">
   <meta name="theme-color" content="#0e3b56">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Villa Timea | Esclusiva Villa Panoramica a Marsala, Sicilia">
+  <meta property="og:title" content="Villa Timea Piscina e Tennis Vista Isole Egadi | Marsala, Sicilia">
   <meta property="og:description" content="Piscina panoramica e campo da tennis ad uso esclusivo per gli ospiti, cantina storica nel tufo e vista sulle Isole Egadi. Scopri la villa e prenota direttamente.">
   <meta property="og:image" content="assets/images/piscina-panorama.jpg">
   <meta property="twitter:card" content="summary_large_image">
@@ -77,9 +77,33 @@
             <span>🎨</span>
             <span data-i18n="navPalette">Palette</span>
           </button>
-          <div class="lang-switch">
-            <button type="button" class="lang-btn active" data-lang="it">IT</button>
-            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button type="button" class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="true" aria-expanded="false" title="Cambia Lingua / Select Language / Sprache wählen">
+              <span class="flag-icon" id="currentLangFlag">
+                <svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h640v480H0z"/><path fill="#009246" d="M0 0h213.3v480H0z"/><path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/></g></svg>
+              </span>
+              <span class="lang-code" id="currentLangCode">IT</span>
+              <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+              <button type="button" class="lang-menu-item active" data-lang="it" role="menuitem">
+                <span class="flag-icon"><svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h640v480H0z"/><path fill="#009246" d="M0 0h213.3v480H0z"/><path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/></g></svg></span>
+                <span class="lang-name">Italiano</span>
+                <span class="lang-check" aria-hidden="true">✓</span>
+              </button>
+              <button type="button" class="lang-menu-item" data-lang="en" role="menuitem">
+                <span class="flag-icon"><svg viewBox="0 0 60 30" width="18" height="13" aria-hidden="true"><clipPath id="uk-clip-nav"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="uk-diag-nav"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk-clip-nav)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-diag-nav)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+                <span class="lang-name">English</span>
+                <span class="lang-check" aria-hidden="true">✓</span>
+              </button>
+              <button type="button" class="lang-menu-item" data-lang="de" role="menuitem">
+                <span class="flag-icon"><svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><path fill="#000" d="M0 0h640v160H0z"/><path fill="#d00" d="M0 160h640v160H0z"/><path fill="#ffce00" d="M0 320h640v160H0z"/></svg></span>
+                <span class="lang-name">Deutsch</span>
+                <span class="lang-check" aria-hidden="true">✓</span>
+              </button>
+            </div>
           </div>
           <a href="#contatti" class="btn btn-primary btn-sm" data-i18n="btnBookNow">Richiedi Disponibilità</a>
           <button type="button" class="menu-toggle" id="menu-open-btn" aria-label="Apri menu">
@@ -115,9 +139,22 @@
         <span>🎨</span>
         <span data-i18n="mobChoosePalette">Scegli Palette Stili</span>
       </button>
-      <div class="lang-switch" style="align-self: flex-start;">
-        <button type="button" class="lang-btn active" data-lang="it">Italiano</button>
-        <button type="button" class="lang-btn" data-lang="en">English</button>
+      <div class="mob-lang-group">
+        <div class="mob-lang-label" data-i18n="mobLangLabel">Lingua / Language / Sprache</div>
+        <div class="lang-switch-mobile">
+          <button type="button" class="lang-btn active" data-lang="it">
+            <span class="flag-icon"><svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h640v480H0z"/><path fill="#009246" d="M0 0h213.3v480H0z"/><path fill="#ce2b37" d="M426.7 0H640v480H426.7z"/></g></svg></span>
+            <span>Italiano</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="en">
+            <span class="flag-icon"><svg viewBox="0 0 60 30" width="18" height="13" aria-hidden="true"><clipPath id="uk-clip-mob"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="uk-diag-mob"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk-clip-mob)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-diag-mob)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>
+            <span>English</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="de">
+            <span class="flag-icon"><svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><path fill="#000" d="M0 0h640v160H0z"/><path fill="#d00" d="M0 160h640v160H0z"/><path fill="#ffce00" d="M0 320h640v160H0z"/></svg></span>
+            <span>Deutsch</span>
+          </button>
+        </div>
       </div>
       <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width: 100%;" data-i18n="mobWaDirect">
         💬 Chat WhatsApp Diretta
@@ -135,23 +172,25 @@
     </div>
     <div class="hero-overlay"></div>
 
-    <div class="container">
-      <div class="hero-badge" data-i18n="heroBadge">
-        ✨ Marsala • Vista Isole Egadi
-      </div>
-      <h1 class="hero-title" data-i18n="heroTitle">
-        Il Tuo Rifugio Esclusivo nel Cuore della Sicilia
-      </h1>
-      <p class="hero-subtitle" data-i18n="heroSubtitle">
-        Piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, pineta mediterranea e un'autentica cantina storica scavata nel tufo.
-      </p>
+    <div class="container hero-container">
+      <div class="hero-content-top">
+        <div class="hero-badge" data-i18n="heroBadge">
+          ✨ Marsala • Vista Isole Egadi
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">
+          Villa Timea Piscina e Tennis Vista Isole Egadi
+        </h1>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, pineta mediterranea e un'autentica cantina storica scavata nel tufo.
+        </p>
 
-      <div class="hero-cta-group">
-        <a href="#galleria" class="btn btn-primary" data-i18n="heroExplore">Esplora la Villa</a>
-        <a href="#contatti" class="btn btn-outline-white" data-i18n="heroInquire">Prenota o Richiedi Info</a>
-        <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btnWaDirect">
-          💬 WhatsApp Diretto
-        </a>
+        <div class="hero-cta-group">
+          <a href="#galleria" class="btn btn-primary" data-i18n="heroExplore">Esplora la Villa</a>
+          <a href="#contatti" class="btn btn-outline-white" data-i18n="heroInquire">Prenota o Richiedi Info</a>
+          <a href="https://wa.me/393349241047" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="btnWaDirect">
+            💬 WhatsApp Diretto
+          </a>
+        </div>
       </div>
 
       <!-- Hero Features Highlights -->
@@ -585,7 +624,7 @@
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <span style="font-size: 1.3rem;">🌐</span>
               <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet3">
-                Bilingue Italiano / Inglese con cambio istantaneo per ospiti internazionali
+                Multilingue Italiano / Inglese / Tedesco con cambio istantaneo per ospiti internazionali
               </span>
             </div>
           </div>
@@ -729,11 +768,19 @@
             <div class="form-group">
               <label for="inq-guests" class="form-label" data-i18n="formGuests">Numero Ospiti</label>
               <select id="inq-guests" class="form-select">
-                <option value="1-2" data-i18n="optGuests12">1-2 Ospiti</option>
-                <option value="3-4" data-i18n="optGuests34">3-4 Ospiti</option>
-                <option value="5-6" data-i18n="optGuests56">5-6 Ospiti</option>
-                <option value="7-8" data-i18n="optGuests78">7-8 Ospiti</option>
-                <option value="9-12+" data-i18n="optGuests912">9-12+ Ospiti (Gruppo / Famiglie)</option>
+                <option value="1" data-i18n="optGuests1">1 Ospite (Singolo)</option>
+                <option value="2" data-i18n="optGuests2" selected>2 Ospiti</option>
+                <option value="3" data-i18n="optGuests3">3 Ospiti</option>
+                <option value="4" data-i18n="optGuests4">4 Ospiti</option>
+                <option value="5" data-i18n="optGuests5">5 Ospiti</option>
+                <option value="6" data-i18n="optGuests6">6 Ospiti</option>
+                <option value="7" data-i18n="optGuests7">7 Ospiti</option>
+                <option value="8" data-i18n="optGuests8">8 Ospiti</option>
+                <option value="9" data-i18n="optGuests9">9 Ospiti</option>
+                <option value="10" data-i18n="optGuests10">10 Ospiti</option>
+                <option value="11" data-i18n="optGuests11">11 Ospiti</option>
+                <option value="12" data-i18n="optGuests12">12 Ospiti</option>
+                <option value="12+" data-i18n="optGuests12Plus">Oltre 12 Ospiti (Gruppo / Famiglie)</option>
               </select>
             </div>
 
