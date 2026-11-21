@@ -4,15 +4,14 @@ Sito web moderno, elegante e completamente responsive per la presentazione di **
 - Presentazione ad alto impatto visivo della villa (piscina panoramica con trampolino e campo da tennis regolamentare entrambi ad uso esclusivo per gli ospiti, cantina storica nel tufo, spazi interni signorili e vista sulle Isole Egadi: Favignana, Levanzo e Marettimo).
 - Galleria fotografica con zoom interattivo (fino a 3.5x con controlli dedicati, rotella mouse, doppio click, drag-to-pan e pinch-to-zoom multi-touch su smartphone).
 - Canali di prenotazione diretti (WhatsApp, Telefono ed Email con modulo preventivo interattivo a tariffa diretta garantita senza commissioni).
-- Diffusione rapida e accoglienza ospiti tramite **QR Code** (generatore integrato e scaricabile).
-- Supporto bilingue istantaneo (**Italiano** e **Inglese**).
+- Supporto multilingue istantaneo (**Italiano**, **Inglese** e **Tedesco**).
 - Mappa interattiva e navigazione GPS one-touch (Google Maps: https://maps.app.goo.gl/ddpPGVBYh4fJH2ks8, Waze).
 
 ---
 
 ## 🚀 Come Visualizzare il Sito in Locale
 
-Non è richiesto alcun framework o build step complesso: il sito è realizzato in **HTML5 moderno, CSS3 e JavaScript vanilla**, con tutte le librerie (Leaflet per le mappe, QRCode.js per i codici QR) salvate **localmente nella cartella `assets/`**.
+Non è richiesto alcun framework o build step complesso: il sito è realizzato in **HTML5 moderno, CSS3 e JavaScript vanilla**, con tutte le librerie (Leaflet per le mappe) salvate **localmente nella cartella `assets/`**.
 
 ### Opzione 1: Con Python (Consigliata)
 Apri il terminale nella cartella del progetto ed esegui:
@@ -119,8 +118,7 @@ Villa Tom/
     │   └── leaflet.css          # Foglio di stile locale per la mappa
     ├── js/
     │   ├── main.js              # Logica interattiva (lightbox, i18n, form, mappa)
-    │   ├── leaflet.js           # Libreria mappe locale
-    │   └── qrcode.min.js        # Generatore QR code locale
+    │   └── leaflet.js           # Libreria mappe locale
     └── images/                  # 20 immagini ottimizzate con nomi semantici italiani
         ├── piscina-panorama.jpg
         ├── piscina-terrazza.jpg

@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initGallery();
   initLightbox();
   initDialogFallbacks();
-  initQRCode();
   initBookingForm();
   initMap();
   initHeader();
@@ -36,7 +35,6 @@ const i18nData = {
     navComfort: "Comfort & Spazi",
     navGallery: "Galleria",
     navTerritory: "Dintorni",
-    navQr: "QR Ospiti",
     navContact: "Contatti",
     btnBookNow: "Richiedi Disponibilità",
 
@@ -81,12 +79,6 @@ const i18nData = {
     filterRooms: "Camere & Bagni",
     filterSports: "Tennis & Giardino",
     filterCellar: "Cantina Storica",
-
-    qrTag: "QR Code & Guest Guide",
-    qrTitle: "Condividi la Villa & Accogli i tuoi Ospiti",
-    qrDesc: "Questo sito è pensato per essere facilmente fruibile tramite QR Code: esponilo all'interno della villa, sui biglietti da visita o sul materiale informativo per permettere agli ospiti di consultare mappa, contatti e servizi con una semplice scansione.",
-    qrBtnDownload: "Scarica QR Code (PNG)",
-    qrBtnPrint: "Stampa Scheda Villa",
 
     territoryTag: "Esplora Marsala & Trapani",
     territoryTitle: "I Tesori della Sicilia Occidentale",
@@ -180,11 +172,6 @@ const i18nData = {
     amRoomsChip5: "Aria Condizionata",
 
     lightboxHint: "🔍 Doppio click o rotella per zoom • Trascina per muoverti",
-    qrBullet1: "Perfetto per QR posizionati in casa (Wi-Fi, regole, piscina e tennis ad uso esclusivo, contatti rapidi)",
-    qrBullet2: "Navigazione GPS one-touch verso Contrada Fontanelle 231",
-    qrBullet3: "Multilingue Italiano / Inglese / Tedesco con cambio istantaneo per ospiti internazionali",
-    qrScanTitle: "Scansiona con la Fotocamera",
-    qrScanSub: "Apri direttamente questo sito sul tuo smartphone",
 
     terr1Title: "Isole Egadi (Favignana, Levanzo e Marettimo)",
     terr1Desc: "Visibili direttamente dalle terrazze della villa! L'arcipelago delle Egadi — Favignana con le sue celebri cale turchesi (Cala Rossa, Cala Azzurra), la caratteristica Levanzo e la selvaggia ed incontaminata Marettimo con le sue grotte marine — è comodamente raggiungibile: l'imbarco degli aliscafi dal porto di Marsala dista solo 10 minuti di auto.",
@@ -253,7 +240,6 @@ const i18nData = {
     navComfort: "Comfort & Spaces",
     navGallery: "Gallery",
     navTerritory: "Surroundings",
-    navQr: "Guest QR",
     navContact: "Contacts",
     btnBookNow: "Check Availability",
 
@@ -298,12 +284,6 @@ const i18nData = {
     filterRooms: "Bedrooms & Baths",
     filterSports: "Tennis & Gardens",
     filterCellar: "Historic Cellar",
-
-    qrTag: "QR Code & Guest Guide",
-    qrTitle: "Share the Villa & Welcome Your Guests",
-    qrDesc: "This website is optimized for instant QR code access: place it inside the villa, on brochures, or welcome packs so guests can access maps, house info, and contacts with a quick smartphone scan.",
-    qrBtnDownload: "Download QR Code (PNG)",
-    qrBtnPrint: "Print Villa Sheet",
 
     territoryTag: "Explore Marsala & Trapani",
     territoryTitle: "Treasures of Western Sicily",
@@ -397,11 +377,6 @@ const i18nData = {
     amRoomsChip5: "Air Conditioning",
 
     lightboxHint: "🔍 Double-click or scroll to zoom • Drag to pan",
-    qrBullet1: "Ideal for in-villa QR codes (Wi-Fi, house rules, exclusive pool & tennis, quick contacts)",
-    qrBullet2: "One-touch GPS navigation to Contrada Fontanelle 231",
-    qrBullet3: "Multilingual support in Italian, English, and German with instant switching for international guests",
-    qrScanTitle: "Scan with Your Camera",
-    qrScanSub: "Open this website directly on your smartphone",
 
     terr1Title: "Egadi Islands (Favignana, Levanzo & Marettimo)",
     terr1Desc: "Visible right from the villa's terraces! The Egadi archipelago — Favignana with its turquoise coves (Cala Rossa, Cala Azzurra), picturesque Levanzo, and unspoiled Marettimo with its sea caves — is easily reached: hydrofoils depart from Marsala port just 10 minutes away by car.",
@@ -470,7 +445,6 @@ const i18nData = {
     navComfort: "Komfort & Räume",
     navGallery: "Galerie",
     navTerritory: "Umgebung",
-    navQr: "Gäste-QR",
     navContact: "Kontakt",
     btnBookNow: "Verfügbarkeit anfragen",
 
@@ -515,12 +489,6 @@ const i18nData = {
     filterRooms: "Zimmer & Bäder",
     filterSports: "Tennis & Garten",
     filterCellar: "Historischer Keller",
-
-    qrTag: "QR-Code & Gästeführer",
-    qrTitle: "Villa teilen & Gäste willkommen heißen",
-    qrDesc: "Diese Website ist für den schnellen Zugriff per QR-Code optimiert: Platzieren Sie ihn in der Villa oder auf Broschüren, damit Gäste mit einem Smartphone-Scan Karte, Kontakte und Services aufrufen können.",
-    qrBtnDownload: "QR-Code herunterladen (PNG)",
-    qrBtnPrint: "Villa-Übersicht drucken",
 
     territoryTag: "Marsala & Trapani entdecken",
     territoryTitle: "Die Schätze Westsiziliens",
@@ -614,11 +582,6 @@ const i18nData = {
     amRoomsChip5: "Klimaanlage",
 
     lightboxHint: "🔍 Doppelklick oder Scrollen zum Zoomen • Ziehen zum Bewegen",
-    qrBullet1: "Ideal für QR-Codes im Haus (WLAN, Hausordnung, Pool & Tennis zur Alleinnutzung, Kontakte)",
-    qrBullet2: "One-Touch-GPS-Navigation zur Contrada Fontanelle 231",
-    qrBullet3: "Mehrsprachig: Italienisch / Englisch / Deutsch mit sofortiger Umschaltung",
-    qrScanTitle: "Mit der Kamera scannen",
-    qrScanSub: "Diese Website direkt auf Ihrem Smartphone öffnen",
 
     terr1Title: "Ägadische Inseln (Favignana, Levanzo & Marettimo)",
     terr1Desc: "Direkt von den Terrassen der Villa aus sichtbar! Der Ägadische Archipel — Favignana mit seinen türkisfarbenen Buchten (Cala Rossa, Cala Azzurra), das malerische Levanzo und das unberührte Marettimo mit seinen Meeresgrotten — ist bequem erreichbar: Die Tragflächenboote legen im nur 10 Autominuten entfernten Hafen von Marsala ab.",
@@ -1672,63 +1635,7 @@ function initDialogFallbacks() {
 }
 
 /* ==========================================================================
-   5. QR CODE GENERATOR & EXPORT
-   Zero external network calls; uses local qrcode.min.js
-   ========================================================================== */
-
-function initQRCode() {
-  const holder = document.getElementById('qr-canvas-holder');
-  if (!holder || typeof QRCode === 'undefined') return;
-
-  // Generate for current site URL or fallback to standard presentation URL
-  const targetUrl = window.location.href.startsWith('http')
-    ? window.location.href
-    : 'https://villatimea.it';
-
-  holder.innerHTML = '';
-  const qrcode = new QRCode(holder, {
-    text: targetUrl,
-    width: 180,
-    height: 180,
-    colorDark: "#0e3b56",
-    colorLight: "#ffffff",
-    correctLevel: QRCode.CorrectLevel.H
-  });
-
-  const downloadBtn = document.getElementById('qr-download-btn');
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', () => {
-      const img = holder.querySelector('img');
-      const canvas = holder.querySelector('canvas');
-      let dataUrl = '';
-
-      if (img && img.src && img.src.startsWith('data:')) {
-        dataUrl = img.src;
-      } else if (canvas) {
-        dataUrl = canvas.toDataURL('image/png');
-      }
-
-      if (dataUrl) {
-        const a = document.createElement('a');
-        a.href = dataUrl;
-        a.download = 'QR-Villa-Timea-Marsala.png';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }
-    });
-  }
-
-  const printBtn = document.getElementById('qr-print-btn');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      window.print();
-    });
-  }
-}
-
-/* ==========================================================================
-   6. BOOKING & INQUIRY FORM (WhatsApp & Email One-Click Generators)
+   5. BOOKING & INQUIRY FORM (WhatsApp & Email One-Click Generators)
    ========================================================================== */
 
 function initBookingForm() {

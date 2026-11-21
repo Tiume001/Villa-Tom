@@ -66,7 +66,6 @@
           <a href="#villa" class="nav-link" data-i18n="navAbout">La Villa</a>
           <a href="#comfort" class="nav-link" data-i18n="navComfort">Comfort & Spazi</a>
           <a href="#galleria" class="nav-link" data-i18n="navGallery">Galleria</a>
-          <a href="#qr-section" class="nav-link" data-i18n="navQr">QR Ospiti</a>
           <a href="#dintorni" class="nav-link" data-i18n="navTerritory">Dintorni</a>
           <a href="#posizione" class="nav-link" data-i18n="mapTag">Posizione</a>
           <a href="#contatti" class="nav-link" data-i18n="navContact">Contatti</a>
@@ -129,7 +128,6 @@
       <a href="#villa" data-i18n="navAbout">La Villa</a>
       <a href="#comfort" data-i18n="navComfort">Comfort & Spazi</a>
       <a href="#galleria" data-i18n="navGallery">Galleria</a>
-      <a href="#qr-section" data-i18n="navQr">QR Ospiti</a>
       <a href="#dintorni" data-i18n="navTerritory">Dintorni</a>
       <a href="#posizione" data-i18n="mapTag">Posizione</a>
       <a href="#contatti" data-i18n="navContact">Contatti</a>
@@ -597,63 +595,6 @@
     </div>
   </dialog>
 
-  <!-- QR Code & Guest Hub Section (Feature requested by user) -->
-  <section class="section section-aqua" id="qr-section">
-    <div class="container">
-      <div class="qr-section-card">
-        <div class="qr-info-content">
-          <span class="section-tag" data-i18n="qrTag">QR Code & Guida Ospiti</span>
-          <h2 class="section-title" data-i18n="qrTitle">Condividi la Villa & Accogli i tuoi Ospiti</h2>
-          <p class="section-desc" data-i18n="qrDesc" style="margin-bottom: 1.5rem;">
-            Questo sito è pensato per essere facilmente fruibile tramite QR Code: esponilo all'interno della villa, sui biglietti da visita o sul materiale promozionale per permettere agli ospiti di consultare mappa, contatti e servizi con una semplice scansione con lo smartphone.
-          </p>
-
-          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <span style="font-size: 1.3rem;">📱</span>
-              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet1">
-                Perfetto per QR posizionati in casa (Wi-Fi, regole, piscina e tennis ad uso esclusivo, contatti rapidi)
-              </span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <span style="font-size: 1.3rem;">🗺️</span>
-              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet2">
-                Navigazione GPS one-touch verso Contrada Fontanelle 231
-              </span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <span style="font-size: 1.3rem;">🌐</span>
-              <span style="font-size: 0.95rem; color: var(--c-navy); font-weight: 500;" data-i18n="qrBullet3">
-                Multilingue Italiano / Inglese / Tedesco con cambio istantaneo per ospiti internazionali
-              </span>
-            </div>
-          </div>
-
-          <div class="qr-actions">
-            <button type="button" class="btn btn-primary" id="qr-download-btn" data-i18n="qrBtnDownload">
-              📥 Scarica QR Code (PNG)
-            </button>
-            <button type="button" class="btn btn-outline" id="qr-print-btn" data-i18n="qrBtnPrint">
-              🖨️ Stampa Scheda Villa
-            </button>
-          </div>
-        </div>
-
-        <div class="qr-box-wrap">
-          <div id="qr-canvas-holder">
-            <!-- Dynamic QR Code rendered via local qrcode.min.js -->
-          </div>
-          <div style="font-weight: 700; color: var(--c-navy); font-size: 1.05rem; margin-bottom: 0.25rem;" data-i18n="qrScanTitle">
-            Scansiona con la Fotocamera
-          </div>
-          <div style="font-size: 0.8rem; color: var(--c-text-muted);" data-i18n="qrScanSub">
-            Apri direttamente questo sito sul tuo smartphone
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Marsala & Surroundings / Territory -->
   <section class="section" id="dintorni">
     <div class="container">
@@ -910,7 +851,6 @@
             <li><a href="#villa" data-i18n="navAbout">La Villa</a></li>
             <li><a href="#comfort" data-i18n="navComfort">Comfort & Spazi</a></li>
             <li><a href="#galleria" data-i18n="navGallery">Galleria Fotografica</a></li>
-            <li><a href="#qr-section" data-i18n="navQr">QR Code Ospiti</a></li>
             <li><a href="#dintorni" data-i18n="navTerritory">Dintorni & Mare</a></li>
             <li><a href="#posizione" data-i18n="mapTag">Posizione</a></li>
           </ul>
@@ -1088,10 +1028,7 @@
   <!-- Local Leaflet Map JS -->
   <script src="assets/js/leaflet.js"></script>
 
-  <!-- Local QRCode Generator JS -->
-  <script src="assets/js/qrcode.min.js"></script>
-
   <!-- Main Website Script -->
-  <script src="assets/js/main.js?v=3.9"></script>
+  <script src="assets/js/main.js?v=4.0"></script>
 </body>
 </html>

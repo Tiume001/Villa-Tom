@@ -2017,7 +2017,7 @@ dialog {
   }
 }
 
-/* General Modal Content Styling (QR Code & Inquiry Dialogs) */
+/* General Modal Content Styling (Dialogs) */
 .modal-card {
   background: var(--c-white);
   border-radius: var(--radius-lg);
@@ -2065,52 +2065,6 @@ dialog {
 .modal-close-btn:hover {
   background: var(--c-sand-200);
   color: var(--c-navy);
-}
-
-/* QR Code Section & Modal */
-.qr-section-card {
-  background: var(--c-white);
-  border-radius: var(--radius-xl);
-  padding: 3.5rem;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--c-sand-200);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.qr-box-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--c-aqua-soft);
-  padding: 2rem;
-  border-radius: var(--radius-lg);
-  border: 2px dashed var(--c-sea-blue);
-  text-align: center;
-}
-
-#qr-canvas-holder {
-  background: var(--c-white);
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 1rem;
-}
-
-#qr-canvas-holder canvas,
-#qr-canvas-holder img {
-  display: block;
-  margin: 0 auto;
-}
-
-.qr-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /* Territory / Dintorni Cards */
@@ -2488,10 +2442,6 @@ dialog {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .qr-section-card {
-    grid-template-columns: 1fr;
-    padding: 2.25rem;
-  }
   .story-badge-floating {
     position: static;
     margin-top: 1.25rem;
@@ -2810,9 +2760,6 @@ dialog {
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.65rem;
-  }
-  .qr-section-card {
-    padding: 1.5rem 1rem;
   }
   .booking-form-wrap {
     padding: 1.5rem 1rem;
