@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMap();
   initHeader();
   initMobileNav();
-  initThemePicker();
 });
 
 /* ==========================================================================
@@ -103,8 +102,6 @@ const i18nData = {
     footerDesc: "Villa Timea: esclusiva villa con piscina panoramica e campo da tennis entrambi ad uso esclusivo per gli ospiti, cantina storica nel tufo e vista mozzafiato sulle Isole Egadi a Marsala (Trapani), Sicilia.",
     footerRights: "Tutti i diritti riservati. Villa Timea Marsala.",
 
-    navPalette: "Palette",
-    mobChoosePalette: "Scegli Palette Stili",
     mobWaDirect: "💬 Chat WhatsApp Diretta",
     btnWaDirect: "💬 WhatsApp Diretto",
     btnCallNow: "📞 Chiama Ora",
@@ -308,8 +305,6 @@ const i18nData = {
     footerDesc: "Villa Timea: exclusive villa with panoramic swimming pool and regulation tennis court reserved exclusively for guests, historic wine cellar, and Egadi views in Marsala (Trapani), Sicily.",
     footerRights: "All rights reserved. Villa Timea Marsala.",
 
-    navPalette: "Palette",
-    mobChoosePalette: "Choose Color Palette",
     mobWaDirect: "💬 Direct WhatsApp Chat",
     btnWaDirect: "💬 Direct WhatsApp",
     btnCallNow: "📞 Call Now",
@@ -513,8 +508,6 @@ const i18nData = {
     footerDesc: "Villa Timea: Exklusive Villa mit Panoramapool und Tennisplatz zur Alleinnutzung, historischem Weinkeller im Tuffstein und atemberaubendem Blick auf die Ägadischen Inseln in Marsala (Trapani), Sizilien.",
     footerRights: "Alle Rechte vorbehalten. Villa Timea Marsala.",
 
-    navPalette: "Palette",
-    mobChoosePalette: "Farbpalette wählen",
     mobWaDirect: "💬 WhatsApp Direktchat",
     btnWaDirect: "💬 WhatsApp Direkt",
     btnCallNow: "📞 Jetzt anrufen",
@@ -1789,95 +1782,6 @@ function initMobileNav() {
   if (dialog) {
     dialog.querySelectorAll('.mob-nav-list a').forEach(link => {
       link.addEventListener('click', () => dialog.close());
-    });
-  }
-}
-
-/* ==========================================================================
-   9. TEMPORARY THEME & STYLE PALETTE PICKER
-   Provvisorio: permette al cliente di testare 5 varianti colore in tempo reale.
-   ========================================================================== */
-
-function initThemePicker() {
-  const triggers = [
-    document.getElementById('themePickerPill'),
-    document.getElementById('navThemeBtn'),
-    document.getElementById('topThemeBtn'),
-    document.getElementById('mobNavThemeBtn')
-  ].filter(Boolean);
-
-  const panel = document.getElementById('themePickerPanel');
-  const overlay = document.getElementById('themePickerOverlay');
-  const closeBtn = document.getElementById('themePickerClose');
-  const cards = document.querySelectorAll('.theme-card');
-
-  if (!panel) return;
-
-  const togglePanel = (open) => {
-    const isOpen = open !== undefined ? open : !panel.classList.contains('open');
-    panel.classList.toggle('open', isOpen);
-    if (overlay) overlay.classList.toggle('open', isOpen);
-  };
-
-  // 1. Carica palette salvata o predefinita
-  const savedTheme = localStorage.getItem('villa_theme') || 'default';
-  applyTheme(savedTheme);
-
-  // 2. Apri / Chiudi pannello con qualsiasi tasto dedicato
-  triggers.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const mobNav = document.getElementById('mobile-nav-dialog');
-      if (mobNav && typeof mobNav.close === 'function' && mobNav.open) {
-        mobNav.close();
-      }
-      togglePanel();
-    });
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => togglePanel(false));
-  }
-
-  if (overlay) {
-    overlay.addEventListener('click', () => togglePanel(false));
-  }
-
-  // Chiudi cliccando fuori dal pannello
-  document.addEventListener('click', (e) => {
-    const isTrigger = triggers.some(btn => btn.contains(e.target));
-    if (!panel.contains(e.target) && !isTrigger) {
-      togglePanel(false);
-    }
-  });
-
-  // Chiudi con tasto Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && panel.classList.contains('open')) {
-      togglePanel(false);
-    }
-  });
-
-  // 3. Selezione e cambio palette in tempo reale
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      const theme = card.dataset.theme || 'default';
-      applyTheme(theme);
-      localStorage.setItem('villa_theme', theme);
-    });
-  });
-
-  function applyTheme(theme) {
-    if (theme === 'default') {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-
-    cards.forEach(c => {
-      const isMatch = (c.dataset.theme || 'default') === theme;
-      c.classList.toggle('active', isMatch);
-      c.setAttribute('aria-checked', isMatch ? 'true' : 'false');
     });
   }
 }

@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/leaflet.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.5">
 </head>
 <body>
 
@@ -72,10 +72,6 @@
         </nav>
 
         <div class="nav-actions">
-          <button type="button" class="nav-theme-btn" id="navThemeBtn" title="Cambia Palette di Stili">
-            <span>🎨</span>
-            <span data-i18n="navPalette">Palette</span>
-          </button>
           <div class="lang-dropdown" id="langDropdown">
             <button type="button" class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="true" aria-expanded="false" title="Cambia Lingua / Select Language / Sprache wählen">
               <span class="flag-icon" id="currentLangFlag">
@@ -133,10 +129,6 @@
       <a href="#contatti" data-i18n="navContact">Contatti</a>
     </div>
     <div class="mob-nav-footer">
-      <button type="button" class="btn btn-outline btn-sm" id="mobNavThemeBtn" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.75rem;">
-        <span>🎨</span>
-        <span data-i18n="mobChoosePalette">Scegli Palette Stili</span>
-      </button>
       <div class="mob-lang-group">
         <div class="mob-lang-label" data-i18n="mobLangLabel">Lingua / Language / Sprache</div>
         <div class="lang-switch-mobile">
@@ -920,115 +912,10 @@
     </div>
   </aside>
 
-  <!-- ==========================================================================
-       PROVVISORIO: TASTO SELETTORE PALETTE STILI
-       Pulsante non invasivo per testare le varianti di stile del sito.
-       Rimuovere questo blocco quando la scelta sarà definitiva.
-       ========================================================================== -->
-  <aside class="theme-picker-widget" aria-label="Selettore Palette Stili">
-    <!-- Overlay di sfondo per chiudere cliccando fuori -->
-    <div class="theme-picker-overlay" id="themePickerOverlay"></div>
-
-    <!-- Pannello Popover / Modal -->
-    <div class="theme-picker-panel" id="themePickerPanel" role="region" aria-label="Opzioni Stile e Colori">
-      <div class="theme-panel-header">
-        <div>
-          <h4 class="theme-panel-title">🎨 Palette di Stile</h4>
-          <p class="theme-panel-subtitle">Tocca una palette per provarla subito in anteprima sul sito.</p>
-        </div>
-        <button type="button" class="theme-panel-close" id="themePickerClose" aria-label="Chiudi selettore">✕</button>
-      </div>
-
-      <div class="theme-options-list" role="radiogroup" aria-label="Seleziona combinazione colori">
-        <!-- Palette 1: Originale -->
-        <button type="button" class="theme-card active" data-theme="default" role="radio" aria-checked="true">
-          <div class="theme-card-info">
-            <div style="display: flex; align-items: center;">
-              <span class="theme-card-name">1. Oceano & Terracotta</span>
-              <span class="theme-card-badge">Attuale</span>
-            </div>
-            <span class="theme-card-mood">Mediterraneo classico: blu mare profondo e cotto siciliano</span>
-          </div>
-          <div class="theme-card-colors">
-            <span class="theme-dot" style="background: #0e3b56;" title="Navy"></span>
-            <span class="theme-dot" style="background: #155e82;" title="Oceano"></span>
-            <span class="theme-dot" style="background: #d97036;" title="Terracotta"></span>
-            <span class="theme-dot" style="background: #f6f1e8;" title="Sabbia"></span>
-            <span class="theme-card-check">✓</span>
-          </div>
-        </button>
-
-        <!-- Palette 2: Ulivo & Tufo Nobile -->
-        <button type="button" class="theme-card" data-theme="olive" role="radio" aria-checked="false">
-          <div class="theme-card-info">
-            <span class="theme-card-name">2. Ulivo & Tufo Nobile</span>
-            <span class="theme-card-mood">Eco-resort di charme: verde oliva, salvia e ambra calda</span>
-          </div>
-          <div class="theme-card-colors">
-            <span class="theme-dot" style="background: #1d3b27;" title="Ulivo profondo"></span>
-            <span class="theme-dot" style="background: #38754e;" title="Salvia"></span>
-            <span class="theme-dot" style="background: #c47d33;" title="Bronzo ambra"></span>
-            <span class="theme-dot" style="background: #f2f1e6;" title="Tufo chiaro"></span>
-            <span class="theme-card-check">✓</span>
-          </div>
-        </button>
-
-        <!-- Palette 3: Tramonto sulle Egadi -->
-        <button type="button" class="theme-card" data-theme="sunset" role="radio" aria-checked="false">
-          <div class="theme-card-info">
-            <span class="theme-card-name">3. Tramonto sulle Egadi</span>
-            <span class="theme-card-mood">Caldo e romantico: vino Marsala rubino e arancio tramonto</span>
-          </div>
-          <div class="theme-card-colors">
-            <span class="theme-dot" style="background: #421a37;" title="Vinaccia"></span>
-            <span class="theme-dot" style="background: #6b2356;" title="Marsala DOC"></span>
-            <span class="theme-dot" style="background: #cf5937;" title="Arancio tramonto"></span>
-            <span class="theme-dot" style="background: #f7f0ee;" title="Sabbia rosata"></span>
-            <span class="theme-card-check">✓</span>
-          </div>
-        </button>
-
-        <!-- Palette 4: Blu Egeo & Riserva Marina -->
-        <button type="button" class="theme-card" data-theme="azure" role="radio" aria-checked="false">
-          <div class="theme-card-info">
-            <span class="theme-card-name">4. Blu Egeo & Riserva</span>
-            <span class="theme-card-mood">Fresco e costiero: azzurro cristallino Cala Rossa e corallo</span>
-          </div>
-          <div class="theme-card-colors">
-            <span class="theme-dot" style="background: #0c335e;" title="Blu notte"></span>
-            <span class="theme-dot" style="background: #0284c7;" title="Azzurro Egeo"></span>
-            <span class="theme-dot" style="background: #ea580c;" title="Corallo"></span>
-            <span class="theme-dot" style="background: #f1f5f9;" title="Bianco spuma"></span>
-            <span class="theme-card-check">✓</span>
-          </div>
-        </button>
-
-        <!-- Palette 5: Oro Barocco & Sabbia Dorata -->
-        <button type="button" class="theme-card" data-theme="gold" role="radio" aria-checked="false">
-          <div class="theme-card-info">
-            <span class="theme-card-name">5. Oro Barocco & Sabbia</span>
-            <span class="theme-card-mood">Signorile e nobile: ebano caldo, oro antico e lino chiaro</span>
-          </div>
-          <div class="theme-card-colors">
-            <span class="theme-dot" style="background: #382d1b;" title="Ebano"></span>
-            <span class="theme-dot" style="background: #7a6030;" title="Ocra"></span>
-            <span class="theme-dot" style="background: #ba7824;" title="Oro antico"></span>
-            <span class="theme-dot" style="background: #f5f1e4;" title="Lino dorato"></span>
-            <span class="theme-card-check">✓</span>
-          </div>
-        </button>
-      </div>
-
-      <div class="theme-panel-footer">
-        💡 <strong>Nota:</strong> Questo selettore è temporaneo. Quando avrete scelto lo stile preferito, basterà confermarlo per renderlo permanente e rimuovere questo pulsante.
-      </div>
-    </div>
-  </aside>
-
   <!-- Local Leaflet Map JS -->
   <script src="assets/js/leaflet.js"></script>
 
   <!-- Main Website Script -->
-  <script src="assets/js/main.js?v=4.0"></script>
+  <script src="assets/js/main.js?v=4.1"></script>
 </body>
 </html>
