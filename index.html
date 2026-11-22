@@ -63,8 +63,10 @@
         "inLanguage": ["it", "en", "de"]
       },
       {
-        "@type": ["LodgingBusiness", "VacationRental"],
+        "@type": "VacationRental",
         "@id": "https://www.villatimea.it/#villa",
+        "identifier": "villa-timea-marsala",
+        "additionalType": "Villa",
         "name": "Villa Timea",
         "alternateName": "Villa Timea Marsala",
         "description": "Villa esclusiva a Marsala (Sicilia) con piscina panoramica e trampolino, campo da tennis regolamentare ad uso esclusivo per gli ospiti, 5 camere da letto per fino a 12 ospiti, cantina storica nel tufo e vista sulle Isole Egadi.",
@@ -72,12 +74,7 @@
         "telephone": "+39 334 924 1047",
         "email": "villatimea@gmail.com",
         "priceRange": "$$$",
-        "numberOfRooms": 5,
-        "occupancy": {
-          "@type": "QuantitativeValue",
-          "minValue": 1,
-          "maxValue": 12
-        },
+        "knowsLanguage": ["it", "en", "de"],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Contrada Fontanelle 231",
@@ -98,18 +95,36 @@
         "image": [
           "https://www.villatimea.it/assets/images/piscina-facciata-villa.jpg",
           "https://www.villatimea.it/assets/images/piscina-panorama.jpg",
+          "https://www.villatimea.it/assets/images/piscina-terrazza.jpg",
           "https://www.villatimea.it/assets/images/terrazza-vista-egadi.jpg",
           "https://www.villatimea.it/assets/images/campo-tennis.jpg",
+          "https://www.villatimea.it/assets/images/salone-principale.jpg",
+          "https://www.villatimea.it/assets/images/sala-pranzo.jpg",
+          "https://www.villatimea.it/assets/images/camera-vista-egadi.jpg",
+          "https://www.villatimea.it/assets/images/camera-matrimoniale.jpg",
+          "https://www.villatimea.it/assets/images/bagno-epoca-vasca.jpg",
+          "https://www.villatimea.it/assets/images/bagno-moderno-doccia.jpg",
           "https://www.villatimea.it/assets/images/cantina-storica-tufo.jpg"
         ],
-        "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "Piscina panoramica privata ad uso esclusivo con trampolino", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Campo da tennis regolamentare ad uso esclusivo", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Vista mare e Isole Egadi (Favignana, Levanzo, Marettimo)", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Cantina storica scavata nel tufo", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Forno a legna esterno in pietra", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Aria condizionata e parcheggio privato", "value": true }
-        ],
+        "containsPlace": {
+          "@type": "Accommodation",
+          "additionalType": "EntirePlace",
+          "numberOfBedrooms": 5,
+          "numberOfBathroomsTotal": 4,
+          "numberOfRooms": 5,
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "value": 12
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "poolType", "value": "Outdoor" },
+            { "@type": "LocationFeatureSpecification", "name": "ac", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "parkingType", "value": "Free" },
+            { "@type": "LocationFeatureSpecification", "name": "balconyOrTerrace", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "gardenOrBackyard", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "outdoorDiningArea", "value": true }
+          ]
+        },
         "petsAllowed": false
       },
       {

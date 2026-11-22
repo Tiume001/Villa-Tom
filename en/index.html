@@ -67,11 +67,10 @@
       ]
     },
     {
-      "@type": [
-        "LodgingBusiness",
-        "VacationRental"
-      ],
+      "@type": "VacationRental",
       "@id": "https://www.villatimea.it/#villa",
+      "identifier": "villa-timea-marsala",
+      "additionalType": "Villa",
       "name": "Villa Timea",
       "alternateName": "Villa Timea Marsala",
       "description": "Exclusive villa in Marsala (Sicily) with panoramic swimming pool, diving board, private regulation tennis court for exclusive guest use, 5 bedrooms for up to 12 guests, historic tuff wine cellar and Egadi Islands views.",
@@ -79,12 +78,11 @@
       "telephone": "+39 334 924 1047",
       "email": "villatimea@gmail.com",
       "priceRange": "$$$",
-      "numberOfRooms": 5,
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "minValue": 1,
-        "maxValue": 12
-      },
+      "knowsLanguage": [
+        "it",
+        "en",
+        "de"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Contrada Fontanelle 231",
@@ -105,42 +103,60 @@
       "image": [
         "https://www.villatimea.it/assets/images/piscina-facciata-villa.jpg",
         "https://www.villatimea.it/assets/images/piscina-panorama.jpg",
+        "https://www.villatimea.it/assets/images/piscina-terrazza.jpg",
         "https://www.villatimea.it/assets/images/terrazza-vista-egadi.jpg",
         "https://www.villatimea.it/assets/images/campo-tennis.jpg",
+        "https://www.villatimea.it/assets/images/salone-principale.jpg",
+        "https://www.villatimea.it/assets/images/sala-pranzo.jpg",
+        "https://www.villatimea.it/assets/images/camera-vista-egadi.jpg",
+        "https://www.villatimea.it/assets/images/camera-matrimoniale.jpg",
+        "https://www.villatimea.it/assets/images/bagno-epoca-vasca.jpg",
+        "https://www.villatimea.it/assets/images/bagno-moderno-doccia.jpg",
         "https://www.villatimea.it/assets/images/cantina-storica-tufo.jpg"
       ],
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Exclusive private panoramic swimming pool with diving board",
-          "value": true
+      "containsPlace": {
+        "@type": "Accommodation",
+        "additionalType": "EntirePlace",
+        "numberOfBedrooms": 5,
+        "numberOfBathroomsTotal": 4,
+        "numberOfRooms": 5,
+        "occupancy": {
+          "@type": "QuantitativeValue",
+          "value": 12
         },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Private regulation tennis court for exclusive guest use",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Sea and Egadi Islands view (Favignana, Levanzo, Marettimo)",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Historic subterranean wine cellar carved in tuff stone",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Outdoor stone wood-fired pizza oven",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Air conditioning and private parking",
-          "value": true
-        }
-      ],
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "poolType",
+            "value": "Outdoor"
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "ac",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "parkingType",
+            "value": "Free"
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "balconyOrTerrace",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "gardenOrBackyard",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "outdoorDiningArea",
+            "value": true
+          }
+        ]
+      },
       "petsAllowed": false
     },
     {
