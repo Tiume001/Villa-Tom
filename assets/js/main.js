@@ -4,11 +4,18 @@
  * Incorporating Modern Web Guidance standards
  */
 
+const ASSET_BASE = /(?:^|\/)(en|de)\/(?:index\.html)?$/.test(window.location.pathname) ? '../' : '';
+
+function resolveAsset(path) {
+  if (!path || /^(https?:|data:|\/)/.test(path)) return path;
+  return ASSET_BASE + path;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Prevent iOS Safari page-level pinch/double-tap zoom outside the photo viewer
-  ['gesturestart', 'gesturechange', 'gestureend'].forEach(evt => {
-    document.addEventListener(evt, (e) => e.preventDefault(), { passive: false });
-  });
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = String(new Date().getFullYear());
+  }
 
   initI18n();
   initSpaceAlbums();
@@ -227,7 +234,21 @@ const i18nData = {
     footerColContacts: "Contatti & Info",
     mobCall: "Chiama",
     mobMap: "Mappa",
-    mobBook: "Prenota"
+    mobBook: "Prenota",
+
+    faqTag: "Domande Frequenti",
+    faqTitle: "Informazioni Utili su Villa Timea",
+    faqDesc: "Tutto quello che c'è da sapere prima di prenotare il tuo soggiorno a Marsala.",
+    faq1Q: "La piscina e il campo da tennis sono davvero ad uso esclusivo?",
+    faq1A: "Sì, al 100%. Sia la grande piscina panoramica con trampolino sia il campo da tennis regolamentare sono riservati esclusivamente agli ospiti che soggiornano a Villa Timea, senza alcuna condivisione con esterni.",
+    faq2Q: "Quanti ospiti può ospitare Villa Timea e come sono divise le camere?",
+    faq2A: "La villa ospita comodamente fino a 12 persone grazie a 5 camere da letto (di cui una in dependance privata) e 4 bagni completi, oltre a un ampio salone con camino, sala da pranzo da oltre 10 coperti, veranda e forno a legna esterno.",
+    faq3Q: "Quanto dista Villa Timea dal porto per le Isole Egadi, dalle spiagge e dagli aeroporti?",
+    faq3A: "La villa si trova in Contrada Fontanelle 231 a Marsala: il centro storico è a circa 8 minuti di auto, l'imbarco degli aliscafi per Favignana, Levanzo e Marettimo a 10 minuti, l'Aeroporto di Trapani-Birgi a 10 minuti, la Riserva dello Stagnone a 12 minuti e le spiagge del litorale sud a circa 15 minuti.",
+    faq4Q: "Qual è il vantaggio di prenotare direttamente su questo sito invece che su Airbnb o Booking?",
+    faq4A: "Prenotando direttamente tramite WhatsApp, telefono o email dal sito ufficiale non paghi le commissioni di intermediazione dei portali, ottieni la miglior tariffa garantita e parli direttamente con i proprietari per concordare check-in, check-out ed esigenze speciali.",
+    faq5Q: "La villa dispone di aria condizionata, parcheggio privato e spazi esterni attrezzati?",
+    faq5A: "Sì, le camere sono climatizzate e la proprietà offre ampi spazi verdi, pineta illuminata la sera, parcheggio privato interno, terrazze panoramiche vista Egadi, solarium con lettini e forno a legna in pietra."
   },
   en: {
     metaTitle: "Villa Timea | Exclusive Pool & Tennis, Egadi Islands View in Marsala",
@@ -430,7 +451,21 @@ const i18nData = {
     footerColContacts: "Contacts & Info",
     mobCall: "Call",
     mobMap: "Map",
-    mobBook: "Book"
+    mobBook: "Book",
+
+    faqTag: "Frequently Asked Questions",
+    faqTitle: "Useful Information about Villa Timea",
+    faqDesc: "Everything you need to know before booking your stay in Marsala.",
+    faq1Q: "Are the swimming pool and tennis court truly for exclusive use?",
+    faq1A: "Yes, 100%. Both the large panoramic swimming pool with diving board and the regulation tennis court are reserved exclusively for guests staying at Villa Timea, with no sharing with anyone else.",
+    faq2Q: "How many guests can Villa Timea accommodate and how are the rooms arranged?",
+    faq2A: "The villa comfortably sleeps up to 12 guests across 5 bedrooms (including one in a private dependance) and 4 full bathrooms, plus a spacious living room with fireplace, dining hall seating 10+, veranda, and outdoor wood-fired pizza oven.",
+    faq3Q: "How far is Villa Timea from the Egadi Islands ferry port, beaches, and airports?",
+    faq3A: "The villa is located at Contrada Fontanelle 231 in Marsala: the historic center is around 8 minutes by car, hydrofoils to Favignana, Levanzo, and Marettimo are 10 minutes away, Trapani-Birgi Airport is 10 minutes away, the Stagnone Lagoon is 12 minutes away, and sandy southern beaches are about 15 minutes away.",
+    faq4Q: "What is the advantage of booking directly here instead of Airbnb or Booking.com?",
+    faq4A: "By booking directly via WhatsApp, phone, or email on our official website, you avoid portal service fees, get the guaranteed best rate, and coordinate check-in, check-out, and special requests directly with the owners.",
+    faq5Q: "Does the villa have air conditioning, private parking, and outdoor dining areas?",
+    faq5A: "Yes, bedrooms are air-conditioned and the estate offers private parking, an evening-lit Mediterranean pine grove, panoramic Egadi-view terraces, sun loungers, and an authentic stone wood-fired oven."
   },
   de: {
     metaTitle: "Villa Timea | Pool & Tennis zur Alleinnutzung, Ägadische Inseln Blick in Marsala",
@@ -633,7 +668,21 @@ const i18nData = {
     footerColContacts: "Kontakt & Info",
     mobCall: "Anrufen",
     mobMap: "Karte",
-    mobBook: "Buchen"
+    mobBook: "Buchen",
+
+    faqTag: "Häufige Fragen",
+    faqTitle: "Wissenswertes über die Villa Timea",
+    faqDesc: "Alles, was Sie vor Ihrer Buchung in Marsala wissen sollten.",
+    faq1Q: "Stehen Pool und Tennisplatz wirklich zur alleinigen Nutzung zur Verfügung?",
+    faq1A: "Ja, zu 100 %. Sowohl der große Panoramapool mit Sprungbrett als auch der Tennisplatz nach offiziellen Maßen sind ausschließlich für die Gäste der Villa Timea reserviert – ohne jegliche Mitbenutzung durch Dritte.",
+    faq2Q: "Wie viele Gäste bietet die Villa Timea Platz und wie sind die Zimmer aufgeteilt?",
+    faq2A: "Die Villa bietet bequem Platz für bis zu 12 Personen in 5 Schlafzimmern (davon eines in einer privaten Dependance) und 4 Badezimmern, ergänzt durch einen großen Salon mit Kamin, Speisesaal für 10+ Personen, Veranda und Holzbackofen.",
+    faq3Q: "Wie weit ist die Villa Timea vom Hafen zu den Ägadischen Inseln, Stränden und Flughäfen entfernt?",
+    faq3A: "Die Villa liegt in Contrada Fontanelle 231 in Marsala: das historische Zentrum ist ca. 8 Autominuten entfernt, die Fähren nach Favignana, Levanzo und Marettimo 10 Minuten, der Flughafen Trapani-Birgi 10 Minuten, das Naturreservat Stagnone 12 Minuten und die Sandstrände im Süden rund 15 Minuten.",
+    faq4Q: "Welchen Vorteil bietet die Direktbuchung gegenüber Airbnb oder Booking.com?",
+    faq4A: "Bei einer direkten Buchung per WhatsApp, Telefon oder E-Mail über die offizielle Website entfallen Portalgebühren: Sie erhalten die garantierte Bestpreis-Rate und klären Check-in, Check-out und Sonderwünsche direkt mit den Eigentümern.",
+    faq5Q: "Verfügt die Villa über Klimaanlage, Privatparkplatz und Außenbereiche zum Essen?",
+    faq5A: "Ja, die Schlafzimmer sind klimatisiert und das Anwesen bietet private Parkplätze, einen abends beleuchteten Pinienhain, Panoramaterrassen mit Blick auf die Ägadischen Inseln, Sonnenliegen und einen Stein-Holzbackofen."
   }
 };
 
@@ -645,10 +694,39 @@ const langFlagsSvg = {
   de: '<svg viewBox="0 0 640 480" width="18" height="13" aria-hidden="true"><path fill="#000" d="M0 0h640v160H0z"/><path fill="#d00" d="M0 160h640v160H0z"/><path fill="#ffce00" d="M0 320h640v160H0z"/></svg>'
 };
 
+function switchLanguage(lang) {
+  if (!lang || !i18nData[lang]) return;
+  localStorage.setItem('villa_lang', lang);
+
+  // When served via HTTP(S), navigate to the dedicated SEO language URL (/ , /en/ , /de/)
+  if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+    const targetUrl = lang === 'it' ? `${ASSET_BASE || './'}` : `${ASSET_BASE}${lang}/`;
+    const currentHtmlLang = (document.documentElement.lang || 'it').slice(0, 2).toLowerCase();
+    if (lang !== currentHtmlLang) {
+      window.location.href = targetUrl;
+      return;
+    }
+  }
+
+  if (lang !== currentLang) {
+    currentLang = lang;
+    applyLanguage(lang);
+  }
+}
+
 function initI18n() {
-  const savedLang = localStorage.getItem('villa_lang');
-  if (savedLang && (savedLang === 'it' || savedLang === 'en' || savedLang === 'de')) {
-    currentLang = savedLang;
+  const htmlLang = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+  const isLocalizedSubpage = /(?:^|\/)(en|de)\/(?:index\.html)?$/.test(window.location.pathname);
+
+  if (isLocalizedSubpage && (htmlLang === 'en' || htmlLang === 'de')) {
+    currentLang = htmlLang;
+  } else {
+    const savedLang = localStorage.getItem('villa_lang');
+    if (savedLang && (savedLang === 'it' || savedLang === 'en' || savedLang === 'de')) {
+      currentLang = (window.location.protocol === 'file:') ? savedLang : (htmlLang || 'it');
+    } else if (htmlLang === 'it' || htmlLang === 'en' || htmlLang === 'de') {
+      currentLang = htmlLang;
+    }
   }
 
   applyLanguage(currentLang);
@@ -683,15 +761,11 @@ function initI18n() {
   document.querySelectorAll('.lang-menu-item').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const lang = e.currentTarget.dataset.lang;
-      if (lang && lang !== currentLang) {
-        currentLang = lang;
-        localStorage.setItem('villa_lang', lang);
-        applyLanguage(lang);
-      }
       if (dropdown) {
         dropdown.classList.remove('open');
         if (dropdownBtn) dropdownBtn.setAttribute('aria-expanded', 'false');
       }
+      switchLanguage(lang);
     });
   });
 
@@ -699,11 +773,7 @@ function initI18n() {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const lang = e.currentTarget.dataset.lang;
-      if (lang && lang !== currentLang) {
-        currentLang = lang;
-        localStorage.setItem('villa_lang', lang);
-        applyLanguage(lang);
-      }
+      switchLanguage(lang);
     });
   });
 }
@@ -1119,7 +1189,7 @@ function openSpaceAlbum(spaceKey) {
 
     card.innerHTML = `
       <div class="space-album-thumb">
-        <img src="${item.src}" alt="${title}" loading="lazy">
+        <img src="${resolveAsset(item.src)}" alt="${title}" loading="lazy">
         <span class="space-album-zoom-badge" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
         </span>
@@ -1178,7 +1248,7 @@ function renderGalleryGrid(category) {
     const desc = getLocalizedItem(item, 'desc');
 
     card.innerHTML = `
-      <img src="${item.src}" alt="${title}" loading="lazy">
+      <img src="${resolveAsset(item.src)}" alt="${title}" loading="lazy">
       <div class="gallery-item-overlay">
         <div class="gallery-item-caption">${title}</div>
         <div class="gallery-item-category">${desc}</div>
@@ -1540,7 +1610,7 @@ function renderLightboxThumbs() {
     btn.type = 'button';
     btn.className = 'lightbox-thumb-btn';
     btn.setAttribute('aria-label', title);
-    btn.innerHTML = `<img src="${item.src}" alt="${title}" loading="lazy">`;
+    btn.innerHTML = `<img src="${resolveAsset(item.src)}" alt="${title}" loading="lazy">`;
     btn.addEventListener('click', () => {
       activeLightboxIndex = idx;
       resetZoom();
@@ -1556,7 +1626,7 @@ function preloadAdjacentLightboxImages() {
   const prevIdx = (activeLightboxIndex - 1 + activeLightboxItems.length) % activeLightboxItems.length;
   [nextIdx, prevIdx].forEach(i => {
     const preloadImg = new Image();
-    preloadImg.src = activeLightboxItems[i].src;
+    preloadImg.src = resolveAsset(activeLightboxItems[i].src);
   });
 }
 
@@ -1573,7 +1643,7 @@ function updateLightboxContent() {
   const itemDesc = getLocalizedItem(item, 'desc');
 
   if (img) {
-    img.src = item.src;
+    img.src = resolveAsset(item.src);
     img.alt = itemTitle;
   }
 
@@ -1632,18 +1702,166 @@ function initDialogFallbacks() {
    ========================================================================== */
 
 function initBookingForm() {
+  const form = document.getElementById('inquiry-form');
   const waBtn = document.getElementById('send-whatsapp-btn');
   const emailBtn = document.getElementById('send-email-btn');
+  const checkinInput = document.getElementById('inq-checkin');
+  const checkoutInput = document.getElementById('inq-checkout');
+
+  if (!form) return;
+
+  // Set min date to today and enforce check-out >= check-in
+  const todayIso = new Date().toISOString().split('T')[0];
+  if (checkinInput) checkinInput.min = todayIso;
+  if (checkoutInput) checkoutInput.min = todayIso;
+
+  const validateDateRange = () => {
+    if (!checkinInput || !checkoutInput) return;
+    checkoutInput.min = checkinInput.value || todayIso;
+    if (checkinInput.value && checkoutInput.value && checkoutInput.value < checkinInput.value) {
+      const msg = currentLang === 'en'
+        ? 'Check-out date must be after check-in date.'
+        : (currentLang === 'de'
+          ? 'Das Abreisedatum muss nach dem Anreisedatum liegen.'
+          : 'La data di check-out deve essere successiva al check-in.');
+      checkoutInput.setCustomValidity(msg);
+    } else {
+      checkoutInput.setCustomValidity('');
+    }
+  };
+
+  if (checkinInput) checkinInput.addEventListener('change', validateDateRange);
+  if (checkoutInput) checkoutInput.addEventListener('change', validateDateRange);
+
+  // Validate-after-interaction ARIA sync & :user-invalid fallback
+  const linkError = (el, shown) => {
+    const errorId = el.dataset.error;
+    if (!errorId) return;
+    const ids = (el.getAttribute('aria-describedby') || '').split(/\s+/).filter(id => id && id !== errorId);
+    if (shown) ids.push(errorId);
+    if (ids.length) el.setAttribute('aria-describedby', ids.join(' '));
+    else el.removeAttribute('aria-describedby');
+  };
+
+  const announcer = document.createElement('div');
+  announcer.setAttribute('aria-live', 'polite');
+  announcer.classList.add('visually-hidden');
+  document.body.append(announcer);
+  let announceTimer;
+  let announcedField;
+
+  const spokenText = (node) => {
+    const copy = node.cloneNode(true);
+    copy.querySelectorAll('[aria-hidden="true"]').forEach(n => n.remove());
+    copy.querySelectorAll('[role="img"][aria-label]').forEach(n => n.replaceWith(`${n.getAttribute('aria-label')}: `));
+    return copy.textContent.replace(/\s+/g, ' ').trim();
+  };
+
+  const announceError = (el) => {
+    const error = document.getElementById(el.dataset.error);
+    if (!error) return;
+    const label = el.labels?.[0] ? `${spokenText(el.labels[0])}: ` : '';
+    clearTimeout(announceTimer);
+    announcer.textContent = '';
+    announcedField = el;
+    announceTimer = setTimeout(() => {
+      announcer.textContent = label + spokenText(error);
+    }, 500);
+  };
+
+  const supportsUserInvalid = CSS.supports('selector(:user-invalid)');
+  const dirtyState = new WeakMap();
+  const flagged = new WeakSet();
+  const announced = new WeakSet();
+
+  const syncControlState = (el, announce = false, forceFallback = false) => {
+    if (!el.matches?.('input, select, textarea')) return;
+    let invalid;
+    if (supportsUserInvalid) {
+      invalid = el.matches(':user-invalid');
+    } else {
+      const state = dirtyState.get(el);
+      const shouldShow = forceFallback || (state && state.hasBlurred && state.hasInteracted);
+      invalid = Boolean(shouldShow && !el.validity.valid);
+      if (shouldShow) {
+        el.classList.toggle('user-invalid-fallback', invalid);
+        el.classList.toggle('user-valid-fallback', !invalid);
+      }
+    }
+
+    if (invalid) {
+      if (announce && !announced.has(el)) {
+        announceError(el);
+        announced.add(el);
+      }
+      el.setAttribute('aria-invalid', 'true');
+      linkError(el, true);
+      flagged.add(el);
+    } else if (flagged.has(el) || el.getAttribute('aria-invalid') !== 'true') {
+      el.setAttribute('aria-invalid', 'false');
+      linkError(el, false);
+      flagged.delete(el);
+      announced.delete(el);
+      if (announcedField === el) {
+        clearTimeout(announceTimer);
+        announcer.textContent = '';
+      }
+    }
+  };
+
+  form.querySelectorAll('input, select, textarea').forEach(el => syncControlState(el));
+
+  form.addEventListener('blur', (e) => {
+    if (!supportsUserInvalid) {
+      const state = dirtyState.get(e.target) || { hasInteracted: false, hasBlurred: false };
+      state.hasBlurred = true;
+      dirtyState.set(e.target, state);
+    }
+    syncControlState(e.target, true);
+  }, true);
+
+  form.addEventListener('input', (e) => {
+    if (!supportsUserInvalid) {
+      const state = dirtyState.get(e.target) || { hasInteracted: false, hasBlurred: false };
+      state.hasInteracted = true;
+      dirtyState.set(e.target, state);
+    }
+    if (e.target.hasAttribute('aria-invalid')) syncControlState(e.target);
+  });
+
+  form.addEventListener('change', (e) => {
+    if (!supportsUserInvalid) {
+      const state = dirtyState.get(e.target) || { hasInteracted: false, hasBlurred: false };
+      state.hasInteracted = true;
+      dirtyState.set(e.target, state);
+    }
+    syncControlState(e.target, true);
+  }, true);
+
+  form.addEventListener('invalid', (e) => {
+    if (!supportsUserInvalid) {
+      dirtyState.set(e.target, { hasInteracted: true, hasBlurred: true });
+    }
+    announced.add(e.target);
+    syncControlState(e.target, false, true);
+  }, true);
+
+  const validateBeforeSend = () => {
+    validateDateRange();
+    return form.reportValidity();
+  };
 
   const getFormData = () => {
-    const name = document.getElementById('inq-name')?.value.trim() || 'Ospite';
+    const tbd = currentLang === 'en' ? 'To be defined' : (currentLang === 'de' ? 'Noch offen' : 'Da definire');
+    const noNotes = currentLang === 'en' ? 'No additional notes' : (currentLang === 'de' ? 'Keine weiteren Hinweise' : 'Nessuna nota aggiuntiva');
+    const name = document.getElementById('inq-name')?.value.trim() || '';
     const email = document.getElementById('inq-email')?.value.trim() || '';
     const phone = document.getElementById('inq-phone')?.value.trim() || '';
-    const checkin = document.getElementById('inq-checkin')?.value || 'Da definire';
-    const checkout = document.getElementById('inq-checkout')?.value || 'Da definire';
+    const checkin = checkinInput?.value || tbd;
+    const checkout = checkoutInput?.value || tbd;
     const guestsEl = document.getElementById('inq-guests');
     const guests = guestsEl ? (guestsEl.options[guestsEl.selectedIndex]?.text || guestsEl.value) : '2';
-    const notes = document.getElementById('inq-notes')?.value.trim() || 'Nessuna nota aggiuntiva';
+    const notes = document.getElementById('inq-notes')?.value.trim() || noNotes;
 
     return { name, email, phone, checkin, checkout, guests, notes };
   };
@@ -1651,38 +1869,58 @@ function initBookingForm() {
   if (waBtn) {
     waBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      if (!validateBeforeSend()) return;
       const d = getFormData();
-      const msg = `*Richiesta Info / Soggiorno - Villa Timea (Marsala)*\n\n` +
-        `👤 *Ospite:* ${d.name}\n` +
-        `📅 *Date:* ${d.checkin} ➔ ${d.checkout}\n` +
-        `👥 *Numero Ospiti:* ${d.guests}\n` +
-        `📞 *Recapito:* ${d.phone || d.email}\n` +
-        `💬 *Note:* ${d.notes}\n\n` +
-        `_Inviato dal sito ufficiale Villa Timea_`;
+      let msg;
+      if (currentLang === 'en') {
+        msg = `*Availability Inquiry - Villa Timea (Marsala)*\n\n` +
+          `👤 *Guest:* ${d.name}\n` +
+          `📅 *Dates:* ${d.checkin} ➔ ${d.checkout}\n` +
+          `👥 *Guests:* ${d.guests}\n` +
+          `📞 *Contact:* ${d.phone || d.email}\n` +
+          `💬 *Notes:* ${d.notes}\n\n` +
+          `_Sent from official website www.villatimea.it_`;
+      } else if (currentLang === 'de') {
+        msg = `*Verfügbarkeitsanfrage - Villa Timea (Marsala)*\n\n` +
+          `👤 *Gast:* ${d.name}\n` +
+          `📅 *Reisedaten:* ${d.checkin} ➔ ${d.checkout}\n` +
+          `👥 *Gästeanzahl:* ${d.guests}\n` +
+          `📞 *Kontakt:* ${d.phone || d.email}\n` +
+          `💬 *Hinweise:* ${d.notes}\n\n` +
+          `_Gesendet über die offizielle Website www.villatimea.it_`;
+      } else {
+        msg = `*Richiesta Info / Soggiorno - Villa Timea (Marsala)*\n\n` +
+          `👤 *Ospite:* ${d.name}\n` +
+          `📅 *Date:* ${d.checkin} ➔ ${d.checkout}\n` +
+          `👥 *Numero Ospiti:* ${d.guests}\n` +
+          `📞 *Recapito:* ${d.phone || d.email}\n` +
+          `💬 *Note:* ${d.notes}\n\n` +
+          `_Inviato dal sito ufficiale www.villatimea.it_`;
+      }
 
       const encoded = encodeURIComponent(msg);
-      window.open(`https://wa.me/393349241047?text=${encoded}`, '_blank');
+      window.open(`https://wa.me/393349241047?text=${encoded}`, '_blank', 'noopener,noreferrer');
     });
   }
 
   if (emailBtn) {
     emailBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      if (!validateBeforeSend()) return;
       const d = getFormData();
-      const subject = encodeURIComponent(`Richiesta Disponibilità Villa Timea: ${d.name} (${d.checkin} - ${d.checkout})`);
-      const body = encodeURIComponent(
-        `Gentile staff di Villa Timea,\n\n` +
-        `Vorrei richiedere disponibilità e preventivo per un soggiorno presso Villa Timea:\n\n` +
-        `- Nome: ${d.name}\n` +
-        `- Date desiderate: dal ${d.checkin} al ${d.checkout}\n` +
-        `- Numero di ospiti: ${d.guests}\n` +
-        `- Telefono / WhatsApp: ${d.phone}\n` +
-        `- Email: ${d.email}\n\n` +
-        `Messaggio / Note:\n${d.notes}\n\n` +
-        `In attesa di un vostro gentile riscontro,\n${d.name}`
-      );
+      let subjectRaw, bodyRaw;
+      if (currentLang === 'en') {
+        subjectRaw = `Availability Request Villa Timea: ${d.name} (${d.checkin} - ${d.checkout})`;
+        bodyRaw = `Dear Villa Timea team,\n\nI would like to request availability and a direct quote for a stay at Villa Timea:\n\n- Name: ${d.name}\n- Preferred dates: ${d.checkin} to ${d.checkout}\n- Guests: ${d.guests}\n- Phone / WhatsApp: ${d.phone}\n- Email: ${d.email}\n\nNotes:\n${d.notes}\n\nBest regards,\n${d.name}`;
+      } else if (currentLang === 'de') {
+        subjectRaw = `Verfügbarkeitsanfrage Villa Timea: ${d.name} (${d.checkin} - ${d.checkout})`;
+        bodyRaw = `Sehr geehrtes Villa Timea Team,\n\nich möchte gerne die Verfügbarkeit und ein Direktangebot für einen Aufenthalt in der Villa Timea anfragen:\n\n- Name: ${d.name}\n- Gewünschte Daten: ${d.checkin} bis ${d.checkout}\n- Gästeanzahl: ${d.guests}\n- Telefon / WhatsApp: ${d.phone}\n- E-Mail: ${d.email}\n\nHinweise:\n${d.notes}\n\nMit freundlichen Grüßen,\n${d.name}`;
+      } else {
+        subjectRaw = `Richiesta Disponibilità Villa Timea: ${d.name} (${d.checkin} - ${d.checkout})`;
+        bodyRaw = `Gentile staff di Villa Timea,\n\nVorrei richiedere disponibilità e preventivo per un soggiorno presso Villa Timea:\n\n- Nome: ${d.name}\n- Date desiderate: dal ${d.checkin} al ${d.checkout}\n- Numero di ospiti: ${d.guests}\n- Telefono / WhatsApp: ${d.phone}\n- Email: ${d.email}\n\nMessaggio / Note:\n${d.notes}\n\nIn attesa di un vostro gentile riscontro,\n${d.name}`;
+      }
 
-      window.location.href = `mailto:villatimea@gmail.com,Info@larosadeiventibb.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:villatimea@gmail.com,Info@larosadeiventibb.com?subject=${encodeURIComponent(subjectRaw)}&body=${encodeURIComponent(bodyRaw)}`;
     });
   }
 }

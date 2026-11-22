@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.villatimea.it/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.villatimea.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villatimea.it/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.villatimea.it/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.villatimea.it/" />
+    <image:image>
+      <image:loc>https://www.villatimea.it/assets/images/piscina-facciata-villa.jpg</image:loc>
+      <image:title>Villa Timea Marsala - Facciata e Piscina Panoramica ad Uso Esclusivo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.villatimea.it/assets/images/piscina-panorama.jpg</image:loc>
+      <image:title>Villa Timea Marsala - Piscina con Trampolino Vista Mare</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.villatimea.it/assets/images/campo-tennis.jpg</image:loc>
+      <image:title>Villa Timea Marsala - Campo da Tennis Regolamentare ad Uso Esclusivo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.villatimea.it/assets/images/terrazza-vista-egadi.jpg</image:loc>
+      <image:title>Villa Timea Marsala - Terrazza Panoramica Vista Isole Egadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.villatimea.it/assets/images/cantina-storica-tufo.jpg</image:loc>
+      <image:title>Villa Timea Marsala - Cantina Storica nel Tufo</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.villatimea.it/en/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.villatimea.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villatimea.it/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.villatimea.it/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.villatimea.it/" />
+  </url>
+
+  <url>
+    <loc>https://www.villatimea.it/de/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.villatimea.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.villatimea.it/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.villatimea.it/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.villatimea.it/" />
+  </url>
+
+</urlset>

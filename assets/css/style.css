@@ -2822,3 +2822,151 @@ dialog {
   flex-direction: column;
   gap: 1rem;
 }
+
+/* ==========================================================================
+   ACCESSIBLE FORM VALIDATION & LIVE REGION UTILITIES
+   ========================================================================== */
+
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+.form-error-msg {
+  display: none;
+  color: #b91c1c;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+:is(.form-input, .form-select, .form-textarea):is(:user-invalid, .user-invalid-fallback) {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+:is(.form-input, .form-select, .form-textarea):is(:user-invalid, .user-invalid-fallback) + .form-error-msg {
+  display: block;
+}
+
+:is(.form-input, .form-select, .form-textarea):is(:user-valid, .user-valid-fallback):not([type="date"]) {
+  border-color: #15803d;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION SECTION
+   ========================================================================== */
+
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.faq-item {
+  background: var(--c-white);
+  border: 1px solid var(--c-sand-200);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item[open] {
+  border-color: rgba(21, 94, 130, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.2rem 1.4rem;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--c-navy);
+  cursor: pointer;
+  line-height: 1.4;
+  border-radius: var(--radius-md);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary:hover {
+  background: var(--c-aqua-soft);
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--c-ocean);
+  outline-offset: 2px;
+}
+
+.faq-item summary::before {
+  content: "";
+  inline-size: 1.15em;
+  block-size: 1.15em;
+  flex-shrink: 0;
+  background-color: var(--c-terracotta);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat center / contain;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat center / contain;
+  rotate: -90deg;
+}
+
+.faq-item[open] > summary::before {
+  rotate: 0deg;
+}
+
+.faq-answer {
+  padding: 0 1.4rem 1.25rem 3.4rem;
+  color: var(--c-text-muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.faq-item::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
+}
+
+.faq-item:not([open])::details-content {
+  block-size: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item summary::before {
+    transition: rotate 0.2s ease;
+  }
+
+  .faq-item::details-content {
+    transition: block-size, content-visibility, display;
+    transition-duration: 0.28s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+}
+
+@media (max-width: 640px) {
+  .faq-item summary {
+    padding: 1rem 1.1rem;
+    font-size: 1.02rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.1rem 1.1rem 2.85rem;
+    font-size: 0.92rem;
+  }
+}
