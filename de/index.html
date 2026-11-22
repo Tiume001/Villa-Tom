@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="../assets/css/leaflet.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../assets/css/style.css?v=5.0">
+  <link rel="stylesheet" href="../assets/css/style.css?v=5.1">
 
   <!-- Structured Data (Schema.org JSON-LD) -->
   <script type="application/ld+json">
@@ -124,6 +124,18 @@
           "@type": "QuantitativeValue",
           "value": 12
         },
+        "bed": [
+          {
+            "@type": "BedDetails",
+            "numberOfBeds": 5,
+            "typeOfBed": "Double"
+          },
+          {
+            "@type": "BedDetails",
+            "numberOfBeds": 2,
+            "typeOfBed": "Single"
+          }
+        ],
         "amenityFeature": [
           {
             "@type": "LocationFeatureSpecification",
@@ -133,6 +145,11 @@
           {
             "@type": "LocationFeatureSpecification",
             "name": "ac",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "wifi",
             "value": true
           },
           {
@@ -157,6 +174,57 @@
           }
         ]
       },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "bestRating": 5,
+        "ratingCount": 3,
+        "reviewCount": 3
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Ashley"
+          },
+          "datePublished": "2024-10-01",
+          "reviewBody": "Wir hatten eine wunderbare Zeit und haben die Außenküche und den Pool sehr genossen.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sylvie"
+          },
+          "datePublished": "2024-09-01",
+          "reviewBody": "Großes Haus mit einem sehr schönen Garten und Pool. Aldo hat uns trotz unserer Last-Minute-Buchung herzlich empfangen und alles in der Umgebung erklärt. Sehr empfehlenswert.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sarah Lena"
+          },
+          "datePublished": "2024-09-01",
+          "reviewBody": "Das Highlight war der schöne Außenbereich mit großem Pool und Außenküche. Aldo ist super herzlich und jederzeit erreichbar. Wir kommen gerne wieder.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          }
+        }
+      ],
       "petsAllowed": false
     },
     {
@@ -902,8 +970,7 @@
               <span class="info-list-icon">📍</span>
               <div>
                 <strong data-i18n="infoAddressLabel">Adresse:</strong><br>
-                Contrada Fontanelle 231, 91025 Marsala (TP), Sicilia
-              </div>
+                Contrada Fontanelle 231, 91025 Marsala (TP), Italien • CIR / CIN: IT027042B4PE5C24JU</div>
             </div>
           </div>
 
@@ -958,8 +1025,63 @@
     </div>
   </section>
 
+  <!-- Guest Reviews Section -->
+  <section class="section section-sand" id="recensioni" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="reviewsTag">Gästebewertungen</span>
+        <h2 class="section-title" id="reviews-heading" data-i18n="reviewsTitle">Verifizierte Erfahrungen unserer Gäste</h2>
+        <p class="section-desc" data-i18n="reviewsDesc">Durchschnittsbewertung 5,0 / 5 von Gästen, die ihren Urlaub in der Villa Timea verbracht haben.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div>
+            <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="review-quote">“Wir hatten eine wunderbare Zeit und haben die Außenküche und den Pool sehr genossen.”</p>
+          </div>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">A</div>
+            <div>
+              <div class="review-author-name">Ashley</div>
+              <div class="review-author-meta" data-i18n="rev1Meta">Tampa, Florida • Oktober 2024</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div>
+            <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="review-quote">“Großes Haus mit einem sehr schönen Garten und Pool. Aldo hat uns trotz unserer Last-Minute-Buchung herzlich empfangen und alles in der Umgebung erklärt. Sehr empfehlenswert.”</p>
+          </div>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">S</div>
+            <div>
+              <div class="review-author-name">Sylvie</div>
+              <div class="review-author-meta" data-i18n="rev2Meta">Mus, Frankreich • September 2024</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div>
+            <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="review-quote">“Das Highlight war der schöne Außenbereich mit großem Pool und Außenküche. Aldo ist super herzlich und jederzeit erreichbar. Wir kommen gerne wieder.”</p>
+          </div>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">SL</div>
+            <div>
+              <div class="review-author-name">Sarah Lena</div>
+              <div class="review-author-meta" data-i18n="rev3Meta">Bobenheim-Roxheim, Deutschland • September 2024</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Frequently Asked Questions -->
-  <section class="section section-sand accordion" id="faq" aria-labelledby="faq-heading">
+  <section class="section accordion" id="faq" aria-labelledby="faq-heading">
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-i18n="faqTag">Häufige Fragen</span>
@@ -1056,8 +1178,7 @@
           &copy; <span id="year">2026</span> Villa Timea. <span data-i18n="footerRights">Alle Rechte vorbehalten. Villa Timea Marsala.</span>
         </div>
         <div style="font-size: 0.78rem; opacity: 0.7;">
-          Contrada Fontanelle 231, 91025 Marsala (TP), Italien • CIR / CIN: Auf Anfrage verfügbar
-        </div>
+          Contrada Fontanelle 231, 91025 Marsala (TP), Italien • CIR / CIN: IT027042B4PE5C24JU</div>
       </div>
     </div>
   </footer>
@@ -1088,6 +1209,6 @@
   <script src="../assets/js/leaflet.js"></script>
 
   <!-- Main Website Script -->
-  <script src="../assets/js/main.js?v=5.0"></script>
+  <script src="../assets/js/main.js?v=5.1"></script>
 </body>
 </html>

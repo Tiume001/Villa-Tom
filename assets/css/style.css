@@ -2970,3 +2970,77 @@ dialog {
     font-size: 0.92rem;
   }
 }
+
+/* ==========================================================================
+   GUEST REVIEWS SECTION
+   ========================================================================== */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: var(--c-white);
+  border: 1px solid var(--c-sand-200);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.review-stars {
+  color: #f59e0b;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.65rem;
+}
+
+.review-quote {
+  color: var(--c-text-main);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--c-sand-100);
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--c-aqua-light);
+  color: var(--c-navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.review-author-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--c-navy);
+}
+
+.review-author-meta {
+  font-size: 0.8rem;
+  color: var(--c-text-muted);
+}
+
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}

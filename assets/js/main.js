@@ -248,7 +248,13 @@ const i18nData = {
     faq4Q: "Qual è il vantaggio di prenotare direttamente su questo sito invece che su Airbnb o Booking?",
     faq4A: "Prenotando direttamente tramite WhatsApp, telefono o email dal sito ufficiale non paghi le commissioni di intermediazione dei portali, ottieni la miglior tariffa garantita e parli direttamente con i proprietari per concordare check-in, check-out ed esigenze speciali.",
     faq5Q: "La villa dispone di aria condizionata, parcheggio privato e spazi esterni attrezzati?",
-    faq5A: "Sì, le camere sono climatizzate e la proprietà offre ampi spazi verdi, pineta illuminata la sera, parcheggio privato interno, terrazze panoramiche vista Egadi, solarium con lettini e forno a legna in pietra."
+    faq5A: "Sì, le camere sono climatizzate e la proprietà offre ampi spazi verdi, pineta illuminata la sera, parcheggio privato interno, terrazze panoramiche vista Egadi, solarium con lettini e forno a legna in pietra.",
+    reviewsTag: "Dicono di Noi",
+    reviewsTitle: "Recensioni Verificate degli Ospiti",
+    reviewsDesc: "Valutazione media 5.0 / 5 dalle esperienze di chi ha già soggiornato a Villa Timea.",
+    rev1Meta: "Tampa, Florida • Ottobre 2024",
+    rev2Meta: "Mus, Francia • Settembre 2024",
+    rev3Meta: "Bobenheim-Roxheim, Germania • Settembre 2024"
   },
   en: {
     metaTitle: "Villa Timea | Exclusive Pool & Tennis, Egadi Islands View in Marsala",
@@ -465,7 +471,13 @@ const i18nData = {
     faq4Q: "What is the advantage of booking directly here instead of Airbnb or Booking.com?",
     faq4A: "By booking directly via WhatsApp, phone, or email on our official website, you avoid portal service fees, get the guaranteed best rate, and coordinate check-in, check-out, and special requests directly with the owners.",
     faq5Q: "Does the villa have air conditioning, private parking, and outdoor dining areas?",
-    faq5A: "Yes, bedrooms are air-conditioned and the estate offers private parking, an evening-lit Mediterranean pine grove, panoramic Egadi-view terraces, sun loungers, and an authentic stone wood-fired oven."
+    faq5A: "Yes, bedrooms are air-conditioned and the estate offers private parking, an evening-lit Mediterranean pine grove, panoramic Egadi-view terraces, sun loungers, and an authentic stone wood-fired oven.",
+    reviewsTag: "Guest Reviews",
+    reviewsTitle: "Verified Guest Feedback",
+    reviewsDesc: "5.0 / 5 average rating from guests who have stayed at Villa Timea.",
+    rev1Meta: "Tampa, Florida • October 2024",
+    rev2Meta: "Mus, France • September 2024",
+    rev3Meta: "Bobenheim-Roxheim, Germany • September 2024"
   },
   de: {
     metaTitle: "Villa Timea | Pool & Tennis zur Alleinnutzung, Ägadische Inseln Blick in Marsala",
@@ -682,7 +694,13 @@ const i18nData = {
     faq4Q: "Welchen Vorteil bietet die Direktbuchung gegenüber Airbnb oder Booking.com?",
     faq4A: "Bei einer direkten Buchung per WhatsApp, Telefon oder E-Mail über die offizielle Website entfallen Portalgebühren: Sie erhalten die garantierte Bestpreis-Rate und klären Check-in, Check-out und Sonderwünsche direkt mit den Eigentümern.",
     faq5Q: "Verfügt die Villa über Klimaanlage, Privatparkplatz und Außenbereiche zum Essen?",
-    faq5A: "Ja, die Schlafzimmer sind klimatisiert und das Anwesen bietet private Parkplätze, einen abends beleuchteten Pinienhain, Panoramaterrassen mit Blick auf die Ägadischen Inseln, Sonnenliegen und einen Stein-Holzbackofen."
+    faq5A: "Ja, die Schlafzimmer sind klimatisiert und das Anwesen bietet private Parkplätze, einen abends beleuchteten Pinienhain, Panoramaterrassen mit Blick auf die Ägadischen Inseln, Sonnenliegen und einen Stein-Holzbackofen.",
+    reviewsTag: "Gästebewertungen",
+    reviewsTitle: "Verifizierte Erfahrungen unserer Gäste",
+    reviewsDesc: "Durchschnittsbewertung 5,0 / 5 von Gästen, die ihren Urlaub in der Villa Timea verbracht haben.",
+    rev1Meta: "Tampa, Florida • Oktober 2024",
+    rev2Meta: "Mus, Frankreich • September 2024",
+    rev3Meta: "Bobenheim-Roxheim, Deutschland • September 2024"
   }
 };
 
